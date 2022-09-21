@@ -1,0 +1,30 @@
+syntax = "proto3";
+package iscp2;
+
+message UpstreamOpenRequestExtensionFields {
+  bool persist = 1;
+}
+
+message UpstreamOpenResponseExtensionFields {}
+
+message UpstreamResumeRequestExtensionFields {}
+
+message UpstreamResumeResponseExtensionFields {}
+
+message UpstreamCloseRequestExtensionFields {
+  bool close_session = 1;
+}
+
+message UpstreamCloseResponseExtensionFields {}
+
+message UpstreamChunkExtensionFields {}
+
+message UpstreamChunkAckExtensionFields {}
+
+message UpstreamMetadataExtensionFields {
+  bool persist = 1;
+}
+
+message UpstreamMetadataAckExtensionFields {}
+
+message UpstreamChunkResultExtensionFields {}

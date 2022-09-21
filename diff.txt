@@ -1,0 +1,176 @@
+diff ./std/common.proto ./go/common.proto
+3a4,14
+> import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+> 
+> option (gogoproto.marshaler_all) = true;
+> option (gogoproto.sizer_all) = true;
+> option (gogoproto.unmarshaler_all) = true;
+> option (gogoproto.testgen_all) = true;
+> option (gogoproto.benchgen_all) = true;
+> option (gogoproto.populate_all) = true;
+> option (gogoproto.equal_all) = true;
+> option (gogoproto.goproto_getters_all) = false;
+> 
+diff ./std/connection.proto ./go/connection.proto
+5a6,15
+> import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+> 
+> option (gogoproto.marshaler_all) = true;
+> option (gogoproto.sizer_all) = true;
+> option (gogoproto.unmarshaler_all) = true;
+> option (gogoproto.testgen_all) = true;
+> option (gogoproto.benchgen_all) = true;
+> option (gogoproto.populate_all) = true;
+> option (gogoproto.equal_all) = true;
+> option (gogoproto.goproto_getters_all) = false;
+diff ./std/downstream.proto ./go/downstream.proto
+7a8,17
+> import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+> 
+> option (gogoproto.marshaler_all) = true;
+> option (gogoproto.sizer_all) = true;
+> option (gogoproto.unmarshaler_all) = true;
+> option (gogoproto.testgen_all) = true;
+> option (gogoproto.benchgen_all) = true;
+> option (gogoproto.populate_all) = true;
+> option (gogoproto.equal_all) = true;
+> option (gogoproto.goproto_getters_all) = false;
+diff ./std/e2e_call.proto ./go/e2e_call.proto
+5a6,15
+> import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+> 
+> option (gogoproto.marshaler_all) = true;
+> option (gogoproto.sizer_all) = true;
+> option (gogoproto.unmarshaler_all) = true;
+> option (gogoproto.testgen_all) = true;
+> option (gogoproto.benchgen_all) = true;
+> option (gogoproto.populate_all) = true;
+> option (gogoproto.equal_all) = true;
+> option (gogoproto.goproto_getters_all) = false;
+Common subdirectories: ./std/extensions and ./go/extensions
+diff ./std/message.proto ./go/message.proto
+8a9,18
+> import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+> 
+> option (gogoproto.marshaler_all) = true;
+> option (gogoproto.sizer_all) = true;
+> option (gogoproto.unmarshaler_all) = true;
+> option (gogoproto.testgen_all) = true;
+> option (gogoproto.benchgen_all) = true;
+> option (gogoproto.populate_all) = true;
+> option (gogoproto.equal_all) = true;
+> option (gogoproto.goproto_getters_all) = false;
+diff ./std/metadata.proto ./go/metadata.proto
+4a5,14
+> import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+> 
+> option (gogoproto.marshaler_all) = true;
+> option (gogoproto.sizer_all) = true;
+> option (gogoproto.unmarshaler_all) = true;
+> option (gogoproto.testgen_all) = true;
+> option (gogoproto.benchgen_all) = true;
+> option (gogoproto.populate_all) = true;
+> option (gogoproto.equal_all) = true;
+> option (gogoproto.goproto_getters_all) = false;
+diff ./std/ping_pong.proto ./go/ping_pong.proto
+4a5,14
+> import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+> 
+> option (gogoproto.marshaler_all) = true;
+> option (gogoproto.sizer_all) = true;
+> option (gogoproto.unmarshaler_all) = true;
+> option (gogoproto.testgen_all) = true;
+> option (gogoproto.benchgen_all) = true;
+> option (gogoproto.populate_all) = true;
+> option (gogoproto.equal_all) = true;
+> option (gogoproto.goproto_getters_all) = false;
+diff ./std/result_code.proto ./go/result_code.proto
+3a4,14
+> import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+> 
+> option (gogoproto.marshaler_all) = true;
+> option (gogoproto.sizer_all) = true;
+> option (gogoproto.unmarshaler_all) = true;
+> option (gogoproto.testgen_all) = true;
+> option (gogoproto.benchgen_all) = true;
+> option (gogoproto.populate_all) = true;
+> option (gogoproto.equal_all) = true;
+> option (gogoproto.goproto_getters_all) = false;
+> 
+diff ./std/upstream.proto ./go/upstream.proto
+7a8,17
+> import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+> 
+> option (gogoproto.marshaler_all) = true;
+> option (gogoproto.sizer_all) = true;
+> option (gogoproto.unmarshaler_all) = true;
+> option (gogoproto.testgen_all) = true;
+> option (gogoproto.benchgen_all) = true;
+> option (gogoproto.populate_all) = true;
+> option (gogoproto.equal_all) = true;
+> option (gogoproto.goproto_getters_all) = false;
+diff ./std/extensions/connection.proto ./go/extensions/connection.proto
+3a4,14
+> import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+> 
+> option (gogoproto.marshaler_all) = true;
+> option (gogoproto.sizer_all) = true;
+> option (gogoproto.unmarshaler_all) = true;
+> option (gogoproto.testgen_all) = true;
+> option (gogoproto.benchgen_all) = true;
+> option (gogoproto.populate_all) = true;
+> option (gogoproto.equal_all) = true;
+> option (gogoproto.goproto_getters_all) = false;
+> 
+diff ./std/extensions/downstream.proto ./go/extensions/downstream.proto
+3a4,14
+> import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+> 
+> option (gogoproto.marshaler_all) = true;
+> option (gogoproto.sizer_all) = true;
+> option (gogoproto.unmarshaler_all) = true;
+> option (gogoproto.testgen_all) = true;
+> option (gogoproto.benchgen_all) = true;
+> option (gogoproto.populate_all) = true;
+> option (gogoproto.equal_all) = true;
+> option (gogoproto.goproto_getters_all) = false;
+> 
+diff ./std/extensions/e2e_call.proto ./go/extensions/e2e_call.proto
+3a4,14
+> import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+> 
+> option (gogoproto.marshaler_all) = true;
+> option (gogoproto.sizer_all) = true;
+> option (gogoproto.unmarshaler_all) = true;
+> option (gogoproto.testgen_all) = true;
+> option (gogoproto.benchgen_all) = true;
+> option (gogoproto.populate_all) = true;
+> option (gogoproto.equal_all) = true;
+> option (gogoproto.goproto_getters_all) = false;
+> 
+diff ./std/extensions/ping_pong.proto ./go/extensions/ping_pong.proto
+3a4,14
+> import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+> 
+> option (gogoproto.marshaler_all) = true;
+> option (gogoproto.sizer_all) = true;
+> option (gogoproto.unmarshaler_all) = true;
+> option (gogoproto.testgen_all) = true;
+> option (gogoproto.benchgen_all) = true;
+> option (gogoproto.populate_all) = true;
+> option (gogoproto.equal_all) = true;
+> option (gogoproto.goproto_getters_all) = false;
+> 
+diff ./std/extensions/upstream.proto ./go/extensions/upstream.proto
+3a4,14
+> import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+> 
+> option (gogoproto.marshaler_all) = true;
+> option (gogoproto.sizer_all) = true;
+> option (gogoproto.unmarshaler_all) = true;
+> option (gogoproto.testgen_all) = true;
+> option (gogoproto.benchgen_all) = true;
+> option (gogoproto.populate_all) = true;
+> option (gogoproto.equal_all) = true;
+> option (gogoproto.goproto_getters_all) = false;
+> 

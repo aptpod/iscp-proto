@@ -1,0 +1,41 @@
+syntax = "proto3";
+package iscp2;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.testgen_all) = true;
+option (gogoproto.benchgen_all) = true;
+option (gogoproto.populate_all) = true;
+option (gogoproto.equal_all) = true;
+option (gogoproto.goproto_getters_all) = false;
+
+message UpstreamOpenRequestExtensionFields {
+  bool persist = 1;
+}
+
+message UpstreamOpenResponseExtensionFields {}
+
+message UpstreamResumeRequestExtensionFields {}
+
+message UpstreamResumeResponseExtensionFields {}
+
+message UpstreamCloseRequestExtensionFields {
+  bool close_session = 1;
+}
+
+message UpstreamCloseResponseExtensionFields {}
+
+message UpstreamChunkExtensionFields {}
+
+message UpstreamChunkAckExtensionFields {}
+
+message UpstreamMetadataExtensionFields {
+  bool persist = 1;
+}
+
+message UpstreamMetadataAckExtensionFields {}
+
+message UpstreamChunkResultExtensionFields {}

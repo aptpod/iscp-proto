@@ -1,0 +1,46 @@
+syntax = "proto3";
+package iscp2;
+
+import "result_code.proto";
+import "extensions/e2e_call.proto";
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.testgen_all) = true;
+option (gogoproto.benchgen_all) = true;
+option (gogoproto.populate_all) = true;
+option (gogoproto.equal_all) = true;
+option (gogoproto.goproto_getters_all) = false;
+
+//
+// iSCP Messages
+//
+
+message UpstreamCall {
+    string call_id = 1;
+    string request_call_id = 2;
+    string destination_node_id = 3;
+    string name = 4;
+    string type = 5;
+    bytes payload = 6;
+    UpstreamCallExtensionFields extension_fields = 7;
+}
+
+message UpstreamCallAck {
+    string call_id = 1;
+    ResultCode result_code = 2;
+    string result_string = 3;
+    UpstreamCallAckExtensionFields extension_fields = 4;
+}
+
+message DownstreamCall {
+    string call_id = 1;
+    string request_call_id = 2;
+    string source_node_id = 3;
+    string name = 4;
+    string type = 5;
+    bytes payload = 6;
+    DownstreamCallExtensionFields extension_fields = 7;
+}

@@ -1,0 +1,42 @@
+syntax = "proto3";
+package iscp2;
+
+import "result_code.proto";
+import "extensions/connection.proto";
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.testgen_all) = true;
+option (gogoproto.benchgen_all) = true;
+option (gogoproto.populate_all) = true;
+option (gogoproto.equal_all) = true;
+option (gogoproto.goproto_getters_all) = false;
+
+//
+// iSCP Messages
+//
+
+message ConnectRequest {
+    uint32 request_id = 1;
+    string protocol_version = 2;
+    string node_id = 3;
+    uint32 ping_interval = 4;
+    uint32 ping_timeout = 5;
+    ConnectRequestExtensionFields extension_fields = 6;
+}
+
+message ConnectResponse {
+    uint32 request_id = 1;
+    string protocol_version = 2;
+    ResultCode result_code = 3;
+    string result_string = 4;
+    ConnectResponseExtensionFields extension_fields = 5;
+}
+
+message Disconnect {
+    ResultCode result_code = 1;
+    string result_string = 2;
+    DisconnectExtensionFields extension_fields = 3;
+}

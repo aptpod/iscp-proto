@@ -1,0 +1,18 @@
+syntax = "proto3";
+package iscp2;
+
+import "extensions/ping_pong.proto";
+
+//
+// iSCP Messages
+//
+
+message Ping {
+    uint32 request_id = 1;
+    PingExtensionFields extension_fields = 2;
+}
+
+message Pong {
+    uint32 request_id = 1;
+    PongExtensionFields extension_fields = 2;
+}

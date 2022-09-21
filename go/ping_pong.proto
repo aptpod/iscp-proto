@@ -1,0 +1,28 @@
+syntax = "proto3";
+package iscp2;
+
+import "extensions/ping_pong.proto";
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.testgen_all) = true;
+option (gogoproto.benchgen_all) = true;
+option (gogoproto.populate_all) = true;
+option (gogoproto.equal_all) = true;
+option (gogoproto.goproto_getters_all) = false;
+
+//
+// iSCP Messages
+//
+
+message Ping {
+    uint32 request_id = 1;
+    PingExtensionFields extension_fields = 2;
+}
+
+message Pong {
+    uint32 request_id = 1;
+    PongExtensionFields extension_fields = 2;
+}

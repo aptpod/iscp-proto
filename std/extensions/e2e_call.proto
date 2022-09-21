@@ -1,0 +1,8 @@
+syntax = "proto3";
+package iscp2;
+
+message UpstreamCallExtensionFields {}
+
+message UpstreamCallAckExtensionFields {}
+
+message DownstreamCallExtensionFields {}

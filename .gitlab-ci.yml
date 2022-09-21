@@ -1,0 +1,20 @@
+image: golang:latest
+stages:
+  - build
+
+before_script:
+  - apt update -y
+  - apt install -y protobuf-compiler
+  - make tools
+
+diff:
+  stage: build
+  retry: 1
+  script:
+    - make diff
+
+build-all:
+  stage: build
+  retry: 1
+  script:
+    - make build-all
