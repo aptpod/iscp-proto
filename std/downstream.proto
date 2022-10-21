@@ -85,6 +85,7 @@ message DownstreamChunkAckComplete {
 
 message DownstreamMetadata {
     uint32 request_id = 1;
+    uint32 stream_id_alias = 13;
     oneof metadata {
         BaseTime base_time = 2;
         UpstreamOpen upstream_open = 3;
