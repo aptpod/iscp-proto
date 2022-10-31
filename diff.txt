@@ -110,7 +110,10 @@ diff ./std/upstream.proto ./go/upstream.proto
 > option (gogoproto.equal_all) = true;
 > option (gogoproto.goproto_getters_all) = false;
 diff ./std/extensions/connection.proto ./go/extensions/connection.proto
-3a4,14
+3c3,13
+< option csharp_namespace = "Iscp2.Extensions";
+---
+> 
 > import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 > 
 > option (gogoproto.marshaler_all) = true;
@@ -121,9 +124,11 @@ diff ./std/extensions/connection.proto ./go/extensions/connection.proto
 > option (gogoproto.populate_all) = true;
 > option (gogoproto.equal_all) = true;
 > option (gogoproto.goproto_getters_all) = false;
-> 
 diff ./std/extensions/downstream.proto ./go/extensions/downstream.proto
-3a4,14
+3c3,13
+< option csharp_namespace = "Iscp2.Extensions";
+---
+> 
 > import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 > 
 > option (gogoproto.marshaler_all) = true;
@@ -134,9 +139,11 @@ diff ./std/extensions/downstream.proto ./go/extensions/downstream.proto
 > option (gogoproto.populate_all) = true;
 > option (gogoproto.equal_all) = true;
 > option (gogoproto.goproto_getters_all) = false;
-> 
 diff ./std/extensions/e2e_call.proto ./go/extensions/e2e_call.proto
-3a4,14
+3c3,13
+< option csharp_namespace = "Iscp2.Extensions";
+---
+> 
 > import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 > 
 > option (gogoproto.marshaler_all) = true;
@@ -147,9 +154,11 @@ diff ./std/extensions/e2e_call.proto ./go/extensions/e2e_call.proto
 > option (gogoproto.populate_all) = true;
 > option (gogoproto.equal_all) = true;
 > option (gogoproto.goproto_getters_all) = false;
-> 
 diff ./std/extensions/ping_pong.proto ./go/extensions/ping_pong.proto
-3a4,14
+3c3,13
+< option csharp_namespace = "Iscp2.Extensions";
+---
+> 
 > import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 > 
 > option (gogoproto.marshaler_all) = true;
@@ -160,9 +169,11 @@ diff ./std/extensions/ping_pong.proto ./go/extensions/ping_pong.proto
 > option (gogoproto.populate_all) = true;
 > option (gogoproto.equal_all) = true;
 > option (gogoproto.goproto_getters_all) = false;
-> 
 diff ./std/extensions/upstream.proto ./go/extensions/upstream.proto
-3a4,14
+3c3,13
+< option csharp_namespace = "Iscp2.Extensions";
+---
+> 
 > import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 > 
 > option (gogoproto.marshaler_all) = true;
@@ -173,4 +184,3 @@ diff ./std/extensions/upstream.proto ./go/extensions/upstream.proto
 > option (gogoproto.populate_all) = true;
 > option (gogoproto.equal_all) = true;
 > option (gogoproto.goproto_getters_all) = false;
-> 
