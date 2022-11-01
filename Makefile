@@ -38,6 +38,10 @@ build-go-gogofast: $(DIR_DIST_GOGOFAST)
 	protoc -I=$(DIR_PROTO_GOGOFAST) -I=$(GOPATH)/src \
 		--gogofast_out=Mextensions/downstream.proto=$(IMPORT_EXTENSIONS),Mextensions/connection.proto=$(IMPORT_EXTENSIONS),Mextensions/e2e_call.proto=$(IMPORT_EXTENSIONS),Mextensions/ping_pong.proto=$(IMPORT_EXTENSIONS),Mextensions/upstream.proto=$(IMPORT_EXTENSIONS):$< $(DIR_PROTO_GOGOFAST)/*.proto
 
+.PHONY: build-go-gogofast
+build-csharp: $(DIR_DIST)/csharp
+	protoc --proto_path=./$(DIR_PROTO_STD) --csharp_out=$< --csharp_opt=file_extension=.g.cs,base_namespace=Iscp2 $(DIR_PROTO_STD)/*.proto $(DIR_PROTO_STD)/extensions/*.proto
+
 
 $(DIR_DIST_GO):
 	echo $@/extensions
@@ -45,6 +49,9 @@ $(DIR_DIST_GO):
 
 $(DIR_DIST_GOGOFAST):
 	mkdir -p $@/extensions
+
+$(DIR_DIST)/csharp:
+	mkdir -p $@/Extensions
 
 .PHONY: tools
 tools:
