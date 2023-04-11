@@ -67,9 +67,9 @@ clean:
 
 .PHONY: diff
 diff:
-	diff ./std ./go > diff.txt.new || true
-	diff ./std/extensions ./go/extensions >> diff.txt.new || true
-	diff ./diff.txt.new ./diff.txt
+	LANG=C.UTF-8 LC_ALL=C.UTF-8 diff ./std ./go > diff.txt.new || true
+	LANG=C.UTF-8 LC_ALL=C.UTF-8 diff ./std/extensions ./go/extensions >> diff.txt.new || true
+	LANG=C.UTF-8 LC_ALL=C.UTF-8 diff ./diff.txt.new ./diff.txt
 	rm ./diff.txt.new
 
 .PHONY: update-diff

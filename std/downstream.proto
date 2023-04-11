@@ -18,6 +18,7 @@ message DownstreamOpenRequest {
     map<uint32, DataID> data_id_aliases = 5;
     QoS qos = 6;
     DownstreamOpenRequestExtensionFields extension_fields = 7;
+    bool omit_empty_chunk = 8;
 }
 
 message DownstreamOpenResponse {
