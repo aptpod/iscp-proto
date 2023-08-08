@@ -2,37 +2,34 @@
 
 iSCPv2のProtocolBuffer
 
-## Installation
+## Prerequisite
 
-gitサブモジュールとして利用します
+- [buf](https://github.com/bufbuild/buf)
+- [npm](https://www.npmjs.com/) ※ Typescriptの生成のみ
 
-```bash
-git submodule add https://github.com/aptpod/iscp-proto.git iscp-proto
-# or
-git submodule add git@github.com:aptpod/iscp-proto.git iscp-proto
-```
+   ```bash
+   npm install @bufbuild/protobuf @bufbuild/protoc-gen-es @bufbuild/buf
+   ```
+
+- [go](https://go.dev/) ※ gogoprotoの生成のみ
+
+   ```bash
+    go install github.com/gogo/protobuf/protoc-gen-gogofast@v1.3.2
+    go run github.com/x-motemen/ghq@latest get github.com/gogo/protobuf/gogoproto
+   ```
 
 ## Usage
 
-任意のprotocコンパイラで任意の場所に生成してください
+1. `buf.gen.yaml` を編集して生成したいコードのみと対象とします。
+2. コードを生成します。
 
-### Go
-
-[gogoproto](https://github.com/gogo/protobuf) の `gogofast` プラグインを利用します。使い方はMakefileを参照してください。
-
-### その他の言語
-
-`std` 内のprootoファイルを利用します。
-
-## Contributing
-
-各言語毎にサポートするprotoファイルがあるので必ず互換を維持するように同期をとってください。
-
-```
-make diff
+```bash
+# ソースコードの生成
+buf generate proto
+# gogoproton用のソースコードの生成
+buf generate proto --template ./buf.gen.gogoproto.yaml
 ```
 
-を実行し、差分がある場合は差分の正しさを判断して適宜修正を行います。
-修正後、差分が妥当だと判断できる場合は `make update-diff` を実行しdiffファイルを更新してください。
+`gen` ディレクトリに生成したコードは配置済みです。
 
 ## License

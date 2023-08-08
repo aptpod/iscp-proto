@@ -1,9 +1,0 @@
-syntax = "proto3";
-package iscp2;
-option csharp_namespace = "Iscp2.Extensions";
-
-message UpstreamCallExtensionFields {}
-
-message UpstreamCallAckExtensionFields {}
-
-message DownstreamCallExtensionFields {}
