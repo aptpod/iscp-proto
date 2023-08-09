@@ -20,14 +20,20 @@ iSCPv2のProtocolBuffer
 
 ## Usage
 
-1. `buf.gen.yaml` を編集して生成したいコードのみと対象とします。
-2. コードを生成します。
+1. gitサブモジュールとして利用します
+
+    ```bash
+    git submodule add https://github.com/aptpod/iscp-proto.git iscp-proto
+    # or
+    git submodule add git@github.com:aptpod/iscp-proto.git iscp-proto
+    ```
+
+2. プロジェクトのルートに`buf.gen.yaml` を作成します。`iscp-proto/buf.gen.yaml` または `iscp-proto/buf.gen.gogoproto.yaml` を参考に編集します。
+3. コードを生成します。
 
 ```bash
 # ソースコードの生成
-buf generate proto
-# gogoproton用のソースコードの生成
-buf generate proto --template ./buf.gen.gogoproto.yaml
+buf generate iscp-proto/proto
 ```
 
 `gen` ディレクトリに生成したコードは配置済みです。
