@@ -26,33 +26,35 @@ namespace Iscp2.V1 {
           string.Concat(
             "Chlpc2NwMi92MS9jb25uZWN0aW9uLnByb3RvEghpc2NwMi52MRokaXNjcDIv",
             "djEvZXh0ZW5zaW9ucy9jb25uZWN0aW9uLnByb3RvGhppc2NwMi92MS9yZXN1",
-            "bHRfY29kZS5wcm90byKaAgoOQ29ubmVjdFJlcXVlc3QSHQoKcmVxdWVzdF9p",
+            "bHRfY29kZS5wcm90byK/AgoOQ29ubmVjdFJlcXVlc3QSHQoKcmVxdWVzdF9p",
             "ZBgBIAEoDVIJcmVxdWVzdElkEikKEHByb3RvY29sX3ZlcnNpb24YAiABKAlS",
             "D3Byb3RvY29sVmVyc2lvbhIXCgdub2RlX2lkGAMgASgJUgZub2RlSWQSIwoN",
             "cGluZ19pbnRlcnZhbBgEIAEoDVIMcGluZ0ludGVydmFsEiEKDHBpbmdfdGlt",
             "ZW91dBgFIAEoDVILcGluZ1RpbWVvdXQSXQoQZXh0ZW5zaW9uX2ZpZWxkcxgG",
             "IAEoCzIyLmlzY3AyLnYxLmV4dGVuc2lvbnMuQ29ubmVjdFJlcXVlc3RFeHRl",
-            "bnNpb25GaWVsZHNSD2V4dGVuc2lvbkZpZWxkcyKXAgoPQ29ubmVjdFJlc3Bv",
-            "bnNlEh0KCnJlcXVlc3RfaWQYASABKA1SCXJlcXVlc3RJZBIpChBwcm90b2Nv",
-            "bF92ZXJzaW9uGAIgASgJUg9wcm90b2NvbFZlcnNpb24SNQoLcmVzdWx0X2Nv",
-            "ZGUYAyABKA4yFC5pc2NwMi52MS5SZXN1bHRDb2RlUgpyZXN1bHRDb2RlEiMK",
-            "DXJlc3VsdF9zdHJpbmcYBCABKAlSDHJlc3VsdFN0cmluZxJeChBleHRlbnNp",
-            "b25fZmllbGRzGAUgASgLMjMuaXNjcDIudjEuZXh0ZW5zaW9ucy5Db25uZWN0",
-            "UmVzcG9uc2VFeHRlbnNpb25GaWVsZHNSD2V4dGVuc2lvbkZpZWxkcyLDAQoK",
-            "RGlzY29ubmVjdBI1CgtyZXN1bHRfY29kZRgBIAEoDjIULmlzY3AyLnYxLlJl",
-            "c3VsdENvZGVSCnJlc3VsdENvZGUSIwoNcmVzdWx0X3N0cmluZxgCIAEoCVIM",
-            "cmVzdWx0U3RyaW5nElkKEGV4dGVuc2lvbl9maWVsZHMYAyABKAsyLi5pc2Nw",
-            "Mi52MS5leHRlbnNpb25zLkRpc2Nvbm5lY3RFeHRlbnNpb25GaWVsZHNSD2V4",
-            "dGVuc2lvbkZpZWxkc0KqAQogY29tLmdpdGh1Yi5hcHRwb2QucHJvdG8uaXNj",
-            "cDIudjFCD0Nvbm5lY3Rpb25Qcm90b1ABWjRnaXRodWIuY29tL2FwdHBvZC9p",
-            "c2NwLXByb3RvL2dlbi9nby9pc2NwMi92MTtpc2NwMnYxogIDSVhYqgIISXNj",
-            "cDIuVjHKAghJc2NwMlxWMeICFElzY3AyXFYxXEdQQk1ldGFkYXRh6gIJSXNj",
-            "cDI6OlYxYgZwcm90bzM="));
+            "bnNpb25GaWVsZHNSD2V4dGVuc2lvbkZpZWxkcxIjCg1jb25uZWN0aW9uX2lk",
+            "GAcgASgJUgxjb25uZWN0aW9uSWQi6QIKD0Nvbm5lY3RSZXNwb25zZRIdCgpy",
+            "ZXF1ZXN0X2lkGAEgASgNUglyZXF1ZXN0SWQSKQoQcHJvdG9jb2xfdmVyc2lv",
+            "bhgCIAEoCVIPcHJvdG9jb2xWZXJzaW9uEjUKC3Jlc3VsdF9jb2RlGAMgASgO",
+            "MhQuaXNjcDIudjEuUmVzdWx0Q29kZVIKcmVzdWx0Q29kZRIjCg1yZXN1bHRf",
+            "c3RyaW5nGAQgASgJUgxyZXN1bHRTdHJpbmcSXgoQZXh0ZW5zaW9uX2ZpZWxk",
+            "cxgFIAEoCzIzLmlzY3AyLnYxLmV4dGVuc2lvbnMuQ29ubmVjdFJlc3BvbnNl",
+            "RXh0ZW5zaW9uRmllbGRzUg9leHRlbnNpb25GaWVsZHMSIwoNY29ubmVjdGlv",
+            "bl9pZBgGIAEoCVIMY29ubmVjdGlvbklkEisKEWNvbm5lY3Rpb25fZXhwaXJ5",
+            "GAcgASgDUhBjb25uZWN0aW9uRXhwaXJ5IsMBCgpEaXNjb25uZWN0EjUKC3Jl",
+            "c3VsdF9jb2RlGAEgASgOMhQuaXNjcDIudjEuUmVzdWx0Q29kZVIKcmVzdWx0",
+            "Q29kZRIjCg1yZXN1bHRfc3RyaW5nGAIgASgJUgxyZXN1bHRTdHJpbmcSWQoQ",
+            "ZXh0ZW5zaW9uX2ZpZWxkcxgDIAEoCzIuLmlzY3AyLnYxLmV4dGVuc2lvbnMu",
+            "RGlzY29ubmVjdEV4dGVuc2lvbkZpZWxkc1IPZXh0ZW5zaW9uRmllbGRzQqoB",
+            "CiBjb20uZ2l0aHViLmFwdHBvZC5wcm90by5pc2NwMi52MUIPQ29ubmVjdGlv",
+            "blByb3RvUAFaNGdpdGh1Yi5jb20vYXB0cG9kL2lzY3AtcHJvdG8vZ2VuL2dv",
+            "L2lzY3AyL3YxO2lzY3AydjGiAgNJWFiqAghJc2NwMi5WMcoCCElzY3AyXFYx",
+            "4gIUSXNjcDJcVjFcR1BCTWV0YWRhdGHqAglJc2NwMjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Iscp2.V1.Extensions.ConnectionReflection.Descriptor, global::Iscp2.V1.ResultCodeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.ConnectRequest), global::Iscp2.V1.ConnectRequest.Parser, new[]{ "RequestId", "ProtocolVersion", "NodeId", "PingInterval", "PingTimeout", "ExtensionFields" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.ConnectResponse), global::Iscp2.V1.ConnectResponse.Parser, new[]{ "RequestId", "ProtocolVersion", "ResultCode", "ResultString", "ExtensionFields" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.ConnectRequest), global::Iscp2.V1.ConnectRequest.Parser, new[]{ "RequestId", "ProtocolVersion", "NodeId", "PingInterval", "PingTimeout", "ExtensionFields", "ConnectionId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.ConnectResponse), global::Iscp2.V1.ConnectResponse.Parser, new[]{ "RequestId", "ProtocolVersion", "ResultCode", "ResultString", "ExtensionFields", "ConnectionId", "ConnectionExpiry" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.Disconnect), global::Iscp2.V1.Disconnect.Parser, new[]{ "ResultCode", "ResultString", "ExtensionFields" }, null, null, null, null)
           }));
     }
@@ -60,6 +62,7 @@ namespace Iscp2.V1 {
 
   }
   #region Messages
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class ConnectRequest : pb::IMessage<ConnectRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -100,6 +103,7 @@ namespace Iscp2.V1 {
       pingInterval_ = other.pingInterval_;
       pingTimeout_ = other.pingTimeout_;
       extensionFields_ = other.extensionFields_ != null ? other.extensionFields_.Clone() : null;
+      connectionId_ = other.connectionId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -181,6 +185,21 @@ namespace Iscp2.V1 {
       }
     }
 
+    /// <summary>Field number for the "connection_id" field.</summary>
+    public const int ConnectionIdFieldNumber = 7;
+    private string connectionId_ = "";
+    /// <summary>
+    /// 再接続時に既存接続を指定
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ConnectionId {
+      get { return connectionId_; }
+      set {
+        connectionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -202,6 +221,7 @@ namespace Iscp2.V1 {
       if (PingInterval != other.PingInterval) return false;
       if (PingTimeout != other.PingTimeout) return false;
       if (!object.Equals(ExtensionFields, other.ExtensionFields)) return false;
+      if (ConnectionId != other.ConnectionId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -215,6 +235,7 @@ namespace Iscp2.V1 {
       if (PingInterval != 0) hash ^= PingInterval.GetHashCode();
       if (PingTimeout != 0) hash ^= PingTimeout.GetHashCode();
       if (extensionFields_ != null) hash ^= ExtensionFields.GetHashCode();
+      if (ConnectionId.Length != 0) hash ^= ConnectionId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -257,6 +278,10 @@ namespace Iscp2.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(ExtensionFields);
       }
+      if (ConnectionId.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ConnectionId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -291,6 +316,10 @@ namespace Iscp2.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(ExtensionFields);
       }
+      if (ConnectionId.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ConnectionId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -318,6 +347,9 @@ namespace Iscp2.V1 {
       }
       if (extensionFields_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExtensionFields);
+      }
+      if (ConnectionId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ConnectionId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -352,6 +384,9 @@ namespace Iscp2.V1 {
         }
         ExtensionFields.MergeFrom(other.ExtensionFields);
       }
+      if (other.ConnectionId.Length != 0) {
+        ConnectionId = other.ConnectionId;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -363,7 +398,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -394,6 +433,10 @@ namespace Iscp2.V1 {
             input.ReadMessage(ExtensionFields);
             break;
           }
+          case 58: {
+            ConnectionId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -405,7 +448,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -436,6 +483,10 @@ namespace Iscp2.V1 {
             input.ReadMessage(ExtensionFields);
             break;
           }
+          case 58: {
+            ConnectionId = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -443,6 +494,7 @@ namespace Iscp2.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class ConnectResponse : pb::IMessage<ConnectResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -482,6 +534,8 @@ namespace Iscp2.V1 {
       resultCode_ = other.resultCode_;
       resultString_ = other.resultString_;
       extensionFields_ = other.extensionFields_ != null ? other.extensionFields_.Clone() : null;
+      connectionId_ = other.connectionId_;
+      connectionExpiry_ = other.connectionExpiry_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -551,6 +605,30 @@ namespace Iscp2.V1 {
       }
     }
 
+    /// <summary>Field number for the "connection_id" field.</summary>
+    public const int ConnectionIdFieldNumber = 6;
+    private string connectionId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ConnectionId {
+      get { return connectionId_; }
+      set {
+        connectionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "connection_expiry" field.</summary>
+    public const int ConnectionExpiryFieldNumber = 7;
+    private long connectionExpiry_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long ConnectionExpiry {
+      get { return connectionExpiry_; }
+      set {
+        connectionExpiry_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -571,6 +649,8 @@ namespace Iscp2.V1 {
       if (ResultCode != other.ResultCode) return false;
       if (ResultString != other.ResultString) return false;
       if (!object.Equals(ExtensionFields, other.ExtensionFields)) return false;
+      if (ConnectionId != other.ConnectionId) return false;
+      if (ConnectionExpiry != other.ConnectionExpiry) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -583,6 +663,8 @@ namespace Iscp2.V1 {
       if (ResultCode != global::Iscp2.V1.ResultCode.Succeeded) hash ^= ResultCode.GetHashCode();
       if (ResultString.Length != 0) hash ^= ResultString.GetHashCode();
       if (extensionFields_ != null) hash ^= ExtensionFields.GetHashCode();
+      if (ConnectionId.Length != 0) hash ^= ConnectionId.GetHashCode();
+      if (ConnectionExpiry != 0L) hash ^= ConnectionExpiry.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -621,6 +703,14 @@ namespace Iscp2.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(ExtensionFields);
       }
+      if (ConnectionId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ConnectionId);
+      }
+      if (ConnectionExpiry != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(ConnectionExpiry);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -651,6 +741,14 @@ namespace Iscp2.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(ExtensionFields);
       }
+      if (ConnectionId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ConnectionId);
+      }
+      if (ConnectionExpiry != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(ConnectionExpiry);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -675,6 +773,12 @@ namespace Iscp2.V1 {
       }
       if (extensionFields_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExtensionFields);
+      }
+      if (ConnectionId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ConnectionId);
+      }
+      if (ConnectionExpiry != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ConnectionExpiry);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -706,6 +810,12 @@ namespace Iscp2.V1 {
         }
         ExtensionFields.MergeFrom(other.ExtensionFields);
       }
+      if (other.ConnectionId.Length != 0) {
+        ConnectionId = other.ConnectionId;
+      }
+      if (other.ConnectionExpiry != 0L) {
+        ConnectionExpiry = other.ConnectionExpiry;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -717,7 +827,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -744,6 +858,14 @@ namespace Iscp2.V1 {
             input.ReadMessage(ExtensionFields);
             break;
           }
+          case 50: {
+            ConnectionId = input.ReadString();
+            break;
+          }
+          case 56: {
+            ConnectionExpiry = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -755,7 +877,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -782,6 +908,14 @@ namespace Iscp2.V1 {
             input.ReadMessage(ExtensionFields);
             break;
           }
+          case 50: {
+            ConnectionId = input.ReadString();
+            break;
+          }
+          case 56: {
+            ConnectionExpiry = input.ReadInt64();
+            break;
+          }
         }
       }
     }
@@ -789,6 +923,7 @@ namespace Iscp2.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class Disconnect : pb::IMessage<Disconnect>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1005,7 +1140,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -1035,7 +1174,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;

@@ -44,6 +44,9 @@ struct Iscp2_V1_ConnectRequest {
   /// Clears the value of `extensionFields`. Subsequent reads from it will return its default value.
   mutating func clearExtensionFields() {self._extensionFields = nil}
 
+  /// 再接続時に既存接続を指定
+  var connectionID: String = String()
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -72,6 +75,10 @@ struct Iscp2_V1_ConnectResponse {
   var hasExtensionFields: Bool {return self._extensionFields != nil}
   /// Clears the value of `extensionFields`. Subsequent reads from it will return its default value.
   mutating func clearExtensionFields() {self._extensionFields = nil}
+
+  var connectionID: String = String()
+
+  var connectionExpiry: Int64 = 0
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -124,6 +131,7 @@ extension Iscp2_V1_ConnectRequest: SwiftProtobuf.Message, SwiftProtobuf._Message
     4: .standard(proto: "ping_interval"),
     5: .standard(proto: "ping_timeout"),
     6: .standard(proto: "extension_fields"),
+    7: .standard(proto: "connection_id"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -138,6 +146,7 @@ extension Iscp2_V1_ConnectRequest: SwiftProtobuf.Message, SwiftProtobuf._Message
       case 4: try { try decoder.decodeSingularUInt32Field(value: &self.pingInterval) }()
       case 5: try { try decoder.decodeSingularUInt32Field(value: &self.pingTimeout) }()
       case 6: try { try decoder.decodeSingularMessageField(value: &self._extensionFields) }()
+      case 7: try { try decoder.decodeSingularStringField(value: &self.connectionID) }()
       default: break
       }
     }
@@ -166,6 +175,9 @@ extension Iscp2_V1_ConnectRequest: SwiftProtobuf.Message, SwiftProtobuf._Message
     try { if let v = self._extensionFields {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
     } }()
+    if !self.connectionID.isEmpty {
+      try visitor.visitSingularStringField(value: self.connectionID, fieldNumber: 7)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -176,6 +188,7 @@ extension Iscp2_V1_ConnectRequest: SwiftProtobuf.Message, SwiftProtobuf._Message
     if lhs.pingInterval != rhs.pingInterval {return false}
     if lhs.pingTimeout != rhs.pingTimeout {return false}
     if lhs._extensionFields != rhs._extensionFields {return false}
+    if lhs.connectionID != rhs.connectionID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -189,6 +202,8 @@ extension Iscp2_V1_ConnectResponse: SwiftProtobuf.Message, SwiftProtobuf._Messag
     3: .standard(proto: "result_code"),
     4: .standard(proto: "result_string"),
     5: .standard(proto: "extension_fields"),
+    6: .standard(proto: "connection_id"),
+    7: .standard(proto: "connection_expiry"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -202,6 +217,8 @@ extension Iscp2_V1_ConnectResponse: SwiftProtobuf.Message, SwiftProtobuf._Messag
       case 3: try { try decoder.decodeSingularEnumField(value: &self.resultCode) }()
       case 4: try { try decoder.decodeSingularStringField(value: &self.resultString) }()
       case 5: try { try decoder.decodeSingularMessageField(value: &self._extensionFields) }()
+      case 6: try { try decoder.decodeSingularStringField(value: &self.connectionID) }()
+      case 7: try { try decoder.decodeSingularInt64Field(value: &self.connectionExpiry) }()
       default: break
       }
     }
@@ -227,6 +244,12 @@ extension Iscp2_V1_ConnectResponse: SwiftProtobuf.Message, SwiftProtobuf._Messag
     try { if let v = self._extensionFields {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
     } }()
+    if !self.connectionID.isEmpty {
+      try visitor.visitSingularStringField(value: self.connectionID, fieldNumber: 6)
+    }
+    if self.connectionExpiry != 0 {
+      try visitor.visitSingularInt64Field(value: self.connectionExpiry, fieldNumber: 7)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -236,6 +259,8 @@ extension Iscp2_V1_ConnectResponse: SwiftProtobuf.Message, SwiftProtobuf._Messag
     if lhs.resultCode != rhs.resultCode {return false}
     if lhs.resultString != rhs.resultString {return false}
     if lhs._extensionFields != rhs._extensionFields {return false}
+    if lhs.connectionID != rhs.connectionID {return false}
+    if lhs.connectionExpiry != rhs.connectionExpiry {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
