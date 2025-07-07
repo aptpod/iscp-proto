@@ -52,7 +52,7 @@ public final class ConnectionProto {
     java.lang.String[] descriptorData = {
       "\n\031iscp2/v1/connection.proto\022\010iscp2.v1\032$i" +
       "scp2/v1/extensions/connection.proto\032\032isc" +
-      "p2/v1/result_code.proto\"\277\002\n\016ConnectReque" +
+      "p2/v1/result_code.proto\"\357\002\n\016ConnectReque" +
       "st\022\035\n\nrequest_id\030\001 \001(\rR\trequestId\022)\n\020pro" +
       "tocol_version\030\002 \001(\tR\017protocolVersion\022\027\n\007" +
       "node_id\030\003 \001(\tR\006nodeId\022#\n\rping_interval\030\004" +
@@ -60,26 +60,28 @@ public final class ConnectionProto {
       "R\013pingTimeout\022]\n\020extension_fields\030\006 \001(\0132" +
       "2.iscp2.v1.extensions.ConnectRequestExte" +
       "nsionFieldsR\017extensionFields\022#\n\rconnecti" +
-      "on_id\030\007 \001(\tR\014connectionId\"\351\002\n\017ConnectRes" +
-      "ponse\022\035\n\nrequest_id\030\001 \001(\rR\trequestId\022)\n\020" +
-      "protocol_version\030\002 \001(\tR\017protocolVersion\022" +
-      "5\n\013result_code\030\003 \001(\0162\024.iscp2.v1.ResultCo" +
-      "deR\nresultCode\022#\n\rresult_string\030\004 \001(\tR\014r" +
-      "esultString\022^\n\020extension_fields\030\005 \001(\01323." +
-      "iscp2.v1.extensions.ConnectResponseExten" +
-      "sionFieldsR\017extensionFields\022#\n\rconnectio" +
-      "n_id\030\006 \001(\tR\014connectionId\022+\n\021connection_e" +
-      "xpiry\030\007 \001(\003R\020connectionExpiry\"\303\001\n\nDiscon" +
-      "nect\0225\n\013result_code\030\001 \001(\0162\024.iscp2.v1.Res" +
-      "ultCodeR\nresultCode\022#\n\rresult_string\030\002 \001" +
-      "(\tR\014resultString\022Y\n\020extension_fields\030\003 \001" +
-      "(\0132..iscp2.v1.extensions.DisconnectExten" +
-      "sionFieldsR\017extensionFieldsB\252\001\n com.gith" +
-      "ub.aptpod.proto.iscp2.v1B\017ConnectionProt" +
-      "oP\001Z4github.com/aptpod/iscp-proto/gen/go" +
-      "/iscp2/v1;iscp2v1\242\002\003IXX\252\002\010Iscp2.V1\312\002\010Isc" +
-      "p2\\V1\342\002\024Iscp2\\V1\\GPBMetadata\352\002\tIscp2::V1" +
-      "b\006proto3"
+      "on_id\030\007 \001(\tR\014connectionId\022.\n\023connection_" +
+      "group_id\030\010 \001(\tR\021connectionGroupId\"\231\003\n\017Co" +
+      "nnectResponse\022\035\n\nrequest_id\030\001 \001(\rR\treque" +
+      "stId\022)\n\020protocol_version\030\002 \001(\tR\017protocol" +
+      "Version\0225\n\013result_code\030\003 \001(\0162\024.iscp2.v1." +
+      "ResultCodeR\nresultCode\022#\n\rresult_string\030" +
+      "\004 \001(\tR\014resultString\022^\n\020extension_fields\030" +
+      "\005 \001(\01323.iscp2.v1.extensions.ConnectRespo" +
+      "nseExtensionFieldsR\017extensionFields\022#\n\rc" +
+      "onnection_id\030\006 \001(\tR\014connectionId\022+\n\021conn" +
+      "ection_expiry\030\007 \001(\003R\020connectionExpiry\022.\n" +
+      "\023connection_group_id\030\010 \001(\tR\021connectionGr" +
+      "oupId\"\303\001\n\nDisconnect\0225\n\013result_code\030\001 \001(" +
+      "\0162\024.iscp2.v1.ResultCodeR\nresultCode\022#\n\rr" +
+      "esult_string\030\002 \001(\tR\014resultString\022Y\n\020exte" +
+      "nsion_fields\030\003 \001(\0132..iscp2.v1.extensions" +
+      ".DisconnectExtensionFieldsR\017extensionFie" +
+      "ldsB\252\001\n com.github.aptpod.proto.iscp2.v1" +
+      "B\017ConnectionProtoP\001Z4github.com/aptpod/i" +
+      "scp-proto/gen/go/iscp2/v1;iscp2v1\242\002\003IXX\252" +
+      "\002\010Iscp2.V1\312\002\010Iscp2\\V1\342\002\024Iscp2\\V1\\GPBMeta" +
+      "data\352\002\tIscp2::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -92,13 +94,13 @@ public final class ConnectionProto {
     internal_static_iscp2_v1_ConnectRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_iscp2_v1_ConnectRequest_descriptor,
-        new java.lang.String[] { "RequestId", "ProtocolVersion", "NodeId", "PingInterval", "PingTimeout", "ExtensionFields", "ConnectionId", });
+        new java.lang.String[] { "RequestId", "ProtocolVersion", "NodeId", "PingInterval", "PingTimeout", "ExtensionFields", "ConnectionId", "ConnectionGroupId", });
     internal_static_iscp2_v1_ConnectResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_iscp2_v1_ConnectResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_iscp2_v1_ConnectResponse_descriptor,
-        new java.lang.String[] { "RequestId", "ProtocolVersion", "ResultCode", "ResultString", "ExtensionFields", "ConnectionId", "ConnectionExpiry", });
+        new java.lang.String[] { "RequestId", "ProtocolVersion", "ResultCode", "ResultString", "ExtensionFields", "ConnectionId", "ConnectionExpiry", "ConnectionGroupId", });
     internal_static_iscp2_v1_Disconnect_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_iscp2_v1_Disconnect_fieldAccessorTable = new

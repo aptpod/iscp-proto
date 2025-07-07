@@ -164,6 +164,31 @@ public object ConnectRequestKt {
     public fun clearConnectionId() {
       _builder.clearConnectionId()
     }
+
+    /**
+     * ```
+     * マルチコネクションで指定する。
+     * ```
+     *
+     * `string connection_group_id = 8 [json_name = "connectionGroupId"];`
+     */
+    public var connectionGroupId: kotlin.String
+      @kotlin.jvm.JvmName("getConnectionGroupId")
+        get() = _builder.connectionGroupId
+      @kotlin.jvm.JvmName("setConnectionGroupId")
+        set(value) {
+        _builder.connectionGroupId = value
+      }
+    /**
+     * ```
+     * マルチコネクションで指定する。
+     * ```
+     *
+     * `string connection_group_id = 8 [json_name = "connectionGroupId"];`
+     */
+    public fun clearConnectionGroupId() {
+      _builder.clearConnectionGroupId()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

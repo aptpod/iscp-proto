@@ -83,4 +83,16 @@ public interface ConnectResponseOrBuilder extends
    * @return The connectionExpiry.
    */
   long getConnectionExpiry();
+
+  /**
+   * <code>string connection_group_id = 8 [json_name = "connectionGroupId"];</code>
+   * @return The connectionGroupId.
+   */
+  java.lang.String getConnectionGroupId();
+  /**
+   * <code>string connection_group_id = 8 [json_name = "connectionGroupId"];</code>
+   * @return The bytes for connectionGroupId.
+   */
+  com.google.protobuf.ByteString
+      getConnectionGroupIdBytes();
 }

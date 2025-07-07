@@ -31,6 +31,7 @@ private static final long serialVersionUID = 0L;
     protocolVersion_ = "";
     nodeId_ = "";
     connectionId_ = "";
+    connectionGroupId_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -231,6 +232,53 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CONNECTION_GROUP_ID_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object connectionGroupId_ = "";
+  /**
+   * <pre>
+   * マルチコネクションで指定する。
+   * </pre>
+   *
+   * <code>string connection_group_id = 8 [json_name = "connectionGroupId"];</code>
+   * @return The connectionGroupId.
+   */
+  @java.lang.Override
+  public java.lang.String getConnectionGroupId() {
+    java.lang.Object ref = connectionGroupId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      connectionGroupId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * マルチコネクションで指定する。
+   * </pre>
+   *
+   * <code>string connection_group_id = 8 [json_name = "connectionGroupId"];</code>
+   * @return The bytes for connectionGroupId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getConnectionGroupIdBytes() {
+    java.lang.Object ref = connectionGroupId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      connectionGroupId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -266,6 +314,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(connectionId_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 7, connectionId_);
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(connectionGroupId_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 8, connectionGroupId_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -300,6 +351,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(connectionId_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(7, connectionId_);
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(connectionGroupId_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(8, connectionGroupId_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -332,6 +386,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getConnectionId()
         .equals(other.getConnectionId())) return false;
+    if (!getConnectionGroupId()
+        .equals(other.getConnectionGroupId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -359,6 +415,8 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
     hash = (53 * hash) + getConnectionId().hashCode();
+    hash = (37 * hash) + CONNECTION_GROUP_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getConnectionGroupId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -507,6 +565,7 @@ private static final long serialVersionUID = 0L;
         extensionFieldsBuilder_ = null;
       }
       connectionId_ = "";
+      connectionGroupId_ = "";
       return this;
     }
 
@@ -565,6 +624,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.connectionId_ = connectionId_;
       }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.connectionGroupId_ = connectionGroupId_;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -605,6 +667,11 @@ private static final long serialVersionUID = 0L;
       if (!other.getConnectionId().isEmpty()) {
         connectionId_ = other.connectionId_;
         bitField0_ |= 0x00000040;
+        onChanged();
+      }
+      if (!other.getConnectionGroupId().isEmpty()) {
+        connectionGroupId_ = other.connectionGroupId_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -670,6 +737,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 58
+            case 66: {
+              connectionGroupId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1136,6 +1208,98 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       connectionId_ = value;
       bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object connectionGroupId_ = "";
+    /**
+     * <pre>
+     * マルチコネクションで指定する。
+     * </pre>
+     *
+     * <code>string connection_group_id = 8 [json_name = "connectionGroupId"];</code>
+     * @return The connectionGroupId.
+     */
+    public java.lang.String getConnectionGroupId() {
+      java.lang.Object ref = connectionGroupId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectionGroupId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * マルチコネクションで指定する。
+     * </pre>
+     *
+     * <code>string connection_group_id = 8 [json_name = "connectionGroupId"];</code>
+     * @return The bytes for connectionGroupId.
+     */
+    public com.google.protobuf.ByteString
+        getConnectionGroupIdBytes() {
+      java.lang.Object ref = connectionGroupId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectionGroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * マルチコネクションで指定する。
+     * </pre>
+     *
+     * <code>string connection_group_id = 8 [json_name = "connectionGroupId"];</code>
+     * @param value The connectionGroupId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConnectionGroupId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      connectionGroupId_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * マルチコネクションで指定する。
+     * </pre>
+     *
+     * <code>string connection_group_id = 8 [json_name = "connectionGroupId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConnectionGroupId() {
+      connectionGroupId_ = getDefaultInstance().getConnectionGroupId();
+      bitField0_ = (bitField0_ & ~0x00000080);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * マルチコネクションで指定する。
+     * </pre>
+     *
+     * <code>string connection_group_id = 8 [json_name = "connectionGroupId"];</code>
+     * @param value The bytes for connectionGroupId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConnectionGroupIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      connectionGroupId_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }

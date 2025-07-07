@@ -47,6 +47,9 @@ struct Iscp2_V1_ConnectRequest {
   /// 再接続時に既存接続を指定
   var connectionID: String = String()
 
+  /// マルチコネクションで指定する。
+  var connectionGroupID: String = String()
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -79,6 +82,8 @@ struct Iscp2_V1_ConnectResponse {
   var connectionID: String = String()
 
   var connectionExpiry: Int64 = 0
+
+  var connectionGroupID: String = String()
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -132,6 +137,7 @@ extension Iscp2_V1_ConnectRequest: SwiftProtobuf.Message, SwiftProtobuf._Message
     5: .standard(proto: "ping_timeout"),
     6: .standard(proto: "extension_fields"),
     7: .standard(proto: "connection_id"),
+    8: .standard(proto: "connection_group_id"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -147,6 +153,7 @@ extension Iscp2_V1_ConnectRequest: SwiftProtobuf.Message, SwiftProtobuf._Message
       case 5: try { try decoder.decodeSingularUInt32Field(value: &self.pingTimeout) }()
       case 6: try { try decoder.decodeSingularMessageField(value: &self._extensionFields) }()
       case 7: try { try decoder.decodeSingularStringField(value: &self.connectionID) }()
+      case 8: try { try decoder.decodeSingularStringField(value: &self.connectionGroupID) }()
       default: break
       }
     }
@@ -178,6 +185,9 @@ extension Iscp2_V1_ConnectRequest: SwiftProtobuf.Message, SwiftProtobuf._Message
     if !self.connectionID.isEmpty {
       try visitor.visitSingularStringField(value: self.connectionID, fieldNumber: 7)
     }
+    if !self.connectionGroupID.isEmpty {
+      try visitor.visitSingularStringField(value: self.connectionGroupID, fieldNumber: 8)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -189,6 +199,7 @@ extension Iscp2_V1_ConnectRequest: SwiftProtobuf.Message, SwiftProtobuf._Message
     if lhs.pingTimeout != rhs.pingTimeout {return false}
     if lhs._extensionFields != rhs._extensionFields {return false}
     if lhs.connectionID != rhs.connectionID {return false}
+    if lhs.connectionGroupID != rhs.connectionGroupID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -204,6 +215,7 @@ extension Iscp2_V1_ConnectResponse: SwiftProtobuf.Message, SwiftProtobuf._Messag
     5: .standard(proto: "extension_fields"),
     6: .standard(proto: "connection_id"),
     7: .standard(proto: "connection_expiry"),
+    8: .standard(proto: "connection_group_id"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -219,6 +231,7 @@ extension Iscp2_V1_ConnectResponse: SwiftProtobuf.Message, SwiftProtobuf._Messag
       case 5: try { try decoder.decodeSingularMessageField(value: &self._extensionFields) }()
       case 6: try { try decoder.decodeSingularStringField(value: &self.connectionID) }()
       case 7: try { try decoder.decodeSingularInt64Field(value: &self.connectionExpiry) }()
+      case 8: try { try decoder.decodeSingularStringField(value: &self.connectionGroupID) }()
       default: break
       }
     }
@@ -250,6 +263,9 @@ extension Iscp2_V1_ConnectResponse: SwiftProtobuf.Message, SwiftProtobuf._Messag
     if self.connectionExpiry != 0 {
       try visitor.visitSingularInt64Field(value: self.connectionExpiry, fieldNumber: 7)
     }
+    if !self.connectionGroupID.isEmpty {
+      try visitor.visitSingularStringField(value: self.connectionGroupID, fieldNumber: 8)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -261,6 +277,7 @@ extension Iscp2_V1_ConnectResponse: SwiftProtobuf.Message, SwiftProtobuf._Messag
     if lhs._extensionFields != rhs._extensionFields {return false}
     if lhs.connectionID != rhs.connectionID {return false}
     if lhs.connectionExpiry != rhs.connectionExpiry {return false}
+    if lhs.connectionGroupID != rhs.connectionGroupID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

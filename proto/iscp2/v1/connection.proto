@@ -15,6 +15,7 @@ message ConnectRequest {
   uint32 ping_timeout = 5;
   iscp2.v1.extensions.ConnectRequestExtensionFields extension_fields = 6;
   string connection_id = 7;  // 再接続時に既存接続を指定
+  string connection_group_id = 8;  // マルチコネクションで指定する。
 }
 
 message ConnectResponse {
@@ -25,6 +26,7 @@ message ConnectResponse {
   iscp2.v1.extensions.ConnectResponseExtensionFields extension_fields = 5;
   string connection_id = 6;
   int64 connection_expiry = 7;
+  string connection_group_id = 8;
 }
 
 message Disconnect {

@@ -49,6 +49,13 @@ export class ConnectRequest extends Message<ConnectRequest> {
    */
   connectionId = "";
 
+  /**
+   * マルチコネクションで指定する。
+   *
+   * @generated from field: string connection_group_id = 8;
+   */
+  connectionGroupId = "";
+
   constructor(data?: PartialMessage<ConnectRequest>) {
     super();
     proto3.util.initPartial(data, this);
@@ -64,6 +71,7 @@ export class ConnectRequest extends Message<ConnectRequest> {
     { no: 5, name: "ping_timeout", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
     { no: 6, name: "extension_fields", kind: "message", T: ConnectRequestExtensionFields },
     { no: 7, name: "connection_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 8, name: "connection_group_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ConnectRequest {
@@ -122,6 +130,11 @@ export class ConnectResponse extends Message<ConnectResponse> {
    */
   connectionExpiry = protoInt64.zero;
 
+  /**
+   * @generated from field: string connection_group_id = 8;
+   */
+  connectionGroupId = "";
+
   constructor(data?: PartialMessage<ConnectResponse>) {
     super();
     proto3.util.initPartial(data, this);
@@ -137,6 +150,7 @@ export class ConnectResponse extends Message<ConnectResponse> {
     { no: 5, name: "extension_fields", kind: "message", T: ConnectResponseExtensionFields },
     { no: 6, name: "connection_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 7, name: "connection_expiry", kind: "scalar", T: 3 /* ScalarType.INT64 */ },
+    { no: 8, name: "connection_group_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ConnectResponse {

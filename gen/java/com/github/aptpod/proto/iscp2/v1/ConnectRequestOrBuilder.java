@@ -86,4 +86,24 @@ public interface ConnectRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getConnectionIdBytes();
+
+  /**
+   * <pre>
+   * マルチコネクションで指定する。
+   * </pre>
+   *
+   * <code>string connection_group_id = 8 [json_name = "connectionGroupId"];</code>
+   * @return The connectionGroupId.
+   */
+  java.lang.String getConnectionGroupId();
+  /**
+   * <pre>
+   * マルチコネクションで指定する。
+   * </pre>
+   *
+   * <code>string connection_group_id = 8 [json_name = "connectionGroupId"];</code>
+   * @return The bytes for connectionGroupId.
+   */
+  com.google.protobuf.ByteString
+      getConnectionGroupIdBytes();
 }

@@ -163,6 +163,23 @@ public object ConnectResponseKt {
     public fun clearConnectionExpiry() {
       _builder.clearConnectionExpiry()
     }
+
+    /**
+     * `string connection_group_id = 8 [json_name = "connectionGroupId"];`
+     */
+    public var connectionGroupId: kotlin.String
+      @kotlin.jvm.JvmName("getConnectionGroupId")
+        get() = _builder.connectionGroupId
+      @kotlin.jvm.JvmName("setConnectionGroupId")
+        set(value) {
+        _builder.connectionGroupId = value
+      }
+    /**
+     * `string connection_group_id = 8 [json_name = "connectionGroupId"];`
+     */
+    public fun clearConnectionGroupId() {
+      _builder.clearConnectionGroupId()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic
