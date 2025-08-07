@@ -106,4 +106,14 @@ public interface ConnectRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getConnectionGroupIdBytes();
+
+  /**
+   * <pre>
+   * コネクションの有効期限（Nano秒）
+   * </pre>
+   *
+   * <code>uint32 expiry_interval = 9 [json_name = "expiryInterval"];</code>
+   * @return The expiryInterval.
+   */
+  int getExpiryInterval();
 }

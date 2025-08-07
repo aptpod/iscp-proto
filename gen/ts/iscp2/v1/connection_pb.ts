@@ -4,7 +4,7 @@
 // @ts-nocheck
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
-import { Message, proto3, protoInt64 } from "@bufbuild/protobuf";
+import { Message, proto3 } from "@bufbuild/protobuf";
 import { ConnectRequestExtensionFields, ConnectResponseExtensionFields, DisconnectExtensionFields } from "./extensions/connection_pb.js";
 import { ResultCode } from "./result_code_pb.js";
 
@@ -56,6 +56,13 @@ export class ConnectRequest extends Message<ConnectRequest> {
    */
   connectionGroupId = "";
 
+  /**
+   * コネクションの有効期限（Nano秒）
+   *
+   * @generated from field: uint32 expiry_interval = 9;
+   */
+  expiryInterval = 0;
+
   constructor(data?: PartialMessage<ConnectRequest>) {
     super();
     proto3.util.initPartial(data, this);
@@ -72,6 +79,7 @@ export class ConnectRequest extends Message<ConnectRequest> {
     { no: 6, name: "extension_fields", kind: "message", T: ConnectRequestExtensionFields },
     { no: 7, name: "connection_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 8, name: "connection_group_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 9, name: "expiry_interval", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ConnectRequest {
@@ -126,11 +134,6 @@ export class ConnectResponse extends Message<ConnectResponse> {
   connectionId = "";
 
   /**
-   * @generated from field: int64 connection_expiry = 7;
-   */
-  connectionExpiry = protoInt64.zero;
-
-  /**
    * @generated from field: string connection_group_id = 8;
    */
   connectionGroupId = "";
@@ -149,7 +152,6 @@ export class ConnectResponse extends Message<ConnectResponse> {
     { no: 4, name: "result_string", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 5, name: "extension_fields", kind: "message", T: ConnectResponseExtensionFields },
     { no: 6, name: "connection_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 7, name: "connection_expiry", kind: "scalar", T: 3 /* ScalarType.INT64 */ },
     { no: 8, name: "connection_group_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ]);
 

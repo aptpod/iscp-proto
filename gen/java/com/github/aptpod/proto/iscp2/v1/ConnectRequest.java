@@ -279,6 +279,21 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int EXPIRY_INTERVAL_FIELD_NUMBER = 9;
+  private int expiryInterval_ = 0;
+  /**
+   * <pre>
+   * コネクションの有効期限（Nano秒）
+   * </pre>
+   *
+   * <code>uint32 expiry_interval = 9 [json_name = "expiryInterval"];</code>
+   * @return The expiryInterval.
+   */
+  @java.lang.Override
+  public int getExpiryInterval() {
+    return expiryInterval_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -317,6 +332,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(connectionGroupId_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 8, connectionGroupId_);
     }
+    if (expiryInterval_ != 0) {
+      output.writeUInt32(9, expiryInterval_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -354,6 +372,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(connectionGroupId_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(8, connectionGroupId_);
     }
+    if (expiryInterval_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt32Size(9, expiryInterval_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -388,6 +410,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getConnectionId())) return false;
     if (!getConnectionGroupId()
         .equals(other.getConnectionGroupId())) return false;
+    if (getExpiryInterval()
+        != other.getExpiryInterval()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -417,6 +441,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getConnectionId().hashCode();
     hash = (37 * hash) + CONNECTION_GROUP_ID_FIELD_NUMBER;
     hash = (53 * hash) + getConnectionGroupId().hashCode();
+    hash = (37 * hash) + EXPIRY_INTERVAL_FIELD_NUMBER;
+    hash = (53 * hash) + getExpiryInterval();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -566,6 +592,7 @@ private static final long serialVersionUID = 0L;
       }
       connectionId_ = "";
       connectionGroupId_ = "";
+      expiryInterval_ = 0;
       return this;
     }
 
@@ -627,6 +654,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.connectionGroupId_ = connectionGroupId_;
       }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.expiryInterval_ = expiryInterval_;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -673,6 +703,9 @@ private static final long serialVersionUID = 0L;
         connectionGroupId_ = other.connectionGroupId_;
         bitField0_ |= 0x00000080;
         onChanged();
+      }
+      if (other.getExpiryInterval() != 0) {
+        setExpiryInterval(other.getExpiryInterval());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -742,6 +775,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 66
+            case 72: {
+              expiryInterval_ = input.readUInt32();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1300,6 +1338,50 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       connectionGroupId_ = value;
       bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+
+    private int expiryInterval_ ;
+    /**
+     * <pre>
+     * コネクションの有効期限（Nano秒）
+     * </pre>
+     *
+     * <code>uint32 expiry_interval = 9 [json_name = "expiryInterval"];</code>
+     * @return The expiryInterval.
+     */
+    @java.lang.Override
+    public int getExpiryInterval() {
+      return expiryInterval_;
+    }
+    /**
+     * <pre>
+     * コネクションの有効期限（Nano秒）
+     * </pre>
+     *
+     * <code>uint32 expiry_interval = 9 [json_name = "expiryInterval"];</code>
+     * @param value The expiryInterval to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExpiryInterval(int value) {
+
+      expiryInterval_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * コネクションの有効期限（Nano秒）
+     * </pre>
+     *
+     * <code>uint32 expiry_interval = 9 [json_name = "expiryInterval"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearExpiryInterval() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      expiryInterval_ = 0;
       onChanged();
       return this;
     }

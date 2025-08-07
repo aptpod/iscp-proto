@@ -50,6 +50,9 @@ struct Iscp2_V1_ConnectRequest {
   /// マルチコネクションで指定する。
   var connectionGroupID: String = String()
 
+  /// コネクションの有効期限（Nano秒）
+  var expiryInterval: UInt32 = 0
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -80,8 +83,6 @@ struct Iscp2_V1_ConnectResponse {
   mutating func clearExtensionFields() {self._extensionFields = nil}
 
   var connectionID: String = String()
-
-  var connectionExpiry: Int64 = 0
 
   var connectionGroupID: String = String()
 
@@ -138,6 +139,7 @@ extension Iscp2_V1_ConnectRequest: SwiftProtobuf.Message, SwiftProtobuf._Message
     6: .standard(proto: "extension_fields"),
     7: .standard(proto: "connection_id"),
     8: .standard(proto: "connection_group_id"),
+    9: .standard(proto: "expiry_interval"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -154,6 +156,7 @@ extension Iscp2_V1_ConnectRequest: SwiftProtobuf.Message, SwiftProtobuf._Message
       case 6: try { try decoder.decodeSingularMessageField(value: &self._extensionFields) }()
       case 7: try { try decoder.decodeSingularStringField(value: &self.connectionID) }()
       case 8: try { try decoder.decodeSingularStringField(value: &self.connectionGroupID) }()
+      case 9: try { try decoder.decodeSingularUInt32Field(value: &self.expiryInterval) }()
       default: break
       }
     }
@@ -188,6 +191,9 @@ extension Iscp2_V1_ConnectRequest: SwiftProtobuf.Message, SwiftProtobuf._Message
     if !self.connectionGroupID.isEmpty {
       try visitor.visitSingularStringField(value: self.connectionGroupID, fieldNumber: 8)
     }
+    if self.expiryInterval != 0 {
+      try visitor.visitSingularUInt32Field(value: self.expiryInterval, fieldNumber: 9)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -200,6 +206,7 @@ extension Iscp2_V1_ConnectRequest: SwiftProtobuf.Message, SwiftProtobuf._Message
     if lhs._extensionFields != rhs._extensionFields {return false}
     if lhs.connectionID != rhs.connectionID {return false}
     if lhs.connectionGroupID != rhs.connectionGroupID {return false}
+    if lhs.expiryInterval != rhs.expiryInterval {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -214,7 +221,6 @@ extension Iscp2_V1_ConnectResponse: SwiftProtobuf.Message, SwiftProtobuf._Messag
     4: .standard(proto: "result_string"),
     5: .standard(proto: "extension_fields"),
     6: .standard(proto: "connection_id"),
-    7: .standard(proto: "connection_expiry"),
     8: .standard(proto: "connection_group_id"),
   ]
 
@@ -230,7 +236,6 @@ extension Iscp2_V1_ConnectResponse: SwiftProtobuf.Message, SwiftProtobuf._Messag
       case 4: try { try decoder.decodeSingularStringField(value: &self.resultString) }()
       case 5: try { try decoder.decodeSingularMessageField(value: &self._extensionFields) }()
       case 6: try { try decoder.decodeSingularStringField(value: &self.connectionID) }()
-      case 7: try { try decoder.decodeSingularInt64Field(value: &self.connectionExpiry) }()
       case 8: try { try decoder.decodeSingularStringField(value: &self.connectionGroupID) }()
       default: break
       }
@@ -260,9 +265,6 @@ extension Iscp2_V1_ConnectResponse: SwiftProtobuf.Message, SwiftProtobuf._Messag
     if !self.connectionID.isEmpty {
       try visitor.visitSingularStringField(value: self.connectionID, fieldNumber: 6)
     }
-    if self.connectionExpiry != 0 {
-      try visitor.visitSingularInt64Field(value: self.connectionExpiry, fieldNumber: 7)
-    }
     if !self.connectionGroupID.isEmpty {
       try visitor.visitSingularStringField(value: self.connectionGroupID, fieldNumber: 8)
     }
@@ -276,7 +278,6 @@ extension Iscp2_V1_ConnectResponse: SwiftProtobuf.Message, SwiftProtobuf._Messag
     if lhs.resultString != rhs.resultString {return false}
     if lhs._extensionFields != rhs._extensionFields {return false}
     if lhs.connectionID != rhs.connectionID {return false}
-    if lhs.connectionExpiry != rhs.connectionExpiry {return false}
     if lhs.connectionGroupID != rhs.connectionGroupID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

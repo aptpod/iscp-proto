@@ -79,12 +79,6 @@ public interface ConnectResponseOrBuilder extends
       getConnectionIdBytes();
 
   /**
-   * <code>int64 connection_expiry = 7 [json_name = "connectionExpiry"];</code>
-   * @return The connectionExpiry.
-   */
-  long getConnectionExpiry();
-
-  /**
    * <code>string connection_group_id = 8 [json_name = "connectionGroupId"];</code>
    * @return The connectionGroupId.
    */

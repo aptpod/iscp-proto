@@ -148,23 +148,6 @@ public object ConnectResponseKt {
     }
 
     /**
-     * `int64 connection_expiry = 7 [json_name = "connectionExpiry"];`
-     */
-    public var connectionExpiry: kotlin.Long
-      @kotlin.jvm.JvmName("getConnectionExpiry")
-        get() = _builder.connectionExpiry
-      @kotlin.jvm.JvmName("setConnectionExpiry")
-        set(value) {
-        _builder.connectionExpiry = value
-      }
-    /**
-     * `int64 connection_expiry = 7 [json_name = "connectionExpiry"];`
-     */
-    public fun clearConnectionExpiry() {
-      _builder.clearConnectionExpiry()
-    }
-
-    /**
      * `string connection_group_id = 8 [json_name = "connectionGroupId"];`
      */
     public var connectionGroupId: kotlin.String

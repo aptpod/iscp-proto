@@ -26,7 +26,7 @@ namespace Iscp2.V1 {
           string.Concat(
             "Chlpc2NwMi92MS9jb25uZWN0aW9uLnByb3RvEghpc2NwMi52MRokaXNjcDIv",
             "djEvZXh0ZW5zaW9ucy9jb25uZWN0aW9uLnByb3RvGhppc2NwMi92MS9yZXN1",
-            "bHRfY29kZS5wcm90byLvAgoOQ29ubmVjdFJlcXVlc3QSHQoKcmVxdWVzdF9p",
+            "bHRfY29kZS5wcm90byKYAwoOQ29ubmVjdFJlcXVlc3QSHQoKcmVxdWVzdF9p",
             "ZBgBIAEoDVIJcmVxdWVzdElkEikKEHByb3RvY29sX3ZlcnNpb24YAiABKAlS",
             "D3Byb3RvY29sVmVyc2lvbhIXCgdub2RlX2lkGAMgASgJUgZub2RlSWQSIwoN",
             "cGluZ19pbnRlcnZhbBgEIAEoDVIMcGluZ0ludGVydmFsEiEKDHBpbmdfdGlt",
@@ -34,30 +34,29 @@ namespace Iscp2.V1 {
             "IAEoCzIyLmlzY3AyLnYxLmV4dGVuc2lvbnMuQ29ubmVjdFJlcXVlc3RFeHRl",
             "bnNpb25GaWVsZHNSD2V4dGVuc2lvbkZpZWxkcxIjCg1jb25uZWN0aW9uX2lk",
             "GAcgASgJUgxjb25uZWN0aW9uSWQSLgoTY29ubmVjdGlvbl9ncm91cF9pZBgI",
-            "IAEoCVIRY29ubmVjdGlvbkdyb3VwSWQimQMKD0Nvbm5lY3RSZXNwb25zZRId",
-            "CgpyZXF1ZXN0X2lkGAEgASgNUglyZXF1ZXN0SWQSKQoQcHJvdG9jb2xfdmVy",
-            "c2lvbhgCIAEoCVIPcHJvdG9jb2xWZXJzaW9uEjUKC3Jlc3VsdF9jb2RlGAMg",
-            "ASgOMhQuaXNjcDIudjEuUmVzdWx0Q29kZVIKcmVzdWx0Q29kZRIjCg1yZXN1",
-            "bHRfc3RyaW5nGAQgASgJUgxyZXN1bHRTdHJpbmcSXgoQZXh0ZW5zaW9uX2Zp",
-            "ZWxkcxgFIAEoCzIzLmlzY3AyLnYxLmV4dGVuc2lvbnMuQ29ubmVjdFJlc3Bv",
-            "bnNlRXh0ZW5zaW9uRmllbGRzUg9leHRlbnNpb25GaWVsZHMSIwoNY29ubmVj",
-            "dGlvbl9pZBgGIAEoCVIMY29ubmVjdGlvbklkEisKEWNvbm5lY3Rpb25fZXhw",
-            "aXJ5GAcgASgDUhBjb25uZWN0aW9uRXhwaXJ5Ei4KE2Nvbm5lY3Rpb25fZ3Jv",
-            "dXBfaWQYCCABKAlSEWNvbm5lY3Rpb25Hcm91cElkIsMBCgpEaXNjb25uZWN0",
-            "EjUKC3Jlc3VsdF9jb2RlGAEgASgOMhQuaXNjcDIudjEuUmVzdWx0Q29kZVIK",
-            "cmVzdWx0Q29kZRIjCg1yZXN1bHRfc3RyaW5nGAIgASgJUgxyZXN1bHRTdHJp",
-            "bmcSWQoQZXh0ZW5zaW9uX2ZpZWxkcxgDIAEoCzIuLmlzY3AyLnYxLmV4dGVu",
-            "c2lvbnMuRGlzY29ubmVjdEV4dGVuc2lvbkZpZWxkc1IPZXh0ZW5zaW9uRmll",
-            "bGRzQqoBCiBjb20uZ2l0aHViLmFwdHBvZC5wcm90by5pc2NwMi52MUIPQ29u",
-            "bmVjdGlvblByb3RvUAFaNGdpdGh1Yi5jb20vYXB0cG9kL2lzY3AtcHJvdG8v",
-            "Z2VuL2dvL2lzY3AyL3YxO2lzY3AydjGiAgNJWFiqAghJc2NwMi5WMcoCCElz",
-            "Y3AyXFYx4gIUSXNjcDJcVjFcR1BCTWV0YWRhdGHqAglJc2NwMjo6VjFiBnBy",
-            "b3RvMw=="));
+            "IAEoCVIRY29ubmVjdGlvbkdyb3VwSWQSJwoPZXhwaXJ5X2ludGVydmFsGAkg",
+            "ASgNUg5leHBpcnlJbnRlcnZhbCLsAgoPQ29ubmVjdFJlc3BvbnNlEh0KCnJl",
+            "cXVlc3RfaWQYASABKA1SCXJlcXVlc3RJZBIpChBwcm90b2NvbF92ZXJzaW9u",
+            "GAIgASgJUg9wcm90b2NvbFZlcnNpb24SNQoLcmVzdWx0X2NvZGUYAyABKA4y",
+            "FC5pc2NwMi52MS5SZXN1bHRDb2RlUgpyZXN1bHRDb2RlEiMKDXJlc3VsdF9z",
+            "dHJpbmcYBCABKAlSDHJlc3VsdFN0cmluZxJeChBleHRlbnNpb25fZmllbGRz",
+            "GAUgASgLMjMuaXNjcDIudjEuZXh0ZW5zaW9ucy5Db25uZWN0UmVzcG9uc2VF",
+            "eHRlbnNpb25GaWVsZHNSD2V4dGVuc2lvbkZpZWxkcxIjCg1jb25uZWN0aW9u",
+            "X2lkGAYgASgJUgxjb25uZWN0aW9uSWQSLgoTY29ubmVjdGlvbl9ncm91cF9p",
+            "ZBgIIAEoCVIRY29ubmVjdGlvbkdyb3VwSWQiwwEKCkRpc2Nvbm5lY3QSNQoL",
+            "cmVzdWx0X2NvZGUYASABKA4yFC5pc2NwMi52MS5SZXN1bHRDb2RlUgpyZXN1",
+            "bHRDb2RlEiMKDXJlc3VsdF9zdHJpbmcYAiABKAlSDHJlc3VsdFN0cmluZxJZ",
+            "ChBleHRlbnNpb25fZmllbGRzGAMgASgLMi4uaXNjcDIudjEuZXh0ZW5zaW9u",
+            "cy5EaXNjb25uZWN0RXh0ZW5zaW9uRmllbGRzUg9leHRlbnNpb25GaWVsZHNC",
+            "qgEKIGNvbS5naXRodWIuYXB0cG9kLnByb3RvLmlzY3AyLnYxQg9Db25uZWN0",
+            "aW9uUHJvdG9QAVo0Z2l0aHViLmNvbS9hcHRwb2QvaXNjcC1wcm90by9nZW4v",
+            "Z28vaXNjcDIvdjE7aXNjcDJ2MaICA0lYWKoCCElzY3AyLlYxygIISXNjcDJc",
+            "VjHiAhRJc2NwMlxWMVxHUEJNZXRhZGF0YeoCCUlzY3AyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Iscp2.V1.Extensions.ConnectionReflection.Descriptor, global::Iscp2.V1.ResultCodeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.ConnectRequest), global::Iscp2.V1.ConnectRequest.Parser, new[]{ "RequestId", "ProtocolVersion", "NodeId", "PingInterval", "PingTimeout", "ExtensionFields", "ConnectionId", "ConnectionGroupId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.ConnectResponse), global::Iscp2.V1.ConnectResponse.Parser, new[]{ "RequestId", "ProtocolVersion", "ResultCode", "ResultString", "ExtensionFields", "ConnectionId", "ConnectionExpiry", "ConnectionGroupId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.ConnectRequest), global::Iscp2.V1.ConnectRequest.Parser, new[]{ "RequestId", "ProtocolVersion", "NodeId", "PingInterval", "PingTimeout", "ExtensionFields", "ConnectionId", "ConnectionGroupId", "ExpiryInterval" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.ConnectResponse), global::Iscp2.V1.ConnectResponse.Parser, new[]{ "RequestId", "ProtocolVersion", "ResultCode", "ResultString", "ExtensionFields", "ConnectionId", "ConnectionGroupId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.Disconnect), global::Iscp2.V1.Disconnect.Parser, new[]{ "ResultCode", "ResultString", "ExtensionFields" }, null, null, null, null)
           }));
     }
@@ -108,6 +107,7 @@ namespace Iscp2.V1 {
       extensionFields_ = other.extensionFields_ != null ? other.extensionFields_.Clone() : null;
       connectionId_ = other.connectionId_;
       connectionGroupId_ = other.connectionGroupId_;
+      expiryInterval_ = other.expiryInterval_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -219,6 +219,21 @@ namespace Iscp2.V1 {
       }
     }
 
+    /// <summary>Field number for the "expiry_interval" field.</summary>
+    public const int ExpiryIntervalFieldNumber = 9;
+    private uint expiryInterval_;
+    /// <summary>
+    /// コネクションの有効期限（Nano秒）
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ExpiryInterval {
+      get { return expiryInterval_; }
+      set {
+        expiryInterval_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -242,6 +257,7 @@ namespace Iscp2.V1 {
       if (!object.Equals(ExtensionFields, other.ExtensionFields)) return false;
       if (ConnectionId != other.ConnectionId) return false;
       if (ConnectionGroupId != other.ConnectionGroupId) return false;
+      if (ExpiryInterval != other.ExpiryInterval) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -257,6 +273,7 @@ namespace Iscp2.V1 {
       if (extensionFields_ != null) hash ^= ExtensionFields.GetHashCode();
       if (ConnectionId.Length != 0) hash ^= ConnectionId.GetHashCode();
       if (ConnectionGroupId.Length != 0) hash ^= ConnectionGroupId.GetHashCode();
+      if (ExpiryInterval != 0) hash ^= ExpiryInterval.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -307,6 +324,10 @@ namespace Iscp2.V1 {
         output.WriteRawTag(66);
         output.WriteString(ConnectionGroupId);
       }
+      if (ExpiryInterval != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(ExpiryInterval);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -349,6 +370,10 @@ namespace Iscp2.V1 {
         output.WriteRawTag(66);
         output.WriteString(ConnectionGroupId);
       }
+      if (ExpiryInterval != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(ExpiryInterval);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -382,6 +407,9 @@ namespace Iscp2.V1 {
       }
       if (ConnectionGroupId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ConnectionGroupId);
+      }
+      if (ExpiryInterval != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ExpiryInterval);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -421,6 +449,9 @@ namespace Iscp2.V1 {
       }
       if (other.ConnectionGroupId.Length != 0) {
         ConnectionGroupId = other.ConnectionGroupId;
+      }
+      if (other.ExpiryInterval != 0) {
+        ExpiryInterval = other.ExpiryInterval;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -474,6 +505,10 @@ namespace Iscp2.V1 {
           }
           case 66: {
             ConnectionGroupId = input.ReadString();
+            break;
+          }
+          case 72: {
+            ExpiryInterval = input.ReadUInt32();
             break;
           }
         }
@@ -530,6 +565,10 @@ namespace Iscp2.V1 {
             ConnectionGroupId = input.ReadString();
             break;
           }
+          case 72: {
+            ExpiryInterval = input.ReadUInt32();
+            break;
+          }
         }
       }
     }
@@ -578,7 +617,6 @@ namespace Iscp2.V1 {
       resultString_ = other.resultString_;
       extensionFields_ = other.extensionFields_ != null ? other.extensionFields_.Clone() : null;
       connectionId_ = other.connectionId_;
-      connectionExpiry_ = other.connectionExpiry_;
       connectionGroupId_ = other.connectionGroupId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -661,18 +699,6 @@ namespace Iscp2.V1 {
       }
     }
 
-    /// <summary>Field number for the "connection_expiry" field.</summary>
-    public const int ConnectionExpiryFieldNumber = 7;
-    private long connectionExpiry_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long ConnectionExpiry {
-      get { return connectionExpiry_; }
-      set {
-        connectionExpiry_ = value;
-      }
-    }
-
     /// <summary>Field number for the "connection_group_id" field.</summary>
     public const int ConnectionGroupIdFieldNumber = 8;
     private string connectionGroupId_ = "";
@@ -706,7 +732,6 @@ namespace Iscp2.V1 {
       if (ResultString != other.ResultString) return false;
       if (!object.Equals(ExtensionFields, other.ExtensionFields)) return false;
       if (ConnectionId != other.ConnectionId) return false;
-      if (ConnectionExpiry != other.ConnectionExpiry) return false;
       if (ConnectionGroupId != other.ConnectionGroupId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -721,7 +746,6 @@ namespace Iscp2.V1 {
       if (ResultString.Length != 0) hash ^= ResultString.GetHashCode();
       if (extensionFields_ != null) hash ^= ExtensionFields.GetHashCode();
       if (ConnectionId.Length != 0) hash ^= ConnectionId.GetHashCode();
-      if (ConnectionExpiry != 0L) hash ^= ConnectionExpiry.GetHashCode();
       if (ConnectionGroupId.Length != 0) hash ^= ConnectionGroupId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -765,10 +789,6 @@ namespace Iscp2.V1 {
         output.WriteRawTag(50);
         output.WriteString(ConnectionId);
       }
-      if (ConnectionExpiry != 0L) {
-        output.WriteRawTag(56);
-        output.WriteInt64(ConnectionExpiry);
-      }
       if (ConnectionGroupId.Length != 0) {
         output.WriteRawTag(66);
         output.WriteString(ConnectionGroupId);
@@ -807,10 +827,6 @@ namespace Iscp2.V1 {
         output.WriteRawTag(50);
         output.WriteString(ConnectionId);
       }
-      if (ConnectionExpiry != 0L) {
-        output.WriteRawTag(56);
-        output.WriteInt64(ConnectionExpiry);
-      }
       if (ConnectionGroupId.Length != 0) {
         output.WriteRawTag(66);
         output.WriteString(ConnectionGroupId);
@@ -842,9 +858,6 @@ namespace Iscp2.V1 {
       }
       if (ConnectionId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ConnectionId);
-      }
-      if (ConnectionExpiry != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ConnectionExpiry);
       }
       if (ConnectionGroupId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ConnectionGroupId);
@@ -881,9 +894,6 @@ namespace Iscp2.V1 {
       }
       if (other.ConnectionId.Length != 0) {
         ConnectionId = other.ConnectionId;
-      }
-      if (other.ConnectionExpiry != 0L) {
-        ConnectionExpiry = other.ConnectionExpiry;
       }
       if (other.ConnectionGroupId.Length != 0) {
         ConnectionGroupId = other.ConnectionGroupId;
@@ -934,10 +944,6 @@ namespace Iscp2.V1 {
             ConnectionId = input.ReadString();
             break;
           }
-          case 56: {
-            ConnectionExpiry = input.ReadInt64();
-            break;
-          }
           case 66: {
             ConnectionGroupId = input.ReadString();
             break;
@@ -986,10 +992,6 @@ namespace Iscp2.V1 {
           }
           case 50: {
             ConnectionId = input.ReadString();
-            break;
-          }
-          case 56: {
-            ConnectionExpiry = input.ReadInt64();
             break;
           }
           case 66: {

@@ -221,17 +221,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CONNECTION_EXPIRY_FIELD_NUMBER = 7;
-  private long connectionExpiry_ = 0L;
-  /**
-   * <code>int64 connection_expiry = 7 [json_name = "connectionExpiry"];</code>
-   * @return The connectionExpiry.
-   */
-  @java.lang.Override
-  public long getConnectionExpiry() {
-    return connectionExpiry_;
-  }
-
   public static final int CONNECTION_GROUP_ID_FIELD_NUMBER = 8;
   @SuppressWarnings("serial")
   private volatile java.lang.Object connectionGroupId_ = "";
@@ -303,9 +292,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(connectionId_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 6, connectionId_);
     }
-    if (connectionExpiry_ != 0L) {
-      output.writeInt64(7, connectionExpiry_);
-    }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(connectionGroupId_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 8, connectionGroupId_);
     }
@@ -339,10 +325,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(connectionId_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(6, connectionId_);
     }
-    if (connectionExpiry_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(7, connectionExpiry_);
-    }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(connectionGroupId_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(8, connectionGroupId_);
     }
@@ -375,8 +357,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!getConnectionId()
         .equals(other.getConnectionId())) return false;
-    if (getConnectionExpiry()
-        != other.getConnectionExpiry()) return false;
     if (!getConnectionGroupId()
         .equals(other.getConnectionGroupId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -404,9 +384,6 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
     hash = (53 * hash) + getConnectionId().hashCode();
-    hash = (37 * hash) + CONNECTION_EXPIRY_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getConnectionExpiry());
     hash = (37 * hash) + CONNECTION_GROUP_ID_FIELD_NUMBER;
     hash = (53 * hash) + getConnectionGroupId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -556,7 +533,6 @@ private static final long serialVersionUID = 0L;
         extensionFieldsBuilder_ = null;
       }
       connectionId_ = "";
-      connectionExpiry_ = 0L;
       connectionGroupId_ = "";
       return this;
     }
@@ -614,9 +590,6 @@ private static final long serialVersionUID = 0L;
         result.connectionId_ = connectionId_;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.connectionExpiry_ = connectionExpiry_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.connectionGroupId_ = connectionGroupId_;
       }
       result.bitField0_ |= to_bitField0_;
@@ -658,12 +631,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000020;
         onChanged();
       }
-      if (other.getConnectionExpiry() != 0L) {
-        setConnectionExpiry(other.getConnectionExpiry());
-      }
       if (!other.getConnectionGroupId().isEmpty()) {
         connectionGroupId_ = other.connectionGroupId_;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -724,14 +694,9 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 50
-            case 56: {
-              connectionExpiry_ = input.readInt64();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 56
             case 66: {
               connectionGroupId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000040;
               break;
             } // case 66
             default: {
@@ -1171,38 +1136,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long connectionExpiry_ ;
-    /**
-     * <code>int64 connection_expiry = 7 [json_name = "connectionExpiry"];</code>
-     * @return The connectionExpiry.
-     */
-    @java.lang.Override
-    public long getConnectionExpiry() {
-      return connectionExpiry_;
-    }
-    /**
-     * <code>int64 connection_expiry = 7 [json_name = "connectionExpiry"];</code>
-     * @param value The connectionExpiry to set.
-     * @return This builder for chaining.
-     */
-    public Builder setConnectionExpiry(long value) {
-
-      connectionExpiry_ = value;
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int64 connection_expiry = 7 [json_name = "connectionExpiry"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearConnectionExpiry() {
-      bitField0_ = (bitField0_ & ~0x00000040);
-      connectionExpiry_ = 0L;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object connectionGroupId_ = "";
     /**
      * <code>string connection_group_id = 8 [json_name = "connectionGroupId"];</code>
@@ -1246,7 +1179,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       connectionGroupId_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1256,7 +1189,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearConnectionGroupId() {
       connectionGroupId_ = getDefaultInstance().getConnectionGroupId();
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1270,7 +1203,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       connectionGroupId_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }

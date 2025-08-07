@@ -189,6 +189,31 @@ public object ConnectRequestKt {
     public fun clearConnectionGroupId() {
       _builder.clearConnectionGroupId()
     }
+
+    /**
+     * ```
+     * コネクションの有効期限（Nano秒）
+     * ```
+     *
+     * `uint32 expiry_interval = 9 [json_name = "expiryInterval"];`
+     */
+    public var expiryInterval: kotlin.Int
+      @kotlin.jvm.JvmName("getExpiryInterval")
+        get() = _builder.expiryInterval
+      @kotlin.jvm.JvmName("setExpiryInterval")
+        set(value) {
+        _builder.expiryInterval = value
+      }
+    /**
+     * ```
+     * コネクションの有効期限（Nano秒）
+     * ```
+     *
+     * `uint32 expiry_interval = 9 [json_name = "expiryInterval"];`
+     */
+    public fun clearExpiryInterval() {
+      _builder.clearExpiryInterval()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

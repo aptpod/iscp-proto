@@ -16,6 +16,7 @@ message ConnectRequest {
   iscp2.v1.extensions.ConnectRequestExtensionFields extension_fields = 6;
   string connection_id = 7;  // 再接続時に既存接続を指定
   string connection_group_id = 8;  // マルチコネクションで指定する。
+  uint32 expiry_interval = 9; // コネクションの有効期限（秒）
 }
 
 message ConnectResponse {
@@ -25,7 +26,6 @@ message ConnectResponse {
   string result_string = 4;
   iscp2.v1.extensions.ConnectResponseExtensionFields extension_fields = 5;
   string connection_id = 6;
-  int64 connection_expiry = 7;
   string connection_group_id = 8;
 }
 
