@@ -18,6 +18,7 @@ message DataPointGroup {
     uint32 data_id_alias = 2;
   }
   repeated DataPoint data_points = 3;
+  repeated uint32 data_filter_ids = 4;
 }
 
 message DataPoint {

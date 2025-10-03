@@ -223,7 +223,7 @@ namespace Iscp2.V1 {
     public const int ExpiryIntervalFieldNumber = 9;
     private uint expiryInterval_;
     /// <summary>
-    /// コネクションの有効期限（Nano秒）
+    /// コネクションの有効期限（秒）
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

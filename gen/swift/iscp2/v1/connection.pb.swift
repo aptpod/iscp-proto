@@ -50,7 +50,7 @@ struct Iscp2_V1_ConnectRequest {
   /// マルチコネクションで指定する。
   var connectionGroupID: String = String()
 
-  /// コネクションの有効期限（Nano秒）
+  /// コネクションの有効期限（秒）
   var expiryInterval: UInt32 = 0
 
   var unknownFields = SwiftProtobuf.UnknownStorage()

@@ -34,7 +34,7 @@ type ConnectRequest struct {
 	ExtensionFields   *extensions.ConnectRequestExtensionFields `protobuf:"bytes,6,opt,name=extension_fields,json=extensionFields,proto3" json:"extension_fields,omitempty"`
 	ConnectionId      string                                    `protobuf:"bytes,7,opt,name=connection_id,json=connectionId,proto3" json:"connection_id,omitempty"`                  // 再接続時に既存接続を指定
 	ConnectionGroupId string                                    `protobuf:"bytes,8,opt,name=connection_group_id,json=connectionGroupId,proto3" json:"connection_group_id,omitempty"` // マルチコネクションで指定する。
-	ExpiryInterval    uint32                                    `protobuf:"varint,9,opt,name=expiry_interval,json=expiryInterval,proto3" json:"expiry_interval,omitempty"`           // コネクションの有効期限（Nano秒）
+	ExpiryInterval    uint32                                    `protobuf:"varint,9,opt,name=expiry_interval,json=expiryInterval,proto3" json:"expiry_interval,omitempty"`           // コネクションの有効期限（秒）
 }
 
 func (x *ConnectRequest) Reset() {

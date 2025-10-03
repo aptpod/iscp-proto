@@ -27,27 +27,28 @@ namespace Iscp2.V1 {
             "ChVpc2NwMi92MS9jb21tb24ucHJvdG8SCGlzY3AyLnYxInwKC1N0cmVhbUNo",
             "dW5rEicKD3NlcXVlbmNlX251bWJlchgBIAEoDVIOc2VxdWVuY2VOdW1iZXIS",
             "RAoRZGF0YV9wb2ludF9ncm91cHMYAiADKAsyGC5pc2NwMi52MS5EYXRhUG9p",
-            "bnRHcm91cFIPZGF0YVBvaW50R3JvdXBzIq0BCg5EYXRhUG9pbnRHcm91cBIr",
+            "bnRHcm91cFIPZGF0YVBvaW50R3JvdXBzItUBCg5EYXRhUG9pbnRHcm91cBIr",
             "CgdkYXRhX2lkGAEgASgLMhAuaXNjcDIudjEuRGF0YUlESABSBmRhdGFJZBIk",
             "Cg1kYXRhX2lkX2FsaWFzGAIgASgNSABSC2RhdGFJZEFsaWFzEjQKC2RhdGFf",
             "cG9pbnRzGAMgAygLMhMuaXNjcDIudjEuRGF0YVBvaW50UgpkYXRhUG9pbnRz",
-            "QhIKEGRhdGFfaWRfb3JfYWxpYXMiSAoJRGF0YVBvaW50EiEKDGVsYXBzZWRf",
-            "dGltZRgBIAEoElILZWxhcHNlZFRpbWUSGAoHcGF5bG9hZBgCIAEoDFIHcGF5",
-            "bG9hZCIwCgZEYXRhSUQSEgoEbmFtZRgBIAEoCVIEbmFtZRISCgR0eXBlGAIg",
-            "ASgJUgR0eXBlInEKEERvd25zdHJlYW1GaWx0ZXISJAoOc291cmNlX25vZGVf",
-            "aWQYASABKAlSDHNvdXJjZU5vZGVJZBI3CgxkYXRhX2ZpbHRlcnMYAiADKAsy",
-            "FC5pc2NwMi52MS5EYXRhRmlsdGVyUgtkYXRhRmlsdGVycyI0CgpEYXRhRmls",
-            "dGVyEhIKBG5hbWUYASABKAlSBG5hbWUSEgoEdHlwZRgCIAEoCVIEdHlwZSow",
-            "CgNRb1MSDgoKVU5SRUxJQUJMRRAAEgwKCFJFTElBQkxFEAESCwoHUEFSVElB",
-            "TBACQqYBCiBjb20uZ2l0aHViLmFwdHBvZC5wcm90by5pc2NwMi52MUILQ29t",
-            "bW9uUHJvdG9QAVo0Z2l0aHViLmNvbS9hcHRwb2QvaXNjcC1wcm90by9nZW4v",
-            "Z28vaXNjcDIvdjE7aXNjcDJ2MaICA0lYWKoCCElzY3AyLlYxygIISXNjcDJc",
-            "VjHiAhRJc2NwMlxWMVxHUEJNZXRhZGF0YeoCCUlzY3AyOjpWMWIGcHJvdG8z"));
+            "EiYKD2RhdGFfZmlsdGVyX2lkcxgEIAMoDVINZGF0YUZpbHRlcklkc0ISChBk",
+            "YXRhX2lkX29yX2FsaWFzIkgKCURhdGFQb2ludBIhCgxlbGFwc2VkX3RpbWUY",
+            "ASABKBJSC2VsYXBzZWRUaW1lEhgKB3BheWxvYWQYAiABKAxSB3BheWxvYWQi",
+            "MAoGRGF0YUlEEhIKBG5hbWUYASABKAlSBG5hbWUSEgoEdHlwZRgCIAEoCVIE",
+            "dHlwZSJxChBEb3duc3RyZWFtRmlsdGVyEiQKDnNvdXJjZV9ub2RlX2lkGAEg",
+            "ASgJUgxzb3VyY2VOb2RlSWQSNwoMZGF0YV9maWx0ZXJzGAIgAygLMhQuaXNj",
+            "cDIudjEuRGF0YUZpbHRlclILZGF0YUZpbHRlcnMiNAoKRGF0YUZpbHRlchIS",
+            "CgRuYW1lGAEgASgJUgRuYW1lEhIKBHR5cGUYAiABKAlSBHR5cGUqMAoDUW9T",
+            "Eg4KClVOUkVMSUFCTEUQABIMCghSRUxJQUJMRRABEgsKB1BBUlRJQUwQAkKm",
+            "AQogY29tLmdpdGh1Yi5hcHRwb2QucHJvdG8uaXNjcDIudjFCC0NvbW1vblBy",
+            "b3RvUAFaNGdpdGh1Yi5jb20vYXB0cG9kL2lzY3AtcHJvdG8vZ2VuL2dvL2lz",
+            "Y3AyL3YxO2lzY3AydjGiAgNJWFiqAghJc2NwMi5WMcoCCElzY3AyXFYx4gIU",
+            "SXNjcDJcVjFcR1BCTWV0YWRhdGHqAglJc2NwMjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Iscp2.V1.QoS), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.StreamChunk), global::Iscp2.V1.StreamChunk.Parser, new[]{ "SequenceNumber", "DataPointGroups" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DataPointGroup), global::Iscp2.V1.DataPointGroup.Parser, new[]{ "DataId", "DataIdAlias", "DataPoints" }, new[]{ "DataIdOrAlias" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DataPointGroup), global::Iscp2.V1.DataPointGroup.Parser, new[]{ "DataId", "DataIdAlias", "DataPoints", "DataFilterIds" }, new[]{ "DataIdOrAlias" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DataPoint), global::Iscp2.V1.DataPoint.Parser, new[]{ "ElapsedTime", "Payload" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DataID), global::Iscp2.V1.DataID.Parser, new[]{ "Name", "Type" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamFilter), global::Iscp2.V1.DownstreamFilter.Parser, new[]{ "SourceNodeId", "DataFilters" }, null, null, null, null),
@@ -327,6 +328,7 @@ namespace Iscp2.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataPointGroup(DataPointGroup other) : this() {
       dataPoints_ = other.dataPoints_.Clone();
+      dataFilterIds_ = other.dataFilterIds_.Clone();
       switch (other.DataIdOrAliasCase) {
         case DataIdOrAliasOneofCase.DataId:
           DataId = other.DataId.Clone();
@@ -394,6 +396,17 @@ namespace Iscp2.V1 {
       get { return dataPoints_; }
     }
 
+    /// <summary>Field number for the "data_filter_ids" field.</summary>
+    public const int DataFilterIdsFieldNumber = 4;
+    private static readonly pb::FieldCodec<uint> _repeated_dataFilterIds_codec
+        = pb::FieldCodec.ForUInt32(34);
+    private readonly pbc::RepeatedField<uint> dataFilterIds_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> DataFilterIds {
+      get { return dataFilterIds_; }
+    }
+
     private object dataIdOrAlias_;
     /// <summary>Enum of possible cases for the "data_id_or_alias" oneof.</summary>
     public enum DataIdOrAliasOneofCase {
@@ -433,6 +446,7 @@ namespace Iscp2.V1 {
       if (!object.Equals(DataId, other.DataId)) return false;
       if (DataIdAlias != other.DataIdAlias) return false;
       if(!dataPoints_.Equals(other.dataPoints_)) return false;
+      if(!dataFilterIds_.Equals(other.dataFilterIds_)) return false;
       if (DataIdOrAliasCase != other.DataIdOrAliasCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -444,6 +458,7 @@ namespace Iscp2.V1 {
       if (dataIdOrAliasCase_ == DataIdOrAliasOneofCase.DataId) hash ^= DataId.GetHashCode();
       if (HasDataIdAlias) hash ^= DataIdAlias.GetHashCode();
       hash ^= dataPoints_.GetHashCode();
+      hash ^= dataFilterIds_.GetHashCode();
       hash ^= (int) dataIdOrAliasCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -472,6 +487,7 @@ namespace Iscp2.V1 {
         output.WriteUInt32(DataIdAlias);
       }
       dataPoints_.WriteTo(output, _repeated_dataPoints_codec);
+      dataFilterIds_.WriteTo(output, _repeated_dataFilterIds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -491,6 +507,7 @@ namespace Iscp2.V1 {
         output.WriteUInt32(DataIdAlias);
       }
       dataPoints_.WriteTo(ref output, _repeated_dataPoints_codec);
+      dataFilterIds_.WriteTo(ref output, _repeated_dataFilterIds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -508,6 +525,7 @@ namespace Iscp2.V1 {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DataIdAlias);
       }
       size += dataPoints_.CalculateSize(_repeated_dataPoints_codec);
+      size += dataFilterIds_.CalculateSize(_repeated_dataFilterIds_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -521,6 +539,7 @@ namespace Iscp2.V1 {
         return;
       }
       dataPoints_.Add(other.dataPoints_);
+      dataFilterIds_.Add(other.dataFilterIds_);
       switch (other.DataIdOrAliasCase) {
         case DataIdOrAliasOneofCase.DataId:
           if (DataId == null) {
@@ -569,6 +588,11 @@ namespace Iscp2.V1 {
             dataPoints_.AddEntriesFrom(input, _repeated_dataPoints_codec);
             break;
           }
+          case 34:
+          case 32: {
+            dataFilterIds_.AddEntriesFrom(input, _repeated_dataFilterIds_codec);
+            break;
+          }
         }
       }
     #endif
@@ -603,6 +627,11 @@ namespace Iscp2.V1 {
           }
           case 26: {
             dataPoints_.AddEntriesFrom(ref input, _repeated_dataPoints_codec);
+            break;
+          }
+          case 34:
+          case 32: {
+            dataFilterIds_.AddEntriesFrom(ref input, _repeated_dataFilterIds_codec);
             break;
           }
         }

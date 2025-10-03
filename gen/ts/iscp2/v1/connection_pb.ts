@@ -57,7 +57,7 @@ export class ConnectRequest extends Message<ConnectRequest> {
   connectionGroupId = "";
 
   /**
-   * コネクションの有効期限（Nano秒）
+   * コネクションの有効期限（秒）
    *
    * @generated from field: uint32 expiry_interval = 9;
    */

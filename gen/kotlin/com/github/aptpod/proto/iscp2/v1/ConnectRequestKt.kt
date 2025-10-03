@@ -192,7 +192,7 @@ public object ConnectRequestKt {
 
     /**
      * ```
-     * コネクションの有効期限（Nano秒）
+     * コネクションの有効期限（秒）
      * ```
      *
      * `uint32 expiry_interval = 9 [json_name = "expiryInterval"];`
@@ -206,7 +206,7 @@ public object ConnectRequestKt {
       }
     /**
      * ```
-     * コネクションの有効期限（Nano秒）
+     * コネクションの有効期限（秒）
      * ```
      *
      * `uint32 expiry_interval = 9 [json_name = "expiryInterval"];`
