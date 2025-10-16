@@ -174,6 +174,32 @@ struct Iscp2_V1_DownstreamFilter {
   init() {}
 }
 
+struct Iscp2_V1_DownstreamFilterReference {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var downstreamFilterIndex: UInt32 = 0
+
+  var dataFilterIndex: UInt32 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+struct Iscp2_V1_DownstreamFilterReferences {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var references: [Iscp2_V1_DownstreamFilterReference] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 struct Iscp2_V1_DataFilter {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -196,6 +222,8 @@ extension Iscp2_V1_DataPointGroup.OneOf_DataIDOrAlias: @unchecked Sendable {}
 extension Iscp2_V1_DataPoint: @unchecked Sendable {}
 extension Iscp2_V1_DataID: @unchecked Sendable {}
 extension Iscp2_V1_DownstreamFilter: @unchecked Sendable {}
+extension Iscp2_V1_DownstreamFilterReference: @unchecked Sendable {}
+extension Iscp2_V1_DownstreamFilterReferences: @unchecked Sendable {}
 extension Iscp2_V1_DataFilter: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
@@ -429,6 +457,76 @@ extension Iscp2_V1_DownstreamFilter: SwiftProtobuf.Message, SwiftProtobuf._Messa
   static func ==(lhs: Iscp2_V1_DownstreamFilter, rhs: Iscp2_V1_DownstreamFilter) -> Bool {
     if lhs.sourceNodeID != rhs.sourceNodeID {return false}
     if lhs.dataFilters != rhs.dataFilters {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Iscp2_V1_DownstreamFilterReference: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".DownstreamFilterReference"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "downstream_filter_index"),
+    2: .standard(proto: "data_filter_index"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt32Field(value: &self.downstreamFilterIndex) }()
+      case 2: try { try decoder.decodeSingularUInt32Field(value: &self.dataFilterIndex) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.downstreamFilterIndex != 0 {
+      try visitor.visitSingularUInt32Field(value: self.downstreamFilterIndex, fieldNumber: 1)
+    }
+    if self.dataFilterIndex != 0 {
+      try visitor.visitSingularUInt32Field(value: self.dataFilterIndex, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Iscp2_V1_DownstreamFilterReference, rhs: Iscp2_V1_DownstreamFilterReference) -> Bool {
+    if lhs.downstreamFilterIndex != rhs.downstreamFilterIndex {return false}
+    if lhs.dataFilterIndex != rhs.dataFilterIndex {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Iscp2_V1_DownstreamFilterReferences: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".DownstreamFilterReferences"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "references"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.references) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.references.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.references, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Iscp2_V1_DownstreamFilterReferences, rhs: Iscp2_V1_DownstreamFilterReferences) -> Bool {
+    if lhs.references != rhs.references {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

@@ -68,75 +68,77 @@ namespace Iscp2.V1 {
             "Mi52MS5SZXN1bHRDb2RlUgpyZXN1bHRDb2RlEiMKDXJlc3VsdF9zdHJpbmcY",
             "AyABKAlSDHJlc3VsdFN0cmluZxJmChBleHRlbnNpb25fZmllbGRzGAQgASgL",
             "MjsuaXNjcDIudjEuZXh0ZW5zaW9ucy5Eb3duc3RyZWFtQ2xvc2VSZXNwb25z",
-            "ZUV4dGVuc2lvbkZpZWxkc1IPZXh0ZW5zaW9uRmllbGRzItACCg9Eb3duc3Ry",
+            "ZUV4dGVuc2lvbkZpZWxkc1IPZXh0ZW5zaW9uRmllbGRzIrgDCg9Eb3duc3Ry",
             "ZWFtQ2h1bmsSJgoPc3RyZWFtX2lkX2FsaWFzGAEgASgNUg1zdHJlYW1JZEFs",
             "aWFzEj0KDXVwc3RyZWFtX2luZm8YAiABKAsyFi5pc2NwMi52MS5VcHN0cmVh",
             "bUluZm9IAFIMdXBzdHJlYW1JbmZvEicKDnVwc3RyZWFtX2FsaWFzGAMgASgN",
             "SABSDXVwc3RyZWFtQWxpYXMSOAoMc3RyZWFtX2NodW5rGAQgASgLMhUuaXNj",
             "cDIudjEuU3RyZWFtQ2h1bmtSC3N0cmVhbUNodW5rEl4KEGV4dGVuc2lvbl9m",
             "aWVsZHMYBSABKAsyMy5pc2NwMi52MS5leHRlbnNpb25zLkRvd25zdHJlYW1D",
-            "aHVua0V4dGVuc2lvbkZpZWxkc1IPZXh0ZW5zaW9uRmllbGRzQhMKEXVwc3Ry",
-            "ZWFtX29yX2FsaWFzItgEChJEb3duc3RyZWFtQ2h1bmtBY2sSJgoPc3RyZWFt",
-            "X2lkX2FsaWFzGAEgASgNUg1zdHJlYW1JZEFsaWFzEhUKBmFja19pZBgCIAEo",
-            "DVIFYWNrSWQSOQoHcmVzdWx0cxgDIAMoCzIfLmlzY3AyLnYxLkRvd25zdHJl",
-            "YW1DaHVua1Jlc3VsdFIHcmVzdWx0cxJcChB1cHN0cmVhbV9hbGlhc2VzGAQg",
-            "AygLMjEuaXNjcDIudjEuRG93bnN0cmVhbUNodW5rQWNrLlVwc3RyZWFtQWxp",
-            "YXNlc0VudHJ5Ug91cHN0cmVhbUFsaWFzZXMSVwoPZGF0YV9pZF9hbGlhc2Vz",
-            "GAUgAygLMi8uaXNjcDIudjEuRG93bnN0cmVhbUNodW5rQWNrLkRhdGFJZEFs",
-            "aWFzZXNFbnRyeVINZGF0YUlkQWxpYXNlcxJhChBleHRlbnNpb25fZmllbGRz",
-            "GAYgASgLMjYuaXNjcDIudjEuZXh0ZW5zaW9ucy5Eb3duc3RyZWFtQ2h1bmtB",
-            "Y2tFeHRlbnNpb25GaWVsZHNSD2V4dGVuc2lvbkZpZWxkcxpaChRVcHN0cmVh",
-            "bUFsaWFzZXNFbnRyeRIQCgNrZXkYASABKA1SA2tleRIsCgV2YWx1ZRgCIAEo",
-            "CzIWLmlzY3AyLnYxLlVwc3RyZWFtSW5mb1IFdmFsdWU6AjgBGlIKEkRhdGFJ",
-            "ZEFsaWFzZXNFbnRyeRIQCgNrZXkYASABKA1SA2tleRImCgV2YWx1ZRgCIAEo",
-            "CzIQLmlzY3AyLnYxLkRhdGFJRFIFdmFsdWU6AjgBIqICChpEb3duc3RyZWFt",
-            "Q2h1bmtBY2tDb21wbGV0ZRImCg9zdHJlYW1faWRfYWxpYXMYASABKA1SDXN0",
-            "cmVhbUlkQWxpYXMSFQoGYWNrX2lkGAIgASgNUgVhY2tJZBI1CgtyZXN1bHRf",
-            "Y29kZRgDIAEoDjIULmlzY3AyLnYxLlJlc3VsdENvZGVSCnJlc3VsdENvZGUS",
-            "IwoNcmVzdWx0X3N0cmluZxgEIAEoCVIMcmVzdWx0U3RyaW5nEmkKEGV4dGVu",
-            "c2lvbl9maWVsZHMYBSABKAsyPi5pc2NwMi52MS5leHRlbnNpb25zLkRvd25z",
-            "dHJlYW1DaHVua0Fja0NvbXBsZXRlRXh0ZW5zaW9uRmllbGRzUg9leHRlbnNp",
-            "b25GaWVsZHMiowcKEkRvd25zdHJlYW1NZXRhZGF0YRIdCgpyZXF1ZXN0X2lk",
-            "GAEgASgNUglyZXF1ZXN0SWQSJgoPc3RyZWFtX2lkX2FsaWFzGA0gASgNUg1z",
-            "dHJlYW1JZEFsaWFzEjEKCWJhc2VfdGltZRgCIAEoCzISLmlzY3AyLnYxLkJh",
-            "c2VUaW1lSABSCGJhc2VUaW1lEj0KDXVwc3RyZWFtX29wZW4YAyABKAsyFi5p",
-            "c2NwMi52MS5VcHN0cmVhbU9wZW5IAFIMdXBzdHJlYW1PcGVuElkKF3Vwc3Ry",
-            "ZWFtX2Fibm9ybWFsX2Nsb3NlGAQgASgLMh8uaXNjcDIudjEuVXBzdHJlYW1B",
-            "Ym5vcm1hbENsb3NlSABSFXVwc3RyZWFtQWJub3JtYWxDbG9zZRJDCg91cHN0",
-            "cmVhbV9yZXN1bWUYBSABKAsyGC5pc2NwMi52MS5VcHN0cmVhbVJlc3VtZUgA",
-            "Ug51cHN0cmVhbVJlc3VtZRJTChV1cHN0cmVhbV9ub3JtYWxfY2xvc2UYBiAB",
-            "KAsyHS5pc2NwMi52MS5VcHN0cmVhbU5vcm1hbENsb3NlSABSE3Vwc3RyZWFt",
-            "Tm9ybWFsQ2xvc2USQwoPZG93bnN0cmVhbV9vcGVuGAcgASgLMhguaXNjcDIu",
-            "djEuRG93bnN0cmVhbU9wZW5IAFIOZG93bnN0cmVhbU9wZW4SXwoZZG93bnN0",
-            "cmVhbV9hYm5vcm1hbF9jbG9zZRgIIAEoCzIhLmlzY3AyLnYxLkRvd25zdHJl",
-            "YW1BYm5vcm1hbENsb3NlSABSF2Rvd25zdHJlYW1BYm5vcm1hbENsb3NlEkkK",
-            "EWRvd25zdHJlYW1fcmVzdW1lGAkgASgLMhouaXNjcDIudjEuRG93bnN0cmVh",
-            "bVJlc3VtZUgAUhBkb3duc3RyZWFtUmVzdW1lElkKF2Rvd25zdHJlYW1fbm9y",
-            "bWFsX2Nsb3NlGAogASgLMh8uaXNjcDIudjEuRG93bnN0cmVhbU5vcm1hbENs",
-            "b3NlSABSFWRvd25zdHJlYW1Ob3JtYWxDbG9zZRIkCg5zb3VyY2Vfbm9kZV9p",
-            "ZBgLIAEoCVIMc291cmNlTm9kZUlkEmEKEGV4dGVuc2lvbl9maWVsZHMYDCAB",
-            "KAsyNi5pc2NwMi52MS5leHRlbnNpb25zLkRvd25zdHJlYW1NZXRhZGF0YUV4",
-            "dGVuc2lvbkZpZWxkc1IPZXh0ZW5zaW9uRmllbGRzQgoKCG1ldGFkYXRhIvgB",
-            "ChVEb3duc3RyZWFtTWV0YWRhdGFBY2sSHQoKcmVxdWVzdF9pZBgBIAEoDVIJ",
-            "cmVxdWVzdElkEjUKC3Jlc3VsdF9jb2RlGAIgASgOMhQuaXNjcDIudjEuUmVz",
-            "dWx0Q29kZVIKcmVzdWx0Q29kZRIjCg1yZXN1bHRfc3RyaW5nGAMgASgJUgxy",
-            "ZXN1bHRTdHJpbmcSZAoQZXh0ZW5zaW9uX2ZpZWxkcxgEIAEoCzI5LmlzY3Ay",
-            "LnYxLmV4dGVuc2lvbnMuRG93bnN0cmVhbU1ldGFkYXRhQWNrRXh0ZW5zaW9u",
-            "RmllbGRzUg9leHRlbnNpb25GaWVsZHMicAoMVXBzdHJlYW1JbmZvEh0KCnNl",
-            "c3Npb25faWQYASABKAlSCXNlc3Npb25JZBIbCglzdHJlYW1faWQYAiABKAxS",
-            "CHN0cmVhbUlkEiQKDnNvdXJjZV9ub2RlX2lkGAMgASgJUgxzb3VyY2VOb2Rl",
-            "SWQiywIKFURvd25zdHJlYW1DaHVua1Jlc3VsdBIxChVzdHJlYW1faWRfb2Zf",
-            "dXBzdHJlYW0YASABKAxSEnN0cmVhbUlkT2ZVcHN0cmVhbRI9ChtzZXF1ZW5j",
-            "ZV9udW1iZXJfaW5fdXBzdHJlYW0YAiABKA1SGHNlcXVlbmNlTnVtYmVySW5V",
-            "cHN0cmVhbRI1CgtyZXN1bHRfY29kZRgDIAEoDjIULmlzY3AyLnYxLlJlc3Vs",
-            "dENvZGVSCnJlc3VsdENvZGUSIwoNcmVzdWx0X3N0cmluZxgEIAEoCVIMcmVz",
-            "dWx0U3RyaW5nEmQKEGV4dGVuc2lvbl9maWVsZHMYBSABKAsyOS5pc2NwMi52",
-            "MS5leHRlbnNpb25zLkRvd25zdHJlYW1DaHVua1Jlc3VsdEV4dGVuc2lvbkZp",
-            "ZWxkc1IPZXh0ZW5zaW9uRmllbGRzQqoBCiBjb20uZ2l0aHViLmFwdHBvZC5w",
-            "cm90by5pc2NwMi52MUIPRG93bnN0cmVhbVByb3RvUAFaNGdpdGh1Yi5jb20v",
-            "YXB0cG9kL2lzY3AtcHJvdG8vZ2VuL2dvL2lzY3AyL3YxO2lzY3AydjGiAgNJ",
-            "WFiqAghJc2NwMi5WMcoCCElzY3AyXFYx4gIUSXNjcDJcVjFcR1BCTWV0YWRh",
-            "dGHqAglJc2NwMjo6VjFiBnByb3RvMw=="));
+            "aHVua0V4dGVuc2lvbkZpZWxkc1IPZXh0ZW5zaW9uRmllbGRzEmYKHGRvd25z",
+            "dHJlYW1fZmlsdGVyX3JlZmVyZW5jZXMYBiADKAsyJC5pc2NwMi52MS5Eb3du",
+            "c3RyZWFtRmlsdGVyUmVmZXJlbmNlc1IaZG93bnN0cmVhbUZpbHRlclJlZmVy",
+            "ZW5jZXNCEwoRdXBzdHJlYW1fb3JfYWxpYXMi2AQKEkRvd25zdHJlYW1DaHVu",
+            "a0FjaxImCg9zdHJlYW1faWRfYWxpYXMYASABKA1SDXN0cmVhbUlkQWxpYXMS",
+            "FQoGYWNrX2lkGAIgASgNUgVhY2tJZBI5CgdyZXN1bHRzGAMgAygLMh8uaXNj",
+            "cDIudjEuRG93bnN0cmVhbUNodW5rUmVzdWx0UgdyZXN1bHRzElwKEHVwc3Ry",
+            "ZWFtX2FsaWFzZXMYBCADKAsyMS5pc2NwMi52MS5Eb3duc3RyZWFtQ2h1bmtB",
+            "Y2suVXBzdHJlYW1BbGlhc2VzRW50cnlSD3Vwc3RyZWFtQWxpYXNlcxJXCg9k",
+            "YXRhX2lkX2FsaWFzZXMYBSADKAsyLy5pc2NwMi52MS5Eb3duc3RyZWFtQ2h1",
+            "bmtBY2suRGF0YUlkQWxpYXNlc0VudHJ5Ug1kYXRhSWRBbGlhc2VzEmEKEGV4",
+            "dGVuc2lvbl9maWVsZHMYBiABKAsyNi5pc2NwMi52MS5leHRlbnNpb25zLkRv",
+            "d25zdHJlYW1DaHVua0Fja0V4dGVuc2lvbkZpZWxkc1IPZXh0ZW5zaW9uRmll",
+            "bGRzGloKFFVwc3RyZWFtQWxpYXNlc0VudHJ5EhAKA2tleRgBIAEoDVIDa2V5",
+            "EiwKBXZhbHVlGAIgASgLMhYuaXNjcDIudjEuVXBzdHJlYW1JbmZvUgV2YWx1",
+            "ZToCOAEaUgoSRGF0YUlkQWxpYXNlc0VudHJ5EhAKA2tleRgBIAEoDVIDa2V5",
+            "EiYKBXZhbHVlGAIgASgLMhAuaXNjcDIudjEuRGF0YUlEUgV2YWx1ZToCOAEi",
+            "ogIKGkRvd25zdHJlYW1DaHVua0Fja0NvbXBsZXRlEiYKD3N0cmVhbV9pZF9h",
+            "bGlhcxgBIAEoDVINc3RyZWFtSWRBbGlhcxIVCgZhY2tfaWQYAiABKA1SBWFj",
+            "a0lkEjUKC3Jlc3VsdF9jb2RlGAMgASgOMhQuaXNjcDIudjEuUmVzdWx0Q29k",
+            "ZVIKcmVzdWx0Q29kZRIjCg1yZXN1bHRfc3RyaW5nGAQgASgJUgxyZXN1bHRT",
+            "dHJpbmcSaQoQZXh0ZW5zaW9uX2ZpZWxkcxgFIAEoCzI+LmlzY3AyLnYxLmV4",
+            "dGVuc2lvbnMuRG93bnN0cmVhbUNodW5rQWNrQ29tcGxldGVFeHRlbnNpb25G",
+            "aWVsZHNSD2V4dGVuc2lvbkZpZWxkcyKjBwoSRG93bnN0cmVhbU1ldGFkYXRh",
+            "Eh0KCnJlcXVlc3RfaWQYASABKA1SCXJlcXVlc3RJZBImCg9zdHJlYW1faWRf",
+            "YWxpYXMYDSABKA1SDXN0cmVhbUlkQWxpYXMSMQoJYmFzZV90aW1lGAIgASgL",
+            "MhIuaXNjcDIudjEuQmFzZVRpbWVIAFIIYmFzZVRpbWUSPQoNdXBzdHJlYW1f",
+            "b3BlbhgDIAEoCzIWLmlzY3AyLnYxLlVwc3RyZWFtT3BlbkgAUgx1cHN0cmVh",
+            "bU9wZW4SWQoXdXBzdHJlYW1fYWJub3JtYWxfY2xvc2UYBCABKAsyHy5pc2Nw",
+            "Mi52MS5VcHN0cmVhbUFibm9ybWFsQ2xvc2VIAFIVdXBzdHJlYW1BYm5vcm1h",
+            "bENsb3NlEkMKD3Vwc3RyZWFtX3Jlc3VtZRgFIAEoCzIYLmlzY3AyLnYxLlVw",
+            "c3RyZWFtUmVzdW1lSABSDnVwc3RyZWFtUmVzdW1lElMKFXVwc3RyZWFtX25v",
+            "cm1hbF9jbG9zZRgGIAEoCzIdLmlzY3AyLnYxLlVwc3RyZWFtTm9ybWFsQ2xv",
+            "c2VIAFITdXBzdHJlYW1Ob3JtYWxDbG9zZRJDCg9kb3duc3RyZWFtX29wZW4Y",
+            "ByABKAsyGC5pc2NwMi52MS5Eb3duc3RyZWFtT3BlbkgAUg5kb3duc3RyZWFt",
+            "T3BlbhJfChlkb3duc3RyZWFtX2Fibm9ybWFsX2Nsb3NlGAggASgLMiEuaXNj",
+            "cDIudjEuRG93bnN0cmVhbUFibm9ybWFsQ2xvc2VIAFIXZG93bnN0cmVhbUFi",
+            "bm9ybWFsQ2xvc2USSQoRZG93bnN0cmVhbV9yZXN1bWUYCSABKAsyGi5pc2Nw",
+            "Mi52MS5Eb3duc3RyZWFtUmVzdW1lSABSEGRvd25zdHJlYW1SZXN1bWUSWQoX",
+            "ZG93bnN0cmVhbV9ub3JtYWxfY2xvc2UYCiABKAsyHy5pc2NwMi52MS5Eb3du",
+            "c3RyZWFtTm9ybWFsQ2xvc2VIAFIVZG93bnN0cmVhbU5vcm1hbENsb3NlEiQK",
+            "DnNvdXJjZV9ub2RlX2lkGAsgASgJUgxzb3VyY2VOb2RlSWQSYQoQZXh0ZW5z",
+            "aW9uX2ZpZWxkcxgMIAEoCzI2LmlzY3AyLnYxLmV4dGVuc2lvbnMuRG93bnN0",
+            "cmVhbU1ldGFkYXRhRXh0ZW5zaW9uRmllbGRzUg9leHRlbnNpb25GaWVsZHNC",
+            "CgoIbWV0YWRhdGEi+AEKFURvd25zdHJlYW1NZXRhZGF0YUFjaxIdCgpyZXF1",
+            "ZXN0X2lkGAEgASgNUglyZXF1ZXN0SWQSNQoLcmVzdWx0X2NvZGUYAiABKA4y",
+            "FC5pc2NwMi52MS5SZXN1bHRDb2RlUgpyZXN1bHRDb2RlEiMKDXJlc3VsdF9z",
+            "dHJpbmcYAyABKAlSDHJlc3VsdFN0cmluZxJkChBleHRlbnNpb25fZmllbGRz",
+            "GAQgASgLMjkuaXNjcDIudjEuZXh0ZW5zaW9ucy5Eb3duc3RyZWFtTWV0YWRh",
+            "dGFBY2tFeHRlbnNpb25GaWVsZHNSD2V4dGVuc2lvbkZpZWxkcyJwCgxVcHN0",
+            "cmVhbUluZm8SHQoKc2Vzc2lvbl9pZBgBIAEoCVIJc2Vzc2lvbklkEhsKCXN0",
+            "cmVhbV9pZBgCIAEoDFIIc3RyZWFtSWQSJAoOc291cmNlX25vZGVfaWQYAyAB",
+            "KAlSDHNvdXJjZU5vZGVJZCLLAgoVRG93bnN0cmVhbUNodW5rUmVzdWx0EjEK",
+            "FXN0cmVhbV9pZF9vZl91cHN0cmVhbRgBIAEoDFISc3RyZWFtSWRPZlVwc3Ry",
+            "ZWFtEj0KG3NlcXVlbmNlX251bWJlcl9pbl91cHN0cmVhbRgCIAEoDVIYc2Vx",
+            "dWVuY2VOdW1iZXJJblVwc3RyZWFtEjUKC3Jlc3VsdF9jb2RlGAMgASgOMhQu",
+            "aXNjcDIudjEuUmVzdWx0Q29kZVIKcmVzdWx0Q29kZRIjCg1yZXN1bHRfc3Ry",
+            "aW5nGAQgASgJUgxyZXN1bHRTdHJpbmcSZAoQZXh0ZW5zaW9uX2ZpZWxkcxgF",
+            "IAEoCzI5LmlzY3AyLnYxLmV4dGVuc2lvbnMuRG93bnN0cmVhbUNodW5rUmVz",
+            "dWx0RXh0ZW5zaW9uRmllbGRzUg9leHRlbnNpb25GaWVsZHNCqgEKIGNvbS5n",
+            "aXRodWIuYXB0cG9kLnByb3RvLmlzY3AyLnYxQg9Eb3duc3RyZWFtUHJvdG9Q",
+            "AVo0Z2l0aHViLmNvbS9hcHRwb2QvaXNjcC1wcm90by9nZW4vZ28vaXNjcDIv",
+            "djE7aXNjcDJ2MaICA0lYWKoCCElzY3AyLlYxygIISXNjcDJcVjHiAhRJc2Nw",
+            "MlxWMVxHUEJNZXRhZGF0YeoCCUlzY3AyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Iscp2.V1.CommonReflection.Descriptor, global::Iscp2.V1.Extensions.DownstreamReflection.Descriptor, global::Iscp2.V1.MetadataReflection.Descriptor, global::Iscp2.V1.ResultCodeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -146,7 +148,7 @@ namespace Iscp2.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamResumeResponse), global::Iscp2.V1.DownstreamResumeResponse.Parser, new[]{ "RequestId", "ResultCode", "ResultString", "ExtensionFields" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamCloseRequest), global::Iscp2.V1.DownstreamCloseRequest.Parser, new[]{ "RequestId", "StreamId", "ExtensionFields" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamCloseResponse), global::Iscp2.V1.DownstreamCloseResponse.Parser, new[]{ "RequestId", "ResultCode", "ResultString", "ExtensionFields" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamChunk), global::Iscp2.V1.DownstreamChunk.Parser, new[]{ "StreamIdAlias", "UpstreamInfo", "UpstreamAlias", "StreamChunk", "ExtensionFields" }, new[]{ "UpstreamOrAlias" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamChunk), global::Iscp2.V1.DownstreamChunk.Parser, new[]{ "StreamIdAlias", "UpstreamInfo", "UpstreamAlias", "StreamChunk", "ExtensionFields", "DownstreamFilterReferences" }, new[]{ "UpstreamOrAlias" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamChunkAck), global::Iscp2.V1.DownstreamChunkAck.Parser, new[]{ "StreamIdAlias", "AckId", "Results", "UpstreamAliases", "DataIdAliases", "ExtensionFields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamChunkAckComplete), global::Iscp2.V1.DownstreamChunkAckComplete.Parser, new[]{ "StreamIdAlias", "AckId", "ResultCode", "ResultString", "ExtensionFields" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamMetadata), global::Iscp2.V1.DownstreamMetadata.Parser, new[]{ "RequestId", "StreamIdAlias", "BaseTime", "UpstreamOpen", "UpstreamAbnormalClose", "UpstreamResume", "UpstreamNormalClose", "DownstreamOpen", "DownstreamAbnormalClose", "DownstreamResume", "DownstreamNormalClose", "SourceNodeId", "ExtensionFields" }, new[]{ "Metadata" }, null, null, null),
@@ -159,6 +161,7 @@ namespace Iscp2.V1 {
 
   }
   #region Messages
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class DownstreamOpenRequest : pb::IMessage<DownstreamOpenRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -498,7 +501,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -548,7 +555,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -594,6 +605,7 @@ namespace Iscp2.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class DownstreamOpenResponse : pb::IMessage<DownstreamOpenResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -897,7 +909,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -939,7 +955,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -977,6 +997,7 @@ namespace Iscp2.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class DownstreamResumeRequest : pb::IMessage<DownstreamResumeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1222,7 +1243,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -1256,7 +1281,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -1286,6 +1315,7 @@ namespace Iscp2.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class DownstreamResumeResponse : pb::IMessage<DownstreamResumeResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1531,7 +1561,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -1565,7 +1599,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -1595,6 +1633,7 @@ namespace Iscp2.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class DownstreamCloseRequest : pb::IMessage<DownstreamCloseRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1811,7 +1850,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -1841,7 +1884,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -1867,6 +1914,7 @@ namespace Iscp2.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class DownstreamCloseResponse : pb::IMessage<DownstreamCloseResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2112,7 +2160,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -2146,7 +2198,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -2176,6 +2232,7 @@ namespace Iscp2.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class DownstreamChunk : pb::IMessage<DownstreamChunk>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2213,6 +2270,7 @@ namespace Iscp2.V1 {
       streamIdAlias_ = other.streamIdAlias_;
       streamChunk_ = other.streamChunk_ != null ? other.streamChunk_.Clone() : null;
       extensionFields_ = other.extensionFields_ != null ? other.extensionFields_.Clone() : null;
+      downstreamFilterReferences_ = other.downstreamFilterReferences_.Clone();
       switch (other.UpstreamOrAliasCase) {
         case UpstreamOrAliasOneofCase.UpstreamInfo:
           UpstreamInfo = other.UpstreamInfo.Clone();
@@ -2305,6 +2363,17 @@ namespace Iscp2.V1 {
       }
     }
 
+    /// <summary>Field number for the "downstream_filter_references" field.</summary>
+    public const int DownstreamFilterReferencesFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Iscp2.V1.DownstreamFilterReferences> _repeated_downstreamFilterReferences_codec
+        = pb::FieldCodec.ForMessage(50, global::Iscp2.V1.DownstreamFilterReferences.Parser);
+    private readonly pbc::RepeatedField<global::Iscp2.V1.DownstreamFilterReferences> downstreamFilterReferences_ = new pbc::RepeatedField<global::Iscp2.V1.DownstreamFilterReferences>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Iscp2.V1.DownstreamFilterReferences> DownstreamFilterReferences {
+      get { return downstreamFilterReferences_; }
+    }
+
     private object upstreamOrAlias_;
     /// <summary>Enum of possible cases for the "upstream_or_alias" oneof.</summary>
     public enum UpstreamOrAliasOneofCase {
@@ -2346,6 +2415,7 @@ namespace Iscp2.V1 {
       if (UpstreamAlias != other.UpstreamAlias) return false;
       if (!object.Equals(StreamChunk, other.StreamChunk)) return false;
       if (!object.Equals(ExtensionFields, other.ExtensionFields)) return false;
+      if(!downstreamFilterReferences_.Equals(other.downstreamFilterReferences_)) return false;
       if (UpstreamOrAliasCase != other.UpstreamOrAliasCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2359,6 +2429,7 @@ namespace Iscp2.V1 {
       if (HasUpstreamAlias) hash ^= UpstreamAlias.GetHashCode();
       if (streamChunk_ != null) hash ^= StreamChunk.GetHashCode();
       if (extensionFields_ != null) hash ^= ExtensionFields.GetHashCode();
+      hash ^= downstreamFilterReferences_.GetHashCode();
       hash ^= (int) upstreamOrAliasCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2398,6 +2469,7 @@ namespace Iscp2.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(ExtensionFields);
       }
+      downstreamFilterReferences_.WriteTo(output, _repeated_downstreamFilterReferences_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2428,6 +2500,7 @@ namespace Iscp2.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(ExtensionFields);
       }
+      downstreamFilterReferences_.WriteTo(ref output, _repeated_downstreamFilterReferences_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2453,6 +2526,7 @@ namespace Iscp2.V1 {
       if (extensionFields_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExtensionFields);
       }
+      size += downstreamFilterReferences_.CalculateSize(_repeated_downstreamFilterReferences_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2480,6 +2554,7 @@ namespace Iscp2.V1 {
         }
         ExtensionFields.MergeFrom(other.ExtensionFields);
       }
+      downstreamFilterReferences_.Add(other.downstreamFilterReferences_);
       switch (other.UpstreamOrAliasCase) {
         case UpstreamOrAliasOneofCase.UpstreamInfo:
           if (UpstreamInfo == null) {
@@ -2503,7 +2578,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -2538,6 +2617,10 @@ namespace Iscp2.V1 {
             input.ReadMessage(ExtensionFields);
             break;
           }
+          case 50: {
+            downstreamFilterReferences_.AddEntriesFrom(input, _repeated_downstreamFilterReferences_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2549,7 +2632,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -2584,6 +2671,10 @@ namespace Iscp2.V1 {
             input.ReadMessage(ExtensionFields);
             break;
           }
+          case 50: {
+            downstreamFilterReferences_.AddEntriesFrom(ref input, _repeated_downstreamFilterReferences_codec);
+            break;
+          }
         }
       }
     }
@@ -2591,6 +2682,7 @@ namespace Iscp2.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class DownstreamChunkAck : pb::IMessage<DownstreamChunkAck>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2861,7 +2953,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -2903,7 +2999,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -2941,6 +3041,7 @@ namespace Iscp2.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class DownstreamChunkAckComplete : pb::IMessage<DownstreamChunkAckComplete>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3215,7 +3316,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -3253,7 +3358,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -3287,6 +3396,7 @@ namespace Iscp2.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class DownstreamMetadata : pb::IMessage<DownstreamMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3874,7 +3984,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -3989,7 +4103,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -4100,6 +4218,7 @@ namespace Iscp2.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class DownstreamMetadataAck : pb::IMessage<DownstreamMetadataAck>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4345,7 +4464,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -4379,7 +4502,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -4409,6 +4536,7 @@ namespace Iscp2.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class UpstreamInfo : pb::IMessage<UpstreamInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4622,7 +4750,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -4649,7 +4781,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -4672,6 +4808,7 @@ namespace Iscp2.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class DownstreamChunkResult : pb::IMessage<DownstreamChunkResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4946,7 +5083,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -4984,7 +5125,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;

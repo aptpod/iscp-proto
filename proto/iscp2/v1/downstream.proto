@@ -65,6 +65,7 @@ message DownstreamChunk {
   }
   StreamChunk stream_chunk = 4;
   iscp2.v1.extensions.DownstreamChunkExtensionFields extension_fields = 5;
+  repeated DownstreamFilterReferences downstream_filter_references = 6;
 }
 
 message DownstreamChunkAck {

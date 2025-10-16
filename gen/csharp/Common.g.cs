@@ -36,13 +36,19 @@ namespace Iscp2.V1 {
             "bG9hZCIwCgZEYXRhSUQSEgoEbmFtZRgBIAEoCVIEbmFtZRISCgR0eXBlGAIg",
             "ASgJUgR0eXBlInEKEERvd25zdHJlYW1GaWx0ZXISJAoOc291cmNlX25vZGVf",
             "aWQYASABKAlSDHNvdXJjZU5vZGVJZBI3CgxkYXRhX2ZpbHRlcnMYAiADKAsy",
-            "FC5pc2NwMi52MS5EYXRhRmlsdGVyUgtkYXRhRmlsdGVycyI0CgpEYXRhRmls",
-            "dGVyEhIKBG5hbWUYASABKAlSBG5hbWUSEgoEdHlwZRgCIAEoCVIEdHlwZSow",
-            "CgNRb1MSDgoKVU5SRUxJQUJMRRAAEgwKCFJFTElBQkxFEAESCwoHUEFSVElB",
-            "TBACQqYBCiBjb20uZ2l0aHViLmFwdHBvZC5wcm90by5pc2NwMi52MUILQ29t",
-            "bW9uUHJvdG9QAVo0Z2l0aHViLmNvbS9hcHRwb2QvaXNjcC1wcm90by9nZW4v",
-            "Z28vaXNjcDIvdjE7aXNjcDJ2MaICA0lYWKoCCElzY3AyLlYxygIISXNjcDJc",
-            "VjHiAhRJc2NwMlxWMVxHUEJNZXRhZGF0YeoCCUlzY3AyOjpWMWIGcHJvdG8z"));
+            "FC5pc2NwMi52MS5EYXRhRmlsdGVyUgtkYXRhRmlsdGVycyJ/ChlEb3duc3Ry",
+            "ZWFtRmlsdGVyUmVmZXJlbmNlEjYKF2Rvd25zdHJlYW1fZmlsdGVyX2luZGV4",
+            "GAEgASgNUhVkb3duc3RyZWFtRmlsdGVySW5kZXgSKgoRZGF0YV9maWx0ZXJf",
+            "aW5kZXgYAiABKA1SD2RhdGFGaWx0ZXJJbmRleCJhChpEb3duc3RyZWFtRmls",
+            "dGVyUmVmZXJlbmNlcxJDCgpyZWZlcmVuY2VzGAEgAygLMiMuaXNjcDIudjEu",
+            "RG93bnN0cmVhbUZpbHRlclJlZmVyZW5jZVIKcmVmZXJlbmNlcyI0CgpEYXRh",
+            "RmlsdGVyEhIKBG5hbWUYASABKAlSBG5hbWUSEgoEdHlwZRgCIAEoCVIEdHlw",
+            "ZSowCgNRb1MSDgoKVU5SRUxJQUJMRRAAEgwKCFJFTElBQkxFEAESCwoHUEFS",
+            "VElBTBACQqYBCiBjb20uZ2l0aHViLmFwdHBvZC5wcm90by5pc2NwMi52MUIL",
+            "Q29tbW9uUHJvdG9QAVo0Z2l0aHViLmNvbS9hcHRwb2QvaXNjcC1wcm90by9n",
+            "ZW4vZ28vaXNjcDIvdjE7aXNjcDJ2MaICA0lYWKoCCElzY3AyLlYxygIISXNj",
+            "cDJcVjHiAhRJc2NwMlxWMVxHUEJNZXRhZGF0YeoCCUlzY3AyOjpWMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Iscp2.V1.QoS), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -51,6 +57,8 @@ namespace Iscp2.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DataPoint), global::Iscp2.V1.DataPoint.Parser, new[]{ "ElapsedTime", "Payload" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DataID), global::Iscp2.V1.DataID.Parser, new[]{ "Name", "Type" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamFilter), global::Iscp2.V1.DownstreamFilter.Parser, new[]{ "SourceNodeId", "DataFilters" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamFilterReference), global::Iscp2.V1.DownstreamFilterReference.Parser, new[]{ "DownstreamFilterIndex", "DataFilterIndex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamFilterReferences), global::Iscp2.V1.DownstreamFilterReferences.Parser, new[]{ "References" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DataFilter), global::Iscp2.V1.DataFilter.Parser, new[]{ "Name", "Type" }, null, null, null, null)
           }));
     }
@@ -67,6 +75,7 @@ namespace Iscp2.V1 {
   #endregion
 
   #region Messages
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class StreamChunk : pb::IMessage<StreamChunk>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -240,7 +249,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -263,7 +276,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -282,6 +299,7 @@ namespace Iscp2.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class DataPointGroup : pb::IMessage<DataPointGroup>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -534,7 +552,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -566,7 +588,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -594,6 +620,7 @@ namespace Iscp2.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class DataPoint : pb::IMessage<DataPoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -778,7 +805,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -801,7 +832,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -820,6 +855,7 @@ namespace Iscp2.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class DataID : pb::IMessage<DataID>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1004,7 +1040,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -1027,7 +1067,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -1046,6 +1090,7 @@ namespace Iscp2.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class DownstreamFilter : pb::IMessage<DownstreamFilter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1219,7 +1264,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -1242,7 +1291,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -1261,6 +1314,429 @@ namespace Iscp2.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  internal sealed partial class DownstreamFilterReference : pb::IMessage<DownstreamFilterReference>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DownstreamFilterReference> _parser = new pb::MessageParser<DownstreamFilterReference>(() => new DownstreamFilterReference());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DownstreamFilterReference> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Iscp2.V1.CommonReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DownstreamFilterReference() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DownstreamFilterReference(DownstreamFilterReference other) : this() {
+      downstreamFilterIndex_ = other.downstreamFilterIndex_;
+      dataFilterIndex_ = other.dataFilterIndex_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DownstreamFilterReference Clone() {
+      return new DownstreamFilterReference(this);
+    }
+
+    /// <summary>Field number for the "downstream_filter_index" field.</summary>
+    public const int DownstreamFilterIndexFieldNumber = 1;
+    private uint downstreamFilterIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DownstreamFilterIndex {
+      get { return downstreamFilterIndex_; }
+      set {
+        downstreamFilterIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "data_filter_index" field.</summary>
+    public const int DataFilterIndexFieldNumber = 2;
+    private uint dataFilterIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DataFilterIndex {
+      get { return dataFilterIndex_; }
+      set {
+        dataFilterIndex_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DownstreamFilterReference);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DownstreamFilterReference other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DownstreamFilterIndex != other.DownstreamFilterIndex) return false;
+      if (DataFilterIndex != other.DataFilterIndex) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DownstreamFilterIndex != 0) hash ^= DownstreamFilterIndex.GetHashCode();
+      if (DataFilterIndex != 0) hash ^= DataFilterIndex.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (DownstreamFilterIndex != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(DownstreamFilterIndex);
+      }
+      if (DataFilterIndex != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(DataFilterIndex);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DownstreamFilterIndex != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(DownstreamFilterIndex);
+      }
+      if (DataFilterIndex != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(DataFilterIndex);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (DownstreamFilterIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DownstreamFilterIndex);
+      }
+      if (DataFilterIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DataFilterIndex);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DownstreamFilterReference other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DownstreamFilterIndex != 0) {
+        DownstreamFilterIndex = other.DownstreamFilterIndex;
+      }
+      if (other.DataFilterIndex != 0) {
+        DataFilterIndex = other.DataFilterIndex;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            DownstreamFilterIndex = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            DataFilterIndex = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            DownstreamFilterIndex = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            DataFilterIndex = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  internal sealed partial class DownstreamFilterReferences : pb::IMessage<DownstreamFilterReferences>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DownstreamFilterReferences> _parser = new pb::MessageParser<DownstreamFilterReferences>(() => new DownstreamFilterReferences());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DownstreamFilterReferences> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Iscp2.V1.CommonReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DownstreamFilterReferences() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DownstreamFilterReferences(DownstreamFilterReferences other) : this() {
+      references_ = other.references_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DownstreamFilterReferences Clone() {
+      return new DownstreamFilterReferences(this);
+    }
+
+    /// <summary>Field number for the "references" field.</summary>
+    public const int ReferencesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Iscp2.V1.DownstreamFilterReference> _repeated_references_codec
+        = pb::FieldCodec.ForMessage(10, global::Iscp2.V1.DownstreamFilterReference.Parser);
+    private readonly pbc::RepeatedField<global::Iscp2.V1.DownstreamFilterReference> references_ = new pbc::RepeatedField<global::Iscp2.V1.DownstreamFilterReference>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Iscp2.V1.DownstreamFilterReference> References {
+      get { return references_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DownstreamFilterReferences);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DownstreamFilterReferences other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!references_.Equals(other.references_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= references_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      references_.WriteTo(output, _repeated_references_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      references_.WriteTo(ref output, _repeated_references_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += references_.CalculateSize(_repeated_references_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DownstreamFilterReferences other) {
+      if (other == null) {
+        return;
+      }
+      references_.Add(other.references_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            references_.AddEntriesFrom(input, _repeated_references_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            references_.AddEntriesFrom(ref input, _repeated_references_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class DataFilter : pb::IMessage<DataFilter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1275,7 +1751,7 @@ namespace Iscp2.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Iscp2.V1.CommonReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Iscp2.V1.CommonReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1445,7 +1921,11 @@ namespace Iscp2.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -1468,7 +1948,11 @@ namespace Iscp2.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;

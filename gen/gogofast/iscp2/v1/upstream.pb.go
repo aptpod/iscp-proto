@@ -5,11 +5,12 @@ package iscp2v1
 
 import (
 	fmt "fmt"
-	extensions "github.com/aptpod/iscp-proto/gen/gogofast/iscp2/v1/extensions"
-	proto "github.com/gogo/protobuf/proto"
 	io "io"
 	math "math"
 	math_bits "math/bits"
+
+	extensions "github.com/aptpod/iscp-proto/gen/gogofast/iscp2/v1/extensions"
+	proto "github.com/gogo/protobuf/proto"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
