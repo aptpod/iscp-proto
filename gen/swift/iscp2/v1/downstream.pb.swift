@@ -235,6 +235,8 @@ struct Iscp2_V1_DownstreamChunk {
   /// Clears the value of `extensionFields`. Subsequent reads from it will return its default value.
   mutating func clearExtensionFields() {self._extensionFields = nil}
 
+  var downstreamFilterReferences: [Iscp2_V1_DownstreamFilterReferences] = []
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   enum OneOf_UpstreamOrAlias: Equatable {
@@ -943,6 +945,7 @@ extension Iscp2_V1_DownstreamChunk: SwiftProtobuf.Message, SwiftProtobuf._Messag
     3: .standard(proto: "upstream_alias"),
     4: .standard(proto: "stream_chunk"),
     5: .standard(proto: "extension_fields"),
+    6: .standard(proto: "downstream_filter_references"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -975,6 +978,7 @@ extension Iscp2_V1_DownstreamChunk: SwiftProtobuf.Message, SwiftProtobuf._Messag
       }()
       case 4: try { try decoder.decodeSingularMessageField(value: &self._streamChunk) }()
       case 5: try { try decoder.decodeSingularMessageField(value: &self._extensionFields) }()
+      case 6: try { try decoder.decodeRepeatedMessageField(value: &self.downstreamFilterReferences) }()
       default: break
       }
     }
@@ -1005,6 +1009,9 @@ extension Iscp2_V1_DownstreamChunk: SwiftProtobuf.Message, SwiftProtobuf._Messag
     try { if let v = self._extensionFields {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
     } }()
+    if !self.downstreamFilterReferences.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.downstreamFilterReferences, fieldNumber: 6)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -1013,6 +1020,7 @@ extension Iscp2_V1_DownstreamChunk: SwiftProtobuf.Message, SwiftProtobuf._Messag
     if lhs.upstreamOrAlias != rhs.upstreamOrAlias {return false}
     if lhs._streamChunk != rhs._streamChunk {return false}
     if lhs._extensionFields != rhs._extensionFields {return false}
+    if lhs.downstreamFilterReferences != rhs.downstreamFilterReferences {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

@@ -4,7 +4,7 @@ VERSION_PROTOC_GOGOPROTO=v1.3.2
 VERSION_PROTOC_GO=v1.26
 
 .PHONY: build-all
-build-all: build-proto build-go-gogofast
+build-all: build-proto build-go-gogofast format
 
 .PHONY: build-proto
 build-proto:
@@ -21,6 +21,7 @@ lint:
 .PHONY: format
 format:
 	buf format --exit-code -w proto
+	go run golang.org/x/tools/cmd/goimports@latest -w .
 
 .PHONY: tools
 tools:

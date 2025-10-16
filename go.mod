@@ -6,5 +6,6 @@ replace github.com/aptpod/iscp-proto => ./
 
 require (
 	github.com/gogo/protobuf v1.3.2
+	github.com/planetscale/vtprotobuf v0.6.0
 	google.golang.org/protobuf v1.31.0
 )

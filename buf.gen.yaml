@@ -2,13 +2,20 @@ version: v1
 managed:
   enabled: true
   java_package_prefix: com.github.aptpod.proto
-  go_package_prefix: 
+  go_package_prefix:
     default: github.com/aptpod/iscp-proto/gen/go
   java_multiple_files: true
 plugins:
-  - plugin: buf.build/protocolbuffers/go:v1.28.1
+  - plugin: buf.build/protocolbuffers/go
     out: gen/go
-    opt: paths=source_relative
+    opt:
+      - paths=source_relative
+  - plugin: buf.build/community/planetscale-vtprotobuf:v0.6.0
+    out: gen/go
+    opt:
+      - paths=source_relative
+      - features=marshal+unmarshal+size
+      - pool=github.com/aptpod/iscp-proto/gen/go
   - plugin: buf.build/protocolbuffers/python:v23.4
     out: gen/python
   - plugin: buf.build/apple/swift:v1.22.1

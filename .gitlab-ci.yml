@@ -4,8 +4,11 @@ stages:
 
 before_script:
   - apt update -y
-  - apt install -y protobuf-compiler npm curl
-  - curl -sSL "https://github.com/bufbuild/buf/releases/download/v1.25.0/buf-$(uname -s)-$(uname -m)" -o "/usr/local/bin/buf" 
+  - apt install -y protobuf-compiler curl
+  # Install Node.js 20 (includes npm 10) to support lockfileVersion 3
+  - curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+  - apt install -y nodejs
+  - curl -sSL "https://github.com/bufbuild/buf/releases/download/v1.25.0/buf-$(uname -s)-$(uname -m)" -o "/usr/local/bin/buf"
   - chmod +x "/usr/local/bin/buf"
   - make tools
 
