@@ -57,6 +57,10 @@ const (
 	ResultCode_TOO_SHORT_PING_INTERVAL     ResultCode = 88
 	ResultCode_TOO_SHORT_PING_TIMEOUT      ResultCode = 89
 	ResultCode_RATE_LIMIT_REACHED          ResultCode = 90
+	ResultCode_TOO_LARGE_FEED_ID           ResultCode = 91
+	ResultCode_TOO_MANY_TARGET_NODES       ResultCode = 92
+	ResultCode_FEED_NOT_FOUND              ResultCode = 93
+	ResultCode_INVALID_RESUME_TOKEN        ResultCode = 94
 	ResultCode_NODE_ID_MISMATCH            ResultCode = 128
 	ResultCode_SESSION_NOT_FOUND           ResultCode = 129
 	ResultCode_SESSION_ALREADY_CLOSED      ResultCode = 130
@@ -98,6 +102,10 @@ var (
 		88:  "TOO_SHORT_PING_INTERVAL",
 		89:  "TOO_SHORT_PING_TIMEOUT",
 		90:  "RATE_LIMIT_REACHED",
+		91:  "TOO_LARGE_FEED_ID",
+		92:  "TOO_MANY_TARGET_NODES",
+		93:  "FEED_NOT_FOUND",
+		94:  "INVALID_RESUME_TOKEN",
 		128: "NODE_ID_MISMATCH",
 		129: "SESSION_NOT_FOUND",
 		130: "SESSION_ALREADY_CLOSED",
@@ -136,6 +144,10 @@ var (
 		"TOO_SHORT_PING_INTERVAL":     88,
 		"TOO_SHORT_PING_TIMEOUT":      89,
 		"RATE_LIMIT_REACHED":          90,
+		"TOO_LARGE_FEED_ID":           91,
+		"TOO_MANY_TARGET_NODES":       92,
+		"FEED_NOT_FOUND":              93,
+		"INVALID_RESUME_TOKEN":        94,
 		"NODE_ID_MISMATCH":            128,
 		"SESSION_NOT_FOUND":           129,
 		"SESSION_ALREADY_CLOSED":      130,
@@ -174,7 +186,7 @@ var File_iscp2_v1_result_code_proto protoreflect.FileDescriptor
 
 const file_iscp2_v1_result_code_proto_rawDesc = "" +
 	"\n" +
-	"\x1aiscp2/v1/result_code.proto\x12\biscp2.v1*\xfc\x06\n" +
+	"\x1aiscp2/v1/result_code.proto\x12\biscp2.v1*\xdc\a\n" +
 	"\n" +
 	"ResultCode\x12\r\n" +
 	"\tSUCCEEDED\x10\x00\x12\x12\n" +
@@ -210,6 +222,10 @@ const file_iscp2_v1_result_code_proto_rawDesc = "" +
 	"\x17TOO_SHORT_PING_INTERVAL\x10X\x12\x1a\n" +
 	"\x16TOO_SHORT_PING_TIMEOUT\x10Y\x12\x16\n" +
 	"\x12RATE_LIMIT_REACHED\x10Z\x12\x15\n" +
+	"\x11TOO_LARGE_FEED_ID\x10[\x12\x19\n" +
+	"\x15TOO_MANY_TARGET_NODES\x10\\\x12\x12\n" +
+	"\x0eFEED_NOT_FOUND\x10]\x12\x18\n" +
+	"\x14INVALID_RESUME_TOKEN\x10^\x12\x15\n" +
 	"\x10NODE_ID_MISMATCH\x10\x80\x01\x12\x16\n" +
 	"\x11SESSION_NOT_FOUND\x10\x81\x01\x12\x1b\n" +
 	"\x16SESSION_ALREADY_CLOSED\x10\x82\x01\x12\x1a\n" +
