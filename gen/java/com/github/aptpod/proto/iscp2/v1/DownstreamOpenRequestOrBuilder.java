@@ -117,4 +117,10 @@ com.github.aptpod.proto.iscp2.v1.DataID defaultValue);
    * @return The omitEmptyChunk.
    */
   boolean getOmitEmptyChunk();
+
+  /**
+   * <code>bool enable_resume_token = 9 [json_name = "enableResumeToken"];</code>
+   * @return The enableResumeToken.
+   */
+  boolean getEnableResumeToken();
 }

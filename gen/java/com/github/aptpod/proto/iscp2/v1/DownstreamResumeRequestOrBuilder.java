@@ -42,4 +42,16 @@ public interface DownstreamResumeRequestOrBuilder extends
    * <code>.iscp2.v1.extensions.DownstreamResumeRequestExtensionFields extension_fields = 4 [json_name = "extensionFields"];</code>
    */
   com.github.aptpod.proto.iscp2.v1.extensions.DownstreamResumeRequestExtensionFieldsOrBuilder getExtensionFieldsOrBuilder();
+
+  /**
+   * <code>string resume_token = 5 [json_name = "resumeToken"];</code>
+   * @return The resumeToken.
+   */
+  java.lang.String getResumeToken();
+  /**
+   * <code>string resume_token = 5 [json_name = "resumeToken"];</code>
+   * @return The bytes for resumeToken.
+   */
+  com.google.protobuf.ByteString
+      getResumeTokenBytes();
 }

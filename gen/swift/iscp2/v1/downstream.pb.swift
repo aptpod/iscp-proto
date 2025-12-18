@@ -48,6 +48,8 @@ struct Iscp2_V1_DownstreamOpenRequest {
 
   var omitEmptyChunk: Bool = false
 
+  var enableResumeToken: Bool = false
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -79,6 +81,8 @@ struct Iscp2_V1_DownstreamOpenResponse {
   /// Clears the value of `extensionFields`. Subsequent reads from it will return its default value.
   mutating func clearExtensionFields() {self._extensionFields = nil}
 
+  var resumeToken: String = String()
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -106,6 +110,8 @@ struct Iscp2_V1_DownstreamResumeRequest {
   /// Clears the value of `extensionFields`. Subsequent reads from it will return its default value.
   mutating func clearExtensionFields() {self._extensionFields = nil}
 
+  var resumeToken: String = String()
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -132,6 +138,8 @@ struct Iscp2_V1_DownstreamResumeResponse {
   var hasExtensionFields: Bool {return self._extensionFields != nil}
   /// Clears the value of `extensionFields`. Subsequent reads from it will return its default value.
   mutating func clearExtensionFields() {self._extensionFields = nil}
+
+  var resumeToken: String = String()
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -594,6 +602,7 @@ extension Iscp2_V1_DownstreamOpenRequest: SwiftProtobuf.Message, SwiftProtobuf._
     6: .same(proto: "qos"),
     7: .standard(proto: "extension_fields"),
     8: .standard(proto: "omit_empty_chunk"),
+    9: .standard(proto: "enable_resume_token"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -610,6 +619,7 @@ extension Iscp2_V1_DownstreamOpenRequest: SwiftProtobuf.Message, SwiftProtobuf._
       case 6: try { try decoder.decodeSingularEnumField(value: &self.qos) }()
       case 7: try { try decoder.decodeSingularMessageField(value: &self._extensionFields) }()
       case 8: try { try decoder.decodeSingularBoolField(value: &self.omitEmptyChunk) }()
+      case 9: try { try decoder.decodeSingularBoolField(value: &self.enableResumeToken) }()
       default: break
       }
     }
@@ -644,6 +654,9 @@ extension Iscp2_V1_DownstreamOpenRequest: SwiftProtobuf.Message, SwiftProtobuf._
     if self.omitEmptyChunk != false {
       try visitor.visitSingularBoolField(value: self.omitEmptyChunk, fieldNumber: 8)
     }
+    if self.enableResumeToken != false {
+      try visitor.visitSingularBoolField(value: self.enableResumeToken, fieldNumber: 9)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -656,6 +669,7 @@ extension Iscp2_V1_DownstreamOpenRequest: SwiftProtobuf.Message, SwiftProtobuf._
     if lhs.qos != rhs.qos {return false}
     if lhs._extensionFields != rhs._extensionFields {return false}
     if lhs.omitEmptyChunk != rhs.omitEmptyChunk {return false}
+    if lhs.enableResumeToken != rhs.enableResumeToken {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -670,6 +684,7 @@ extension Iscp2_V1_DownstreamOpenResponse: SwiftProtobuf.Message, SwiftProtobuf.
     4: .standard(proto: "result_code"),
     5: .standard(proto: "result_string"),
     6: .standard(proto: "extension_fields"),
+    7: .standard(proto: "resume_token"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -684,6 +699,7 @@ extension Iscp2_V1_DownstreamOpenResponse: SwiftProtobuf.Message, SwiftProtobuf.
       case 4: try { try decoder.decodeSingularEnumField(value: &self.resultCode) }()
       case 5: try { try decoder.decodeSingularStringField(value: &self.resultString) }()
       case 6: try { try decoder.decodeSingularMessageField(value: &self._extensionFields) }()
+      case 7: try { try decoder.decodeSingularStringField(value: &self.resumeToken) }()
       default: break
       }
     }
@@ -712,6 +728,9 @@ extension Iscp2_V1_DownstreamOpenResponse: SwiftProtobuf.Message, SwiftProtobuf.
     try { if let v = self._extensionFields {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
     } }()
+    if !self.resumeToken.isEmpty {
+      try visitor.visitSingularStringField(value: self.resumeToken, fieldNumber: 7)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -722,6 +741,7 @@ extension Iscp2_V1_DownstreamOpenResponse: SwiftProtobuf.Message, SwiftProtobuf.
     if lhs.resultCode != rhs.resultCode {return false}
     if lhs.resultString != rhs.resultString {return false}
     if lhs._extensionFields != rhs._extensionFields {return false}
+    if lhs.resumeToken != rhs.resumeToken {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -734,6 +754,7 @@ extension Iscp2_V1_DownstreamResumeRequest: SwiftProtobuf.Message, SwiftProtobuf
     2: .standard(proto: "stream_id"),
     3: .standard(proto: "desired_stream_id_alias"),
     4: .standard(proto: "extension_fields"),
+    5: .standard(proto: "resume_token"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -746,6 +767,7 @@ extension Iscp2_V1_DownstreamResumeRequest: SwiftProtobuf.Message, SwiftProtobuf
       case 2: try { try decoder.decodeSingularBytesField(value: &self.streamID) }()
       case 3: try { try decoder.decodeSingularUInt32Field(value: &self.desiredStreamIDAlias) }()
       case 4: try { try decoder.decodeSingularMessageField(value: &self._extensionFields) }()
+      case 5: try { try decoder.decodeSingularStringField(value: &self.resumeToken) }()
       default: break
       }
     }
@@ -768,6 +790,9 @@ extension Iscp2_V1_DownstreamResumeRequest: SwiftProtobuf.Message, SwiftProtobuf
     try { if let v = self._extensionFields {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
     } }()
+    if !self.resumeToken.isEmpty {
+      try visitor.visitSingularStringField(value: self.resumeToken, fieldNumber: 5)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -776,6 +801,7 @@ extension Iscp2_V1_DownstreamResumeRequest: SwiftProtobuf.Message, SwiftProtobuf
     if lhs.streamID != rhs.streamID {return false}
     if lhs.desiredStreamIDAlias != rhs.desiredStreamIDAlias {return false}
     if lhs._extensionFields != rhs._extensionFields {return false}
+    if lhs.resumeToken != rhs.resumeToken {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -788,6 +814,7 @@ extension Iscp2_V1_DownstreamResumeResponse: SwiftProtobuf.Message, SwiftProtobu
     2: .standard(proto: "result_code"),
     3: .standard(proto: "result_string"),
     4: .standard(proto: "extension_fields"),
+    5: .standard(proto: "resume_token"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -800,6 +827,7 @@ extension Iscp2_V1_DownstreamResumeResponse: SwiftProtobuf.Message, SwiftProtobu
       case 2: try { try decoder.decodeSingularEnumField(value: &self.resultCode) }()
       case 3: try { try decoder.decodeSingularStringField(value: &self.resultString) }()
       case 4: try { try decoder.decodeSingularMessageField(value: &self._extensionFields) }()
+      case 5: try { try decoder.decodeSingularStringField(value: &self.resumeToken) }()
       default: break
       }
     }
@@ -822,6 +850,9 @@ extension Iscp2_V1_DownstreamResumeResponse: SwiftProtobuf.Message, SwiftProtobu
     try { if let v = self._extensionFields {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
     } }()
+    if !self.resumeToken.isEmpty {
+      try visitor.visitSingularStringField(value: self.resumeToken, fieldNumber: 5)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -830,6 +861,7 @@ extension Iscp2_V1_DownstreamResumeResponse: SwiftProtobuf.Message, SwiftProtobu
     if lhs.resultCode != rhs.resultCode {return false}
     if lhs.resultString != rhs.resultString {return false}
     if lhs._extensionFields != rhs._extensionFields {return false}
+    if lhs.resumeToken != rhs.resumeToken {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

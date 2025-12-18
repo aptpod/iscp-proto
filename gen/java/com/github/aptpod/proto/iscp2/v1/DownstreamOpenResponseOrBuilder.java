@@ -65,4 +65,16 @@ public interface DownstreamOpenResponseOrBuilder extends
    * <code>.iscp2.v1.extensions.DownstreamOpenResponseExtensionFields extension_fields = 6 [json_name = "extensionFields"];</code>
    */
   com.github.aptpod.proto.iscp2.v1.extensions.DownstreamOpenResponseExtensionFieldsOrBuilder getExtensionFieldsOrBuilder();
+
+  /**
+   * <code>string resume_token = 7 [json_name = "resumeToken"];</code>
+   * @return The resumeToken.
+   */
+  java.lang.String getResumeToken();
+  /**
+   * <code>string resume_token = 7 [json_name = "resumeToken"];</code>
+   * @return The bytes for resumeToken.
+   */
+  com.google.protobuf.ByteString
+      getResumeTokenBytes();
 }

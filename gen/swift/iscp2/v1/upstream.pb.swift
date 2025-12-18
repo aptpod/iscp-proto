@@ -46,6 +46,8 @@ struct Iscp2_V1_UpstreamOpenRequest {
   /// Clears the value of `extensionFields`. Subsequent reads from it will return its default value.
   mutating func clearExtensionFields() {self._extensionFields = nil}
 
+  var enableResumeToken: Bool = false
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -81,6 +83,8 @@ struct Iscp2_V1_UpstreamOpenResponse {
   /// Clears the value of `extensionFields`. Subsequent reads from it will return its default value.
   mutating func clearExtensionFields() {self._extensionFields = nil}
 
+  var resumeToken: String = String()
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -105,6 +109,8 @@ struct Iscp2_V1_UpstreamResumeRequest {
   var hasExtensionFields: Bool {return self._extensionFields != nil}
   /// Clears the value of `extensionFields`. Subsequent reads from it will return its default value.
   mutating func clearExtensionFields() {self._extensionFields = nil}
+
+  var resumeToken: String = String()
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -134,6 +140,8 @@ struct Iscp2_V1_UpstreamResumeResponse {
   var hasExtensionFields: Bool {return self._extensionFields != nil}
   /// Clears the value of `extensionFields`. Subsequent reads from it will return its default value.
   mutating func clearExtensionFields() {self._extensionFields = nil}
+
+  var resumeToken: String = String()
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -394,6 +402,7 @@ extension Iscp2_V1_UpstreamOpenRequest: SwiftProtobuf.Message, SwiftProtobuf._Me
     6: .standard(proto: "data_ids"),
     7: .same(proto: "qos"),
     8: .standard(proto: "extension_fields"),
+    9: .standard(proto: "enable_resume_token"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -409,6 +418,7 @@ extension Iscp2_V1_UpstreamOpenRequest: SwiftProtobuf.Message, SwiftProtobuf._Me
       case 6: try { try decoder.decodeRepeatedMessageField(value: &self.dataIds) }()
       case 7: try { try decoder.decodeSingularEnumField(value: &self.qos) }()
       case 8: try { try decoder.decodeSingularMessageField(value: &self._extensionFields) }()
+      case 9: try { try decoder.decodeSingularBoolField(value: &self.enableResumeToken) }()
       default: break
       }
     }
@@ -440,6 +450,9 @@ extension Iscp2_V1_UpstreamOpenRequest: SwiftProtobuf.Message, SwiftProtobuf._Me
     try { if let v = self._extensionFields {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
     } }()
+    if self.enableResumeToken != false {
+      try visitor.visitSingularBoolField(value: self.enableResumeToken, fieldNumber: 9)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -451,6 +464,7 @@ extension Iscp2_V1_UpstreamOpenRequest: SwiftProtobuf.Message, SwiftProtobuf._Me
     if lhs.dataIds != rhs.dataIds {return false}
     if lhs.qos != rhs.qos {return false}
     if lhs._extensionFields != rhs._extensionFields {return false}
+    if lhs.enableResumeToken != rhs.enableResumeToken {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -467,6 +481,7 @@ extension Iscp2_V1_UpstreamOpenResponse: SwiftProtobuf.Message, SwiftProtobuf._M
     6: .standard(proto: "result_code"),
     7: .standard(proto: "result_string"),
     8: .standard(proto: "extension_fields"),
+    9: .standard(proto: "resume_token"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -483,6 +498,7 @@ extension Iscp2_V1_UpstreamOpenResponse: SwiftProtobuf.Message, SwiftProtobuf._M
       case 6: try { try decoder.decodeSingularEnumField(value: &self.resultCode) }()
       case 7: try { try decoder.decodeSingularStringField(value: &self.resultString) }()
       case 8: try { try decoder.decodeSingularMessageField(value: &self._extensionFields) }()
+      case 9: try { try decoder.decodeSingularStringField(value: &self.resumeToken) }()
       default: break
       }
     }
@@ -517,6 +533,9 @@ extension Iscp2_V1_UpstreamOpenResponse: SwiftProtobuf.Message, SwiftProtobuf._M
     try { if let v = self._extensionFields {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
     } }()
+    if !self.resumeToken.isEmpty {
+      try visitor.visitSingularStringField(value: self.resumeToken, fieldNumber: 9)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -529,6 +548,7 @@ extension Iscp2_V1_UpstreamOpenResponse: SwiftProtobuf.Message, SwiftProtobuf._M
     if lhs.resultCode != rhs.resultCode {return false}
     if lhs.resultString != rhs.resultString {return false}
     if lhs._extensionFields != rhs._extensionFields {return false}
+    if lhs.resumeToken != rhs.resumeToken {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -540,6 +560,7 @@ extension Iscp2_V1_UpstreamResumeRequest: SwiftProtobuf.Message, SwiftProtobuf._
     1: .standard(proto: "request_id"),
     2: .standard(proto: "stream_id"),
     3: .standard(proto: "extension_fields"),
+    4: .standard(proto: "resume_token"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -551,6 +572,7 @@ extension Iscp2_V1_UpstreamResumeRequest: SwiftProtobuf.Message, SwiftProtobuf._
       case 1: try { try decoder.decodeSingularUInt32Field(value: &self.requestID) }()
       case 2: try { try decoder.decodeSingularBytesField(value: &self.streamID) }()
       case 3: try { try decoder.decodeSingularMessageField(value: &self._extensionFields) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.resumeToken) }()
       default: break
       }
     }
@@ -570,6 +592,9 @@ extension Iscp2_V1_UpstreamResumeRequest: SwiftProtobuf.Message, SwiftProtobuf._
     try { if let v = self._extensionFields {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
     } }()
+    if !self.resumeToken.isEmpty {
+      try visitor.visitSingularStringField(value: self.resumeToken, fieldNumber: 4)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -577,6 +602,7 @@ extension Iscp2_V1_UpstreamResumeRequest: SwiftProtobuf.Message, SwiftProtobuf._
     if lhs.requestID != rhs.requestID {return false}
     if lhs.streamID != rhs.streamID {return false}
     if lhs._extensionFields != rhs._extensionFields {return false}
+    if lhs.resumeToken != rhs.resumeToken {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -590,6 +616,7 @@ extension Iscp2_V1_UpstreamResumeResponse: SwiftProtobuf.Message, SwiftProtobuf.
     3: .standard(proto: "result_code"),
     4: .standard(proto: "result_string"),
     5: .standard(proto: "extension_fields"),
+    6: .standard(proto: "resume_token"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -603,6 +630,7 @@ extension Iscp2_V1_UpstreamResumeResponse: SwiftProtobuf.Message, SwiftProtobuf.
       case 3: try { try decoder.decodeSingularEnumField(value: &self.resultCode) }()
       case 4: try { try decoder.decodeSingularStringField(value: &self.resultString) }()
       case 5: try { try decoder.decodeSingularMessageField(value: &self._extensionFields) }()
+      case 6: try { try decoder.decodeSingularStringField(value: &self.resumeToken) }()
       default: break
       }
     }
@@ -628,6 +656,9 @@ extension Iscp2_V1_UpstreamResumeResponse: SwiftProtobuf.Message, SwiftProtobuf.
     try { if let v = self._extensionFields {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
     } }()
+    if !self.resumeToken.isEmpty {
+      try visitor.visitSingularStringField(value: self.resumeToken, fieldNumber: 6)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -637,6 +668,7 @@ extension Iscp2_V1_UpstreamResumeResponse: SwiftProtobuf.Message, SwiftProtobuf.
     if lhs.resultCode != rhs.resultCode {return false}
     if lhs.resultString != rhs.resultString {return false}
     if lhs._extensionFields != rhs._extensionFields {return false}
+    if lhs.resumeToken != rhs.resumeToken {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

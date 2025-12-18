@@ -27,7 +27,7 @@ namespace Iscp2.V1 {
             "Chlpc2NwMi92MS9kb3duc3RyZWFtLnByb3RvEghpc2NwMi52MRoVaXNjcDIv",
             "djEvY29tbW9uLnByb3RvGiRpc2NwMi92MS9leHRlbnNpb25zL2Rvd25zdHJl",
             "YW0ucHJvdG8aF2lzY3AyL3YxL21ldGFkYXRhLnByb3RvGhppc2NwMi92MS9y",
-            "ZXN1bHRfY29kZS5wcm90byLCBAoVRG93bnN0cmVhbU9wZW5SZXF1ZXN0Eh0K",
+            "ZXN1bHRfY29kZS5wcm90byLyBAoVRG93bnN0cmVhbU9wZW5SZXF1ZXN0Eh0K",
             "CnJlcXVlc3RfaWQYASABKA1SCXJlcXVlc3RJZBI1ChdkZXNpcmVkX3N0cmVh",
             "bV9pZF9hbGlhcxgCIAEoDVIUZGVzaXJlZFN0cmVhbUlkQWxpYXMSSQoSZG93",
             "bnN0cmVhbV9maWx0ZXJzGAMgAygLMhouaXNjcDIudjEuRG93bnN0cmVhbUZp",
@@ -38,114 +38,118 @@ namespace Iscp2.V1 {
             "LlFvU1IDcW9zEmQKEGV4dGVuc2lvbl9maWVsZHMYByABKAsyOS5pc2NwMi52",
             "MS5leHRlbnNpb25zLkRvd25zdHJlYW1PcGVuUmVxdWVzdEV4dGVuc2lvbkZp",
             "ZWxkc1IPZXh0ZW5zaW9uRmllbGRzEigKEG9taXRfZW1wdHlfY2h1bmsYCCAB",
-            "KAhSDm9taXRFbXB0eUNodW5rGlIKEkRhdGFJZEFsaWFzZXNFbnRyeRIQCgNr",
-            "ZXkYASABKA1SA2tleRImCgV2YWx1ZRgCIAEoCzIQLmlzY3AyLnYxLkRhdGFJ",
-            "RFIFdmFsdWU6AjgBIskCChZEb3duc3RyZWFtT3BlblJlc3BvbnNlEh0KCnJl",
-            "cXVlc3RfaWQYASABKA1SCXJlcXVlc3RJZBIsChJhc3NpZ25lZF9zdHJlYW1f",
-            "aWQYAiABKAxSEGFzc2lnbmVkU3RyZWFtSWQSHwoLc2VydmVyX3RpbWUYAyAB",
-            "KBJSCnNlcnZlclRpbWUSNQoLcmVzdWx0X2NvZGUYBCABKA4yFC5pc2NwMi52",
-            "MS5SZXN1bHRDb2RlUgpyZXN1bHRDb2RlEiMKDXJlc3VsdF9zdHJpbmcYBSAB",
-            "KAlSDHJlc3VsdFN0cmluZxJlChBleHRlbnNpb25fZmllbGRzGAYgASgLMjou",
-            "aXNjcDIudjEuZXh0ZW5zaW9ucy5Eb3duc3RyZWFtT3BlblJlc3BvbnNlRXh0",
-            "ZW5zaW9uRmllbGRzUg9leHRlbnNpb25GaWVsZHMi9AEKF0Rvd25zdHJlYW1S",
-            "ZXN1bWVSZXF1ZXN0Eh0KCnJlcXVlc3RfaWQYASABKA1SCXJlcXVlc3RJZBIb",
-            "CglzdHJlYW1faWQYAiABKAxSCHN0cmVhbUlkEjUKF2Rlc2lyZWRfc3RyZWFt",
-            "X2lkX2FsaWFzGAMgASgNUhRkZXNpcmVkU3RyZWFtSWRBbGlhcxJmChBleHRl",
-            "bnNpb25fZmllbGRzGAQgASgLMjsuaXNjcDIudjEuZXh0ZW5zaW9ucy5Eb3du",
-            "c3RyZWFtUmVzdW1lUmVxdWVzdEV4dGVuc2lvbkZpZWxkc1IPZXh0ZW5zaW9u",
-            "RmllbGRzIv4BChhEb3duc3RyZWFtUmVzdW1lUmVzcG9uc2USHQoKcmVxdWVz",
-            "dF9pZBgBIAEoDVIJcmVxdWVzdElkEjUKC3Jlc3VsdF9jb2RlGAIgASgOMhQu",
-            "aXNjcDIudjEuUmVzdWx0Q29kZVIKcmVzdWx0Q29kZRIjCg1yZXN1bHRfc3Ry",
-            "aW5nGAMgASgJUgxyZXN1bHRTdHJpbmcSZwoQZXh0ZW5zaW9uX2ZpZWxkcxgE",
-            "IAEoCzI8LmlzY3AyLnYxLmV4dGVuc2lvbnMuRG93bnN0cmVhbVJlc3VtZVJl",
-            "c3BvbnNlRXh0ZW5zaW9uRmllbGRzUg9leHRlbnNpb25GaWVsZHMiuwEKFkRv",
-            "d25zdHJlYW1DbG9zZVJlcXVlc3QSHQoKcmVxdWVzdF9pZBgBIAEoDVIJcmVx",
-            "dWVzdElkEhsKCXN0cmVhbV9pZBgCIAEoDFIIc3RyZWFtSWQSZQoQZXh0ZW5z",
-            "aW9uX2ZpZWxkcxgDIAEoCzI6LmlzY3AyLnYxLmV4dGVuc2lvbnMuRG93bnN0",
-            "cmVhbUNsb3NlUmVxdWVzdEV4dGVuc2lvbkZpZWxkc1IPZXh0ZW5zaW9uRmll",
-            "bGRzIvwBChdEb3duc3RyZWFtQ2xvc2VSZXNwb25zZRIdCgpyZXF1ZXN0X2lk",
-            "GAEgASgNUglyZXF1ZXN0SWQSNQoLcmVzdWx0X2NvZGUYAiABKA4yFC5pc2Nw",
+            "KAhSDm9taXRFbXB0eUNodW5rEi4KE2VuYWJsZV9yZXN1bWVfdG9rZW4YCSAB",
+            "KAhSEWVuYWJsZVJlc3VtZVRva2VuGlIKEkRhdGFJZEFsaWFzZXNFbnRyeRIQ",
+            "CgNrZXkYASABKA1SA2tleRImCgV2YWx1ZRgCIAEoCzIQLmlzY3AyLnYxLkRh",
+            "dGFJRFIFdmFsdWU6AjgBIuwCChZEb3duc3RyZWFtT3BlblJlc3BvbnNlEh0K",
+            "CnJlcXVlc3RfaWQYASABKA1SCXJlcXVlc3RJZBIsChJhc3NpZ25lZF9zdHJl",
+            "YW1faWQYAiABKAxSEGFzc2lnbmVkU3RyZWFtSWQSHwoLc2VydmVyX3RpbWUY",
+            "AyABKBJSCnNlcnZlclRpbWUSNQoLcmVzdWx0X2NvZGUYBCABKA4yFC5pc2Nw",
             "Mi52MS5SZXN1bHRDb2RlUgpyZXN1bHRDb2RlEiMKDXJlc3VsdF9zdHJpbmcY",
-            "AyABKAlSDHJlc3VsdFN0cmluZxJmChBleHRlbnNpb25fZmllbGRzGAQgASgL",
-            "MjsuaXNjcDIudjEuZXh0ZW5zaW9ucy5Eb3duc3RyZWFtQ2xvc2VSZXNwb25z",
-            "ZUV4dGVuc2lvbkZpZWxkc1IPZXh0ZW5zaW9uRmllbGRzIrgDCg9Eb3duc3Ry",
-            "ZWFtQ2h1bmsSJgoPc3RyZWFtX2lkX2FsaWFzGAEgASgNUg1zdHJlYW1JZEFs",
-            "aWFzEj0KDXVwc3RyZWFtX2luZm8YAiABKAsyFi5pc2NwMi52MS5VcHN0cmVh",
-            "bUluZm9IAFIMdXBzdHJlYW1JbmZvEicKDnVwc3RyZWFtX2FsaWFzGAMgASgN",
-            "SABSDXVwc3RyZWFtQWxpYXMSOAoMc3RyZWFtX2NodW5rGAQgASgLMhUuaXNj",
-            "cDIudjEuU3RyZWFtQ2h1bmtSC3N0cmVhbUNodW5rEl4KEGV4dGVuc2lvbl9m",
-            "aWVsZHMYBSABKAsyMy5pc2NwMi52MS5leHRlbnNpb25zLkRvd25zdHJlYW1D",
-            "aHVua0V4dGVuc2lvbkZpZWxkc1IPZXh0ZW5zaW9uRmllbGRzEmYKHGRvd25z",
-            "dHJlYW1fZmlsdGVyX3JlZmVyZW5jZXMYBiADKAsyJC5pc2NwMi52MS5Eb3du",
-            "c3RyZWFtRmlsdGVyUmVmZXJlbmNlc1IaZG93bnN0cmVhbUZpbHRlclJlZmVy",
-            "ZW5jZXNCEwoRdXBzdHJlYW1fb3JfYWxpYXMi2AQKEkRvd25zdHJlYW1DaHVu",
-            "a0FjaxImCg9zdHJlYW1faWRfYWxpYXMYASABKA1SDXN0cmVhbUlkQWxpYXMS",
-            "FQoGYWNrX2lkGAIgASgNUgVhY2tJZBI5CgdyZXN1bHRzGAMgAygLMh8uaXNj",
-            "cDIudjEuRG93bnN0cmVhbUNodW5rUmVzdWx0UgdyZXN1bHRzElwKEHVwc3Ry",
-            "ZWFtX2FsaWFzZXMYBCADKAsyMS5pc2NwMi52MS5Eb3duc3RyZWFtQ2h1bmtB",
-            "Y2suVXBzdHJlYW1BbGlhc2VzRW50cnlSD3Vwc3RyZWFtQWxpYXNlcxJXCg9k",
-            "YXRhX2lkX2FsaWFzZXMYBSADKAsyLy5pc2NwMi52MS5Eb3duc3RyZWFtQ2h1",
-            "bmtBY2suRGF0YUlkQWxpYXNlc0VudHJ5Ug1kYXRhSWRBbGlhc2VzEmEKEGV4",
-            "dGVuc2lvbl9maWVsZHMYBiABKAsyNi5pc2NwMi52MS5leHRlbnNpb25zLkRv",
-            "d25zdHJlYW1DaHVua0Fja0V4dGVuc2lvbkZpZWxkc1IPZXh0ZW5zaW9uRmll",
-            "bGRzGloKFFVwc3RyZWFtQWxpYXNlc0VudHJ5EhAKA2tleRgBIAEoDVIDa2V5",
-            "EiwKBXZhbHVlGAIgASgLMhYuaXNjcDIudjEuVXBzdHJlYW1JbmZvUgV2YWx1",
-            "ZToCOAEaUgoSRGF0YUlkQWxpYXNlc0VudHJ5EhAKA2tleRgBIAEoDVIDa2V5",
-            "EiYKBXZhbHVlGAIgASgLMhAuaXNjcDIudjEuRGF0YUlEUgV2YWx1ZToCOAEi",
-            "ogIKGkRvd25zdHJlYW1DaHVua0Fja0NvbXBsZXRlEiYKD3N0cmVhbV9pZF9h",
-            "bGlhcxgBIAEoDVINc3RyZWFtSWRBbGlhcxIVCgZhY2tfaWQYAiABKA1SBWFj",
-            "a0lkEjUKC3Jlc3VsdF9jb2RlGAMgASgOMhQuaXNjcDIudjEuUmVzdWx0Q29k",
-            "ZVIKcmVzdWx0Q29kZRIjCg1yZXN1bHRfc3RyaW5nGAQgASgJUgxyZXN1bHRT",
-            "dHJpbmcSaQoQZXh0ZW5zaW9uX2ZpZWxkcxgFIAEoCzI+LmlzY3AyLnYxLmV4",
-            "dGVuc2lvbnMuRG93bnN0cmVhbUNodW5rQWNrQ29tcGxldGVFeHRlbnNpb25G",
-            "aWVsZHNSD2V4dGVuc2lvbkZpZWxkcyKjBwoSRG93bnN0cmVhbU1ldGFkYXRh",
-            "Eh0KCnJlcXVlc3RfaWQYASABKA1SCXJlcXVlc3RJZBImCg9zdHJlYW1faWRf",
-            "YWxpYXMYDSABKA1SDXN0cmVhbUlkQWxpYXMSMQoJYmFzZV90aW1lGAIgASgL",
-            "MhIuaXNjcDIudjEuQmFzZVRpbWVIAFIIYmFzZVRpbWUSPQoNdXBzdHJlYW1f",
-            "b3BlbhgDIAEoCzIWLmlzY3AyLnYxLlVwc3RyZWFtT3BlbkgAUgx1cHN0cmVh",
-            "bU9wZW4SWQoXdXBzdHJlYW1fYWJub3JtYWxfY2xvc2UYBCABKAsyHy5pc2Nw",
-            "Mi52MS5VcHN0cmVhbUFibm9ybWFsQ2xvc2VIAFIVdXBzdHJlYW1BYm5vcm1h",
-            "bENsb3NlEkMKD3Vwc3RyZWFtX3Jlc3VtZRgFIAEoCzIYLmlzY3AyLnYxLlVw",
-            "c3RyZWFtUmVzdW1lSABSDnVwc3RyZWFtUmVzdW1lElMKFXVwc3RyZWFtX25v",
-            "cm1hbF9jbG9zZRgGIAEoCzIdLmlzY3AyLnYxLlVwc3RyZWFtTm9ybWFsQ2xv",
-            "c2VIAFITdXBzdHJlYW1Ob3JtYWxDbG9zZRJDCg9kb3duc3RyZWFtX29wZW4Y",
-            "ByABKAsyGC5pc2NwMi52MS5Eb3duc3RyZWFtT3BlbkgAUg5kb3duc3RyZWFt",
-            "T3BlbhJfChlkb3duc3RyZWFtX2Fibm9ybWFsX2Nsb3NlGAggASgLMiEuaXNj",
-            "cDIudjEuRG93bnN0cmVhbUFibm9ybWFsQ2xvc2VIAFIXZG93bnN0cmVhbUFi",
-            "bm9ybWFsQ2xvc2USSQoRZG93bnN0cmVhbV9yZXN1bWUYCSABKAsyGi5pc2Nw",
-            "Mi52MS5Eb3duc3RyZWFtUmVzdW1lSABSEGRvd25zdHJlYW1SZXN1bWUSWQoX",
-            "ZG93bnN0cmVhbV9ub3JtYWxfY2xvc2UYCiABKAsyHy5pc2NwMi52MS5Eb3du",
-            "c3RyZWFtTm9ybWFsQ2xvc2VIAFIVZG93bnN0cmVhbU5vcm1hbENsb3NlEiQK",
-            "DnNvdXJjZV9ub2RlX2lkGAsgASgJUgxzb3VyY2VOb2RlSWQSYQoQZXh0ZW5z",
-            "aW9uX2ZpZWxkcxgMIAEoCzI2LmlzY3AyLnYxLmV4dGVuc2lvbnMuRG93bnN0",
-            "cmVhbU1ldGFkYXRhRXh0ZW5zaW9uRmllbGRzUg9leHRlbnNpb25GaWVsZHNC",
-            "CgoIbWV0YWRhdGEi+AEKFURvd25zdHJlYW1NZXRhZGF0YUFjaxIdCgpyZXF1",
-            "ZXN0X2lkGAEgASgNUglyZXF1ZXN0SWQSNQoLcmVzdWx0X2NvZGUYAiABKA4y",
-            "FC5pc2NwMi52MS5SZXN1bHRDb2RlUgpyZXN1bHRDb2RlEiMKDXJlc3VsdF9z",
-            "dHJpbmcYAyABKAlSDHJlc3VsdFN0cmluZxJkChBleHRlbnNpb25fZmllbGRz",
-            "GAQgASgLMjkuaXNjcDIudjEuZXh0ZW5zaW9ucy5Eb3duc3RyZWFtTWV0YWRh",
-            "dGFBY2tFeHRlbnNpb25GaWVsZHNSD2V4dGVuc2lvbkZpZWxkcyJwCgxVcHN0",
-            "cmVhbUluZm8SHQoKc2Vzc2lvbl9pZBgBIAEoCVIJc2Vzc2lvbklkEhsKCXN0",
-            "cmVhbV9pZBgCIAEoDFIIc3RyZWFtSWQSJAoOc291cmNlX25vZGVfaWQYAyAB",
-            "KAlSDHNvdXJjZU5vZGVJZCLLAgoVRG93bnN0cmVhbUNodW5rUmVzdWx0EjEK",
-            "FXN0cmVhbV9pZF9vZl91cHN0cmVhbRgBIAEoDFISc3RyZWFtSWRPZlVwc3Ry",
-            "ZWFtEj0KG3NlcXVlbmNlX251bWJlcl9pbl91cHN0cmVhbRgCIAEoDVIYc2Vx",
-            "dWVuY2VOdW1iZXJJblVwc3RyZWFtEjUKC3Jlc3VsdF9jb2RlGAMgASgOMhQu",
+            "BSABKAlSDHJlc3VsdFN0cmluZxJlChBleHRlbnNpb25fZmllbGRzGAYgASgL",
+            "MjouaXNjcDIudjEuZXh0ZW5zaW9ucy5Eb3duc3RyZWFtT3BlblJlc3BvbnNl",
+            "RXh0ZW5zaW9uRmllbGRzUg9leHRlbnNpb25GaWVsZHMSIQoMcmVzdW1lX3Rv",
+            "a2VuGAcgASgJUgtyZXN1bWVUb2tlbiKXAgoXRG93bnN0cmVhbVJlc3VtZVJl",
+            "cXVlc3QSHQoKcmVxdWVzdF9pZBgBIAEoDVIJcmVxdWVzdElkEhsKCXN0cmVh",
+            "bV9pZBgCIAEoDFIIc3RyZWFtSWQSNQoXZGVzaXJlZF9zdHJlYW1faWRfYWxp",
+            "YXMYAyABKA1SFGRlc2lyZWRTdHJlYW1JZEFsaWFzEmYKEGV4dGVuc2lvbl9m",
+            "aWVsZHMYBCABKAsyOy5pc2NwMi52MS5leHRlbnNpb25zLkRvd25zdHJlYW1S",
+            "ZXN1bWVSZXF1ZXN0RXh0ZW5zaW9uRmllbGRzUg9leHRlbnNpb25GaWVsZHMS",
+            "IQoMcmVzdW1lX3Rva2VuGAUgASgJUgtyZXN1bWVUb2tlbiKhAgoYRG93bnN0",
+            "cmVhbVJlc3VtZVJlc3BvbnNlEh0KCnJlcXVlc3RfaWQYASABKA1SCXJlcXVl",
+            "c3RJZBI1CgtyZXN1bHRfY29kZRgCIAEoDjIULmlzY3AyLnYxLlJlc3VsdENv",
+            "ZGVSCnJlc3VsdENvZGUSIwoNcmVzdWx0X3N0cmluZxgDIAEoCVIMcmVzdWx0",
+            "U3RyaW5nEmcKEGV4dGVuc2lvbl9maWVsZHMYBCABKAsyPC5pc2NwMi52MS5l",
+            "eHRlbnNpb25zLkRvd25zdHJlYW1SZXN1bWVSZXNwb25zZUV4dGVuc2lvbkZp",
+            "ZWxkc1IPZXh0ZW5zaW9uRmllbGRzEiEKDHJlc3VtZV90b2tlbhgFIAEoCVIL",
+            "cmVzdW1lVG9rZW4iuwEKFkRvd25zdHJlYW1DbG9zZVJlcXVlc3QSHQoKcmVx",
+            "dWVzdF9pZBgBIAEoDVIJcmVxdWVzdElkEhsKCXN0cmVhbV9pZBgCIAEoDFII",
+            "c3RyZWFtSWQSZQoQZXh0ZW5zaW9uX2ZpZWxkcxgDIAEoCzI6LmlzY3AyLnYx",
+            "LmV4dGVuc2lvbnMuRG93bnN0cmVhbUNsb3NlUmVxdWVzdEV4dGVuc2lvbkZp",
+            "ZWxkc1IPZXh0ZW5zaW9uRmllbGRzIvwBChdEb3duc3RyZWFtQ2xvc2VSZXNw",
+            "b25zZRIdCgpyZXF1ZXN0X2lkGAEgASgNUglyZXF1ZXN0SWQSNQoLcmVzdWx0",
+            "X2NvZGUYAiABKA4yFC5pc2NwMi52MS5SZXN1bHRDb2RlUgpyZXN1bHRDb2Rl",
+            "EiMKDXJlc3VsdF9zdHJpbmcYAyABKAlSDHJlc3VsdFN0cmluZxJmChBleHRl",
+            "bnNpb25fZmllbGRzGAQgASgLMjsuaXNjcDIudjEuZXh0ZW5zaW9ucy5Eb3du",
+            "c3RyZWFtQ2xvc2VSZXNwb25zZUV4dGVuc2lvbkZpZWxkc1IPZXh0ZW5zaW9u",
+            "RmllbGRzIrgDCg9Eb3duc3RyZWFtQ2h1bmsSJgoPc3RyZWFtX2lkX2FsaWFz",
+            "GAEgASgNUg1zdHJlYW1JZEFsaWFzEj0KDXVwc3RyZWFtX2luZm8YAiABKAsy",
+            "Fi5pc2NwMi52MS5VcHN0cmVhbUluZm9IAFIMdXBzdHJlYW1JbmZvEicKDnVw",
+            "c3RyZWFtX2FsaWFzGAMgASgNSABSDXVwc3RyZWFtQWxpYXMSOAoMc3RyZWFt",
+            "X2NodW5rGAQgASgLMhUuaXNjcDIudjEuU3RyZWFtQ2h1bmtSC3N0cmVhbUNo",
+            "dW5rEl4KEGV4dGVuc2lvbl9maWVsZHMYBSABKAsyMy5pc2NwMi52MS5leHRl",
+            "bnNpb25zLkRvd25zdHJlYW1DaHVua0V4dGVuc2lvbkZpZWxkc1IPZXh0ZW5z",
+            "aW9uRmllbGRzEmYKHGRvd25zdHJlYW1fZmlsdGVyX3JlZmVyZW5jZXMYBiAD",
+            "KAsyJC5pc2NwMi52MS5Eb3duc3RyZWFtRmlsdGVyUmVmZXJlbmNlc1IaZG93",
+            "bnN0cmVhbUZpbHRlclJlZmVyZW5jZXNCEwoRdXBzdHJlYW1fb3JfYWxpYXMi",
+            "2AQKEkRvd25zdHJlYW1DaHVua0FjaxImCg9zdHJlYW1faWRfYWxpYXMYASAB",
+            "KA1SDXN0cmVhbUlkQWxpYXMSFQoGYWNrX2lkGAIgASgNUgVhY2tJZBI5Cgdy",
+            "ZXN1bHRzGAMgAygLMh8uaXNjcDIudjEuRG93bnN0cmVhbUNodW5rUmVzdWx0",
+            "UgdyZXN1bHRzElwKEHVwc3RyZWFtX2FsaWFzZXMYBCADKAsyMS5pc2NwMi52",
+            "MS5Eb3duc3RyZWFtQ2h1bmtBY2suVXBzdHJlYW1BbGlhc2VzRW50cnlSD3Vw",
+            "c3RyZWFtQWxpYXNlcxJXCg9kYXRhX2lkX2FsaWFzZXMYBSADKAsyLy5pc2Nw",
+            "Mi52MS5Eb3duc3RyZWFtQ2h1bmtBY2suRGF0YUlkQWxpYXNlc0VudHJ5Ug1k",
+            "YXRhSWRBbGlhc2VzEmEKEGV4dGVuc2lvbl9maWVsZHMYBiABKAsyNi5pc2Nw",
+            "Mi52MS5leHRlbnNpb25zLkRvd25zdHJlYW1DaHVua0Fja0V4dGVuc2lvbkZp",
+            "ZWxkc1IPZXh0ZW5zaW9uRmllbGRzGloKFFVwc3RyZWFtQWxpYXNlc0VudHJ5",
+            "EhAKA2tleRgBIAEoDVIDa2V5EiwKBXZhbHVlGAIgASgLMhYuaXNjcDIudjEu",
+            "VXBzdHJlYW1JbmZvUgV2YWx1ZToCOAEaUgoSRGF0YUlkQWxpYXNlc0VudHJ5",
+            "EhAKA2tleRgBIAEoDVIDa2V5EiYKBXZhbHVlGAIgASgLMhAuaXNjcDIudjEu",
+            "RGF0YUlEUgV2YWx1ZToCOAEiogIKGkRvd25zdHJlYW1DaHVua0Fja0NvbXBs",
+            "ZXRlEiYKD3N0cmVhbV9pZF9hbGlhcxgBIAEoDVINc3RyZWFtSWRBbGlhcxIV",
+            "CgZhY2tfaWQYAiABKA1SBWFja0lkEjUKC3Jlc3VsdF9jb2RlGAMgASgOMhQu",
             "aXNjcDIudjEuUmVzdWx0Q29kZVIKcmVzdWx0Q29kZRIjCg1yZXN1bHRfc3Ry",
-            "aW5nGAQgASgJUgxyZXN1bHRTdHJpbmcSZAoQZXh0ZW5zaW9uX2ZpZWxkcxgF",
-            "IAEoCzI5LmlzY3AyLnYxLmV4dGVuc2lvbnMuRG93bnN0cmVhbUNodW5rUmVz",
-            "dWx0RXh0ZW5zaW9uRmllbGRzUg9leHRlbnNpb25GaWVsZHNCqgEKIGNvbS5n",
-            "aXRodWIuYXB0cG9kLnByb3RvLmlzY3AyLnYxQg9Eb3duc3RyZWFtUHJvdG9Q",
-            "AVo0Z2l0aHViLmNvbS9hcHRwb2QvaXNjcC1wcm90by9nZW4vZ28vaXNjcDIv",
-            "djE7aXNjcDJ2MaICA0lYWKoCCElzY3AyLlYxygIISXNjcDJcVjHiAhRJc2Nw",
-            "MlxWMVxHUEJNZXRhZGF0YeoCCUlzY3AyOjpWMWIGcHJvdG8z"));
+            "aW5nGAQgASgJUgxyZXN1bHRTdHJpbmcSaQoQZXh0ZW5zaW9uX2ZpZWxkcxgF",
+            "IAEoCzI+LmlzY3AyLnYxLmV4dGVuc2lvbnMuRG93bnN0cmVhbUNodW5rQWNr",
+            "Q29tcGxldGVFeHRlbnNpb25GaWVsZHNSD2V4dGVuc2lvbkZpZWxkcyKjBwoS",
+            "RG93bnN0cmVhbU1ldGFkYXRhEh0KCnJlcXVlc3RfaWQYASABKA1SCXJlcXVl",
+            "c3RJZBImCg9zdHJlYW1faWRfYWxpYXMYDSABKA1SDXN0cmVhbUlkQWxpYXMS",
+            "MQoJYmFzZV90aW1lGAIgASgLMhIuaXNjcDIudjEuQmFzZVRpbWVIAFIIYmFz",
+            "ZVRpbWUSPQoNdXBzdHJlYW1fb3BlbhgDIAEoCzIWLmlzY3AyLnYxLlVwc3Ry",
+            "ZWFtT3BlbkgAUgx1cHN0cmVhbU9wZW4SWQoXdXBzdHJlYW1fYWJub3JtYWxf",
+            "Y2xvc2UYBCABKAsyHy5pc2NwMi52MS5VcHN0cmVhbUFibm9ybWFsQ2xvc2VI",
+            "AFIVdXBzdHJlYW1BYm5vcm1hbENsb3NlEkMKD3Vwc3RyZWFtX3Jlc3VtZRgF",
+            "IAEoCzIYLmlzY3AyLnYxLlVwc3RyZWFtUmVzdW1lSABSDnVwc3RyZWFtUmVz",
+            "dW1lElMKFXVwc3RyZWFtX25vcm1hbF9jbG9zZRgGIAEoCzIdLmlzY3AyLnYx",
+            "LlVwc3RyZWFtTm9ybWFsQ2xvc2VIAFITdXBzdHJlYW1Ob3JtYWxDbG9zZRJD",
+            "Cg9kb3duc3RyZWFtX29wZW4YByABKAsyGC5pc2NwMi52MS5Eb3duc3RyZWFt",
+            "T3BlbkgAUg5kb3duc3RyZWFtT3BlbhJfChlkb3duc3RyZWFtX2Fibm9ybWFs",
+            "X2Nsb3NlGAggASgLMiEuaXNjcDIudjEuRG93bnN0cmVhbUFibm9ybWFsQ2xv",
+            "c2VIAFIXZG93bnN0cmVhbUFibm9ybWFsQ2xvc2USSQoRZG93bnN0cmVhbV9y",
+            "ZXN1bWUYCSABKAsyGi5pc2NwMi52MS5Eb3duc3RyZWFtUmVzdW1lSABSEGRv",
+            "d25zdHJlYW1SZXN1bWUSWQoXZG93bnN0cmVhbV9ub3JtYWxfY2xvc2UYCiAB",
+            "KAsyHy5pc2NwMi52MS5Eb3duc3RyZWFtTm9ybWFsQ2xvc2VIAFIVZG93bnN0",
+            "cmVhbU5vcm1hbENsb3NlEiQKDnNvdXJjZV9ub2RlX2lkGAsgASgJUgxzb3Vy",
+            "Y2VOb2RlSWQSYQoQZXh0ZW5zaW9uX2ZpZWxkcxgMIAEoCzI2LmlzY3AyLnYx",
+            "LmV4dGVuc2lvbnMuRG93bnN0cmVhbU1ldGFkYXRhRXh0ZW5zaW9uRmllbGRz",
+            "Ug9leHRlbnNpb25GaWVsZHNCCgoIbWV0YWRhdGEi+AEKFURvd25zdHJlYW1N",
+            "ZXRhZGF0YUFjaxIdCgpyZXF1ZXN0X2lkGAEgASgNUglyZXF1ZXN0SWQSNQoL",
+            "cmVzdWx0X2NvZGUYAiABKA4yFC5pc2NwMi52MS5SZXN1bHRDb2RlUgpyZXN1",
+            "bHRDb2RlEiMKDXJlc3VsdF9zdHJpbmcYAyABKAlSDHJlc3VsdFN0cmluZxJk",
+            "ChBleHRlbnNpb25fZmllbGRzGAQgASgLMjkuaXNjcDIudjEuZXh0ZW5zaW9u",
+            "cy5Eb3duc3RyZWFtTWV0YWRhdGFBY2tFeHRlbnNpb25GaWVsZHNSD2V4dGVu",
+            "c2lvbkZpZWxkcyJwCgxVcHN0cmVhbUluZm8SHQoKc2Vzc2lvbl9pZBgBIAEo",
+            "CVIJc2Vzc2lvbklkEhsKCXN0cmVhbV9pZBgCIAEoDFIIc3RyZWFtSWQSJAoO",
+            "c291cmNlX25vZGVfaWQYAyABKAlSDHNvdXJjZU5vZGVJZCLLAgoVRG93bnN0",
+            "cmVhbUNodW5rUmVzdWx0EjEKFXN0cmVhbV9pZF9vZl91cHN0cmVhbRgBIAEo",
+            "DFISc3RyZWFtSWRPZlVwc3RyZWFtEj0KG3NlcXVlbmNlX251bWJlcl9pbl91",
+            "cHN0cmVhbRgCIAEoDVIYc2VxdWVuY2VOdW1iZXJJblVwc3RyZWFtEjUKC3Jl",
+            "c3VsdF9jb2RlGAMgASgOMhQuaXNjcDIudjEuUmVzdWx0Q29kZVIKcmVzdWx0",
+            "Q29kZRIjCg1yZXN1bHRfc3RyaW5nGAQgASgJUgxyZXN1bHRTdHJpbmcSZAoQ",
+            "ZXh0ZW5zaW9uX2ZpZWxkcxgFIAEoCzI5LmlzY3AyLnYxLmV4dGVuc2lvbnMu",
+            "RG93bnN0cmVhbUNodW5rUmVzdWx0RXh0ZW5zaW9uRmllbGRzUg9leHRlbnNp",
+            "b25GaWVsZHNCqgEKIGNvbS5naXRodWIuYXB0cG9kLnByb3RvLmlzY3AyLnYx",
+            "Qg9Eb3duc3RyZWFtUHJvdG9QAVo0Z2l0aHViLmNvbS9hcHRwb2QvaXNjcC1w",
+            "cm90by9nZW4vZ28vaXNjcDIvdjE7aXNjcDJ2MaICA0lYWKoCCElzY3AyLlYx",
+            "ygIISXNjcDJcVjHiAhRJc2NwMlxWMVxHUEJNZXRhZGF0YeoCCUlzY3AyOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Iscp2.V1.CommonReflection.Descriptor, global::Iscp2.V1.Extensions.DownstreamReflection.Descriptor, global::Iscp2.V1.MetadataReflection.Descriptor, global::Iscp2.V1.ResultCodeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamOpenRequest), global::Iscp2.V1.DownstreamOpenRequest.Parser, new[]{ "RequestId", "DesiredStreamIdAlias", "DownstreamFilters", "ExpiryInterval", "DataIdAliases", "Qos", "ExtensionFields", "OmitEmptyChunk" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamOpenResponse), global::Iscp2.V1.DownstreamOpenResponse.Parser, new[]{ "RequestId", "AssignedStreamId", "ServerTime", "ResultCode", "ResultString", "ExtensionFields" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamResumeRequest), global::Iscp2.V1.DownstreamResumeRequest.Parser, new[]{ "RequestId", "StreamId", "DesiredStreamIdAlias", "ExtensionFields" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamResumeResponse), global::Iscp2.V1.DownstreamResumeResponse.Parser, new[]{ "RequestId", "ResultCode", "ResultString", "ExtensionFields" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamOpenRequest), global::Iscp2.V1.DownstreamOpenRequest.Parser, new[]{ "RequestId", "DesiredStreamIdAlias", "DownstreamFilters", "ExpiryInterval", "DataIdAliases", "Qos", "ExtensionFields", "OmitEmptyChunk", "EnableResumeToken" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamOpenResponse), global::Iscp2.V1.DownstreamOpenResponse.Parser, new[]{ "RequestId", "AssignedStreamId", "ServerTime", "ResultCode", "ResultString", "ExtensionFields", "ResumeToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamResumeRequest), global::Iscp2.V1.DownstreamResumeRequest.Parser, new[]{ "RequestId", "StreamId", "DesiredStreamIdAlias", "ExtensionFields", "ResumeToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamResumeResponse), global::Iscp2.V1.DownstreamResumeResponse.Parser, new[]{ "RequestId", "ResultCode", "ResultString", "ExtensionFields", "ResumeToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamCloseRequest), global::Iscp2.V1.DownstreamCloseRequest.Parser, new[]{ "RequestId", "StreamId", "ExtensionFields" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamCloseResponse), global::Iscp2.V1.DownstreamCloseResponse.Parser, new[]{ "RequestId", "ResultCode", "ResultString", "ExtensionFields" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamChunk), global::Iscp2.V1.DownstreamChunk.Parser, new[]{ "StreamIdAlias", "UpstreamInfo", "UpstreamAlias", "StreamChunk", "ExtensionFields", "DownstreamFilterReferences" }, new[]{ "UpstreamOrAlias" }, null, null, null),
@@ -204,6 +208,7 @@ namespace Iscp2.V1 {
       qos_ = other.qos_;
       extensionFields_ = other.extensionFields_ != null ? other.extensionFields_.Clone() : null;
       omitEmptyChunk_ = other.omitEmptyChunk_;
+      enableResumeToken_ = other.enableResumeToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -307,6 +312,18 @@ namespace Iscp2.V1 {
       }
     }
 
+    /// <summary>Field number for the "enable_resume_token" field.</summary>
+    public const int EnableResumeTokenFieldNumber = 9;
+    private bool enableResumeToken_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableResumeToken {
+      get { return enableResumeToken_; }
+      set {
+        enableResumeToken_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -330,6 +347,7 @@ namespace Iscp2.V1 {
       if (Qos != other.Qos) return false;
       if (!object.Equals(ExtensionFields, other.ExtensionFields)) return false;
       if (OmitEmptyChunk != other.OmitEmptyChunk) return false;
+      if (EnableResumeToken != other.EnableResumeToken) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -345,6 +363,7 @@ namespace Iscp2.V1 {
       if (Qos != global::Iscp2.V1.QoS.Unreliable) hash ^= Qos.GetHashCode();
       if (extensionFields_ != null) hash ^= ExtensionFields.GetHashCode();
       if (OmitEmptyChunk != false) hash ^= OmitEmptyChunk.GetHashCode();
+      if (EnableResumeToken != false) hash ^= EnableResumeToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -389,6 +408,10 @@ namespace Iscp2.V1 {
         output.WriteRawTag(64);
         output.WriteBool(OmitEmptyChunk);
       }
+      if (EnableResumeToken != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(EnableResumeToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -425,6 +448,10 @@ namespace Iscp2.V1 {
         output.WriteRawTag(64);
         output.WriteBool(OmitEmptyChunk);
       }
+      if (EnableResumeToken != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(EnableResumeToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -453,6 +480,9 @@ namespace Iscp2.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExtensionFields);
       }
       if (OmitEmptyChunk != false) {
+        size += 1 + 1;
+      }
+      if (EnableResumeToken != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -489,6 +519,9 @@ namespace Iscp2.V1 {
       }
       if (other.OmitEmptyChunk != false) {
         OmitEmptyChunk = other.OmitEmptyChunk;
+      }
+      if (other.EnableResumeToken != false) {
+        EnableResumeToken = other.EnableResumeToken;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -542,6 +575,10 @@ namespace Iscp2.V1 {
           }
           case 64: {
             OmitEmptyChunk = input.ReadBool();
+            break;
+          }
+          case 72: {
+            EnableResumeToken = input.ReadBool();
             break;
           }
         }
@@ -598,6 +635,10 @@ namespace Iscp2.V1 {
             OmitEmptyChunk = input.ReadBool();
             break;
           }
+          case 72: {
+            EnableResumeToken = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -646,6 +687,7 @@ namespace Iscp2.V1 {
       resultCode_ = other.resultCode_;
       resultString_ = other.resultString_;
       extensionFields_ = other.extensionFields_ != null ? other.extensionFields_.Clone() : null;
+      resumeToken_ = other.resumeToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -727,6 +769,18 @@ namespace Iscp2.V1 {
       }
     }
 
+    /// <summary>Field number for the "resume_token" field.</summary>
+    public const int ResumeTokenFieldNumber = 7;
+    private string resumeToken_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ResumeToken {
+      get { return resumeToken_; }
+      set {
+        resumeToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -748,6 +802,7 @@ namespace Iscp2.V1 {
       if (ResultCode != other.ResultCode) return false;
       if (ResultString != other.ResultString) return false;
       if (!object.Equals(ExtensionFields, other.ExtensionFields)) return false;
+      if (ResumeToken != other.ResumeToken) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -761,6 +816,7 @@ namespace Iscp2.V1 {
       if (ResultCode != global::Iscp2.V1.ResultCode.Succeeded) hash ^= ResultCode.GetHashCode();
       if (ResultString.Length != 0) hash ^= ResultString.GetHashCode();
       if (extensionFields_ != null) hash ^= ExtensionFields.GetHashCode();
+      if (ResumeToken.Length != 0) hash ^= ResumeToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -803,6 +859,10 @@ namespace Iscp2.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(ExtensionFields);
       }
+      if (ResumeToken.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ResumeToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -837,6 +897,10 @@ namespace Iscp2.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(ExtensionFields);
       }
+      if (ResumeToken.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ResumeToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -864,6 +928,9 @@ namespace Iscp2.V1 {
       }
       if (extensionFields_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExtensionFields);
+      }
+      if (ResumeToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ResumeToken);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -897,6 +964,9 @@ namespace Iscp2.V1 {
           ExtensionFields = new global::Iscp2.V1.Extensions.DownstreamOpenResponseExtensionFields();
         }
         ExtensionFields.MergeFrom(other.ExtensionFields);
+      }
+      if (other.ResumeToken.Length != 0) {
+        ResumeToken = other.ResumeToken;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -942,6 +1012,10 @@ namespace Iscp2.V1 {
               ExtensionFields = new global::Iscp2.V1.Extensions.DownstreamOpenResponseExtensionFields();
             }
             input.ReadMessage(ExtensionFields);
+            break;
+          }
+          case 58: {
+            ResumeToken = input.ReadString();
             break;
           }
         }
@@ -990,6 +1064,10 @@ namespace Iscp2.V1 {
             input.ReadMessage(ExtensionFields);
             break;
           }
+          case 58: {
+            ResumeToken = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1036,6 +1114,7 @@ namespace Iscp2.V1 {
       streamId_ = other.streamId_;
       desiredStreamIdAlias_ = other.desiredStreamIdAlias_;
       extensionFields_ = other.extensionFields_ != null ? other.extensionFields_.Clone() : null;
+      resumeToken_ = other.resumeToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1093,6 +1172,18 @@ namespace Iscp2.V1 {
       }
     }
 
+    /// <summary>Field number for the "resume_token" field.</summary>
+    public const int ResumeTokenFieldNumber = 5;
+    private string resumeToken_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ResumeToken {
+      get { return resumeToken_; }
+      set {
+        resumeToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1112,6 +1203,7 @@ namespace Iscp2.V1 {
       if (StreamId != other.StreamId) return false;
       if (DesiredStreamIdAlias != other.DesiredStreamIdAlias) return false;
       if (!object.Equals(ExtensionFields, other.ExtensionFields)) return false;
+      if (ResumeToken != other.ResumeToken) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1123,6 +1215,7 @@ namespace Iscp2.V1 {
       if (StreamId.Length != 0) hash ^= StreamId.GetHashCode();
       if (DesiredStreamIdAlias != 0) hash ^= DesiredStreamIdAlias.GetHashCode();
       if (extensionFields_ != null) hash ^= ExtensionFields.GetHashCode();
+      if (ResumeToken.Length != 0) hash ^= ResumeToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1157,6 +1250,10 @@ namespace Iscp2.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(ExtensionFields);
       }
+      if (ResumeToken.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ResumeToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1183,6 +1280,10 @@ namespace Iscp2.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(ExtensionFields);
       }
+      if (ResumeToken.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ResumeToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1204,6 +1305,9 @@ namespace Iscp2.V1 {
       }
       if (extensionFields_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExtensionFields);
+      }
+      if (ResumeToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ResumeToken);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1231,6 +1335,9 @@ namespace Iscp2.V1 {
           ExtensionFields = new global::Iscp2.V1.Extensions.DownstreamResumeRequestExtensionFields();
         }
         ExtensionFields.MergeFrom(other.ExtensionFields);
+      }
+      if (other.ResumeToken.Length != 0) {
+        ResumeToken = other.ResumeToken;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1270,6 +1377,10 @@ namespace Iscp2.V1 {
             input.ReadMessage(ExtensionFields);
             break;
           }
+          case 42: {
+            ResumeToken = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1306,6 +1417,10 @@ namespace Iscp2.V1 {
               ExtensionFields = new global::Iscp2.V1.Extensions.DownstreamResumeRequestExtensionFields();
             }
             input.ReadMessage(ExtensionFields);
+            break;
+          }
+          case 42: {
+            ResumeToken = input.ReadString();
             break;
           }
         }
@@ -1354,6 +1469,7 @@ namespace Iscp2.V1 {
       resultCode_ = other.resultCode_;
       resultString_ = other.resultString_;
       extensionFields_ = other.extensionFields_ != null ? other.extensionFields_.Clone() : null;
+      resumeToken_ = other.resumeToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1411,6 +1527,18 @@ namespace Iscp2.V1 {
       }
     }
 
+    /// <summary>Field number for the "resume_token" field.</summary>
+    public const int ResumeTokenFieldNumber = 5;
+    private string resumeToken_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ResumeToken {
+      get { return resumeToken_; }
+      set {
+        resumeToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1430,6 +1558,7 @@ namespace Iscp2.V1 {
       if (ResultCode != other.ResultCode) return false;
       if (ResultString != other.ResultString) return false;
       if (!object.Equals(ExtensionFields, other.ExtensionFields)) return false;
+      if (ResumeToken != other.ResumeToken) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1441,6 +1570,7 @@ namespace Iscp2.V1 {
       if (ResultCode != global::Iscp2.V1.ResultCode.Succeeded) hash ^= ResultCode.GetHashCode();
       if (ResultString.Length != 0) hash ^= ResultString.GetHashCode();
       if (extensionFields_ != null) hash ^= ExtensionFields.GetHashCode();
+      if (ResumeToken.Length != 0) hash ^= ResumeToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1475,6 +1605,10 @@ namespace Iscp2.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(ExtensionFields);
       }
+      if (ResumeToken.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ResumeToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1501,6 +1635,10 @@ namespace Iscp2.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(ExtensionFields);
       }
+      if (ResumeToken.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ResumeToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1522,6 +1660,9 @@ namespace Iscp2.V1 {
       }
       if (extensionFields_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExtensionFields);
+      }
+      if (ResumeToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ResumeToken);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1549,6 +1690,9 @@ namespace Iscp2.V1 {
           ExtensionFields = new global::Iscp2.V1.Extensions.DownstreamResumeResponseExtensionFields();
         }
         ExtensionFields.MergeFrom(other.ExtensionFields);
+      }
+      if (other.ResumeToken.Length != 0) {
+        ResumeToken = other.ResumeToken;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1588,6 +1732,10 @@ namespace Iscp2.V1 {
             input.ReadMessage(ExtensionFields);
             break;
           }
+          case 42: {
+            ResumeToken = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1624,6 +1772,10 @@ namespace Iscp2.V1 {
               ExtensionFields = new global::Iscp2.V1.Extensions.DownstreamResumeResponseExtensionFields();
             }
             input.ReadMessage(ExtensionFields);
+            break;
+          }
+          case 42: {
+            ResumeToken = input.ReadString();
             break;
           }
         }

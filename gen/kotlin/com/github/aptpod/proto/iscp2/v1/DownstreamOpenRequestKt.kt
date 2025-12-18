@@ -279,6 +279,23 @@ public object DownstreamOpenRequestKt {
     public fun clearOmitEmptyChunk() {
       _builder.clearOmitEmptyChunk()
     }
+
+    /**
+     * `bool enable_resume_token = 9 [json_name = "enableResumeToken"];`
+     */
+    public var enableResumeToken: kotlin.Boolean
+      @kotlin.jvm.JvmName("getEnableResumeToken")
+        get() = _builder.enableResumeToken
+      @kotlin.jvm.JvmName("setEnableResumeToken")
+        set(value) {
+        _builder.enableResumeToken = value
+      }
+    /**
+     * `bool enable_resume_token = 9 [json_name = "enableResumeToken"];`
+     */
+    public fun clearEnableResumeToken() {
+      _builder.clearEnableResumeToken()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

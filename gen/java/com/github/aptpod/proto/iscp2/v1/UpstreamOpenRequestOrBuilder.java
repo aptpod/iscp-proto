@@ -89,4 +89,10 @@ public interface UpstreamOpenRequestOrBuilder extends
    * <code>.iscp2.v1.extensions.UpstreamOpenRequestExtensionFields extension_fields = 8 [json_name = "extensionFields"];</code>
    */
   com.github.aptpod.proto.iscp2.v1.extensions.UpstreamOpenRequestExtensionFieldsOrBuilder getExtensionFieldsOrBuilder();
+
+  /**
+   * <code>bool enable_resume_token = 9 [json_name = "enableResumeToken"];</code>
+   * @return The enableResumeToken.
+   */
+  boolean getEnableResumeToken();
 }

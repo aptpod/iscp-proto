@@ -103,7 +103,7 @@ public final class UpstreamProto extends com.google.protobuf.GeneratedFile {
       "\n\027iscp2/v1/upstream.proto\022\010iscp2.v1\032\025isc" +
       "p2/v1/common.proto\032\"iscp2/v1/extensions/" +
       "upstream.proto\032\027iscp2/v1/metadata.proto\032" +
-      "\032iscp2/v1/result_code.proto\"\321\002\n\023Upstream" +
+      "\032iscp2/v1/result_code.proto\"\201\003\n\023Upstream" +
       "OpenRequest\022\035\n\nrequest_id\030\001 \001(\rR\trequest" +
       "Id\022\035\n\nsession_id\030\002 \001(\tR\tsessionId\022!\n\014ack" +
       "_interval\030\003 \001(\rR\013ackInterval\022\'\n\017expiry_i" +
@@ -112,85 +112,89 @@ public final class UpstreamProto extends com.google.protobuf.GeneratedFile {
       "s\030\007 \001(\0162\r.iscp2.v1.QoSR\003qos\022b\n\020extension" +
       "_fields\030\010 \001(\01327.iscp2.v1.extensions.Upst" +
       "reamOpenRequestExtensionFieldsR\017extensio" +
-      "nFields\"\255\004\n\024UpstreamOpenResponse\022\035\n\nrequ" +
-      "est_id\030\001 \001(\rR\trequestId\022,\n\022assigned_stre" +
-      "am_id\030\002 \001(\014R\020assignedStreamId\0227\n\030assigne" +
-      "d_stream_id_alias\030\003 \001(\rR\025assignedStreamI" +
-      "dAlias\022Y\n\017data_id_aliases\030\004 \003(\01321.iscp2." +
-      "v1.UpstreamOpenResponse.DataIdAliasesEnt" +
-      "ryR\rdataIdAliases\022\037\n\013server_time\030\005 \001(\022R\n" +
-      "serverTime\0225\n\013result_code\030\006 \001(\0162\024.iscp2." +
-      "v1.ResultCodeR\nresultCode\022#\n\rresult_stri" +
-      "ng\030\007 \001(\tR\014resultString\022c\n\020extension_fiel" +
-      "ds\030\010 \001(\01328.iscp2.v1.extensions.UpstreamO" +
-      "penResponseExtensionFieldsR\017extensionFie" +
-      "lds\032R\n\022DataIdAliasesEntry\022\020\n\003key\030\001 \001(\rR\003" +
-      "key\022&\n\005value\030\002 \001(\0132\020.iscp2.v1.DataIDR\005va" +
-      "lue:\0028\001\"\271\001\n\025UpstreamResumeRequest\022\035\n\nreq" +
-      "uest_id\030\001 \001(\rR\trequestId\022\033\n\tstream_id\030\002 " +
-      "\001(\014R\010streamId\022d\n\020extension_fields\030\003 \001(\0132" +
-      "9.iscp2.v1.extensions.UpstreamResumeRequ" +
-      "estExtensionFieldsR\017extensionFields\"\263\002\n\026" +
-      "UpstreamResumeResponse\022\035\n\nrequest_id\030\001 \001" +
-      "(\rR\trequestId\0227\n\030assigned_stream_id_alia" +
-      "s\030\002 \001(\rR\025assignedStreamIdAlias\0225\n\013result" +
-      "_code\030\003 \001(\0162\024.iscp2.v1.ResultCodeR\nresul" +
-      "tCode\022#\n\rresult_string\030\004 \001(\tR\014resultStri" +
-      "ng\022e\n\020extension_fields\030\005 \001(\0132:.iscp2.v1." +
-      "extensions.UpstreamResumeResponseExtensi" +
-      "onFieldsR\017extensionFields\"\227\002\n\024UpstreamCl" +
-      "oseRequest\022\035\n\nrequest_id\030\001 \001(\rR\trequestI" +
-      "d\022\033\n\tstream_id\030\002 \001(\014R\010streamId\022*\n\021total_" +
-      "data_points\030\003 \001(\004R\017totalDataPoints\0222\n\025fi" +
-      "nal_sequence_number\030\004 \001(\rR\023finalSequence" +
-      "Number\022c\n\020extension_fields\030\005 \001(\01328.iscp2" +
-      ".v1.extensions.UpstreamCloseRequestExten" +
-      "sionFieldsR\017extensionFields\"\370\001\n\025Upstream" +
-      "CloseResponse\022\035\n\nrequest_id\030\001 \001(\rR\treque" +
-      "stId\0225\n\013result_code\030\002 \001(\0162\024.iscp2.v1.Res" +
-      "ultCodeR\nresultCode\022#\n\rresult_string\030\003 \001" +
-      "(\tR\014resultString\022d\n\020extension_fields\030\004 \001" +
-      "(\01329.iscp2.v1.extensions.UpstreamCloseRe" +
-      "sponseExtensionFieldsR\017extensionFields\"\374" +
-      "\001\n\rUpstreamChunk\022&\n\017stream_id_alias\030\001 \001(" +
-      "\rR\rstreamIdAlias\0228\n\014stream_chunk\030\002 \001(\0132\025" +
-      ".iscp2.v1.StreamChunkR\013streamChunk\022+\n\010da" +
-      "ta_ids\030\003 \003(\0132\020.iscp2.v1.DataIDR\007dataIds\022" +
-      "\\\n\020extension_fields\030\004 \001(\01321.iscp2.v1.ext" +
-      "ensions.UpstreamChunkExtensionFieldsR\017ex" +
-      "tensionFields\"\377\002\n\020UpstreamChunkAck\022&\n\017st" +
-      "ream_id_alias\030\001 \001(\rR\rstreamIdAlias\0227\n\007re" +
-      "sults\030\002 \003(\0132\035.iscp2.v1.UpstreamChunkResu" +
-      "ltR\007results\022U\n\017data_id_aliases\030\003 \003(\0132-.i" +
-      "scp2.v1.UpstreamChunkAck.DataIdAliasesEn" +
-      "tryR\rdataIdAliases\022_\n\020extension_fields\030\004" +
-      " \001(\01324.iscp2.v1.extensions.UpstreamChunk" +
-      "AckExtensionFieldsR\017extensionFields\032R\n\022D" +
-      "ataIdAliasesEntry\022\020\n\003key\030\001 \001(\rR\003key\022&\n\005v" +
-      "alue\030\002 \001(\0132\020.iscp2.v1.DataIDR\005value:\0028\001\"" +
-      "\321\001\n\020UpstreamMetadata\022\035\n\nrequest_id\030\001 \001(\r" +
-      "R\trequestId\0221\n\tbase_time\030\002 \001(\0132\022.iscp2.v" +
-      "1.BaseTimeH\000R\010baseTime\022_\n\020extension_fiel" +
-      "ds\030\004 \001(\01324.iscp2.v1.extensions.UpstreamM" +
-      "etadataExtensionFieldsR\017extensionFieldsB" +
-      "\n\n\010metadata\"\364\001\n\023UpstreamMetadataAck\022\035\n\nr" +
-      "equest_id\030\001 \001(\rR\trequestId\0225\n\013result_cod" +
-      "e\030\002 \001(\0162\024.iscp2.v1.ResultCodeR\nresultCod" +
-      "e\022#\n\rresult_string\030\003 \001(\tR\014resultString\022b" +
-      "\n\020extension_fields\030\004 \001(\01327.iscp2.v1.exte" +
-      "nsions.UpstreamMetadataAckExtensionField" +
-      "sR\017extensionFields\"\376\001\n\023UpstreamChunkResu" +
-      "lt\022\'\n\017sequence_number\030\001 \001(\rR\016sequenceNum" +
-      "ber\0225\n\013result_code\030\002 \001(\0162\024.iscp2.v1.Resu" +
-      "ltCodeR\nresultCode\022#\n\rresult_string\030\003 \001(" +
-      "\tR\014resultString\022b\n\020extension_fields\030\004 \001(" +
-      "\01327.iscp2.v1.extensions.UpstreamChunkRes" +
-      "ultExtensionFieldsR\017extensionFieldsB\250\001\n " +
-      "com.github.aptpod.proto.iscp2.v1B\rUpstre" +
-      "amProtoP\001Z4github.com/aptpod/iscp-proto/" +
-      "gen/go/iscp2/v1;iscp2v1\242\002\003IXX\252\002\010Iscp2.V1" +
-      "\312\002\010Iscp2\\V1\342\002\024Iscp2\\V1\\GPBMetadata\352\002\tIsc" +
-      "p2::V1b\006proto3"
+      "nFields\022.\n\023enable_resume_token\030\t \001(\010R\021en" +
+      "ableResumeToken\"\320\004\n\024UpstreamOpenResponse" +
+      "\022\035\n\nrequest_id\030\001 \001(\rR\trequestId\022,\n\022assig" +
+      "ned_stream_id\030\002 \001(\014R\020assignedStreamId\0227\n" +
+      "\030assigned_stream_id_alias\030\003 \001(\rR\025assigne" +
+      "dStreamIdAlias\022Y\n\017data_id_aliases\030\004 \003(\0132" +
+      "1.iscp2.v1.UpstreamOpenResponse.DataIdAl" +
+      "iasesEntryR\rdataIdAliases\022\037\n\013server_time" +
+      "\030\005 \001(\022R\nserverTime\0225\n\013result_code\030\006 \001(\0162" +
+      "\024.iscp2.v1.ResultCodeR\nresultCode\022#\n\rres" +
+      "ult_string\030\007 \001(\tR\014resultString\022c\n\020extens" +
+      "ion_fields\030\010 \001(\01328.iscp2.v1.extensions.U" +
+      "pstreamOpenResponseExtensionFieldsR\017exte" +
+      "nsionFields\022!\n\014resume_token\030\t \001(\tR\013resum" +
+      "eToken\032R\n\022DataIdAliasesEntry\022\020\n\003key\030\001 \001(" +
+      "\rR\003key\022&\n\005value\030\002 \001(\0132\020.iscp2.v1.DataIDR" +
+      "\005value:\0028\001\"\334\001\n\025UpstreamResumeRequest\022\035\n\n" +
+      "request_id\030\001 \001(\rR\trequestId\022\033\n\tstream_id" +
+      "\030\002 \001(\014R\010streamId\022d\n\020extension_fields\030\003 \001" +
+      "(\01329.iscp2.v1.extensions.UpstreamResumeR" +
+      "equestExtensionFieldsR\017extensionFields\022!" +
+      "\n\014resume_token\030\004 \001(\tR\013resumeToken\"\326\002\n\026Up" +
+      "streamResumeResponse\022\035\n\nrequest_id\030\001 \001(\r" +
+      "R\trequestId\0227\n\030assigned_stream_id_alias\030" +
+      "\002 \001(\rR\025assignedStreamIdAlias\0225\n\013result_c" +
+      "ode\030\003 \001(\0162\024.iscp2.v1.ResultCodeR\nresultC" +
+      "ode\022#\n\rresult_string\030\004 \001(\tR\014resultString" +
+      "\022e\n\020extension_fields\030\005 \001(\0132:.iscp2.v1.ex" +
+      "tensions.UpstreamResumeResponseExtension" +
+      "FieldsR\017extensionFields\022!\n\014resume_token\030" +
+      "\006 \001(\tR\013resumeToken\"\227\002\n\024UpstreamCloseRequ" +
+      "est\022\035\n\nrequest_id\030\001 \001(\rR\trequestId\022\033\n\tst" +
+      "ream_id\030\002 \001(\014R\010streamId\022*\n\021total_data_po" +
+      "ints\030\003 \001(\004R\017totalDataPoints\0222\n\025final_seq" +
+      "uence_number\030\004 \001(\rR\023finalSequenceNumber\022" +
+      "c\n\020extension_fields\030\005 \001(\01328.iscp2.v1.ext" +
+      "ensions.UpstreamCloseRequestExtensionFie" +
+      "ldsR\017extensionFields\"\370\001\n\025UpstreamCloseRe" +
+      "sponse\022\035\n\nrequest_id\030\001 \001(\rR\trequestId\0225\n" +
+      "\013result_code\030\002 \001(\0162\024.iscp2.v1.ResultCode" +
+      "R\nresultCode\022#\n\rresult_string\030\003 \001(\tR\014res" +
+      "ultString\022d\n\020extension_fields\030\004 \001(\01329.is" +
+      "cp2.v1.extensions.UpstreamCloseResponseE" +
+      "xtensionFieldsR\017extensionFields\"\374\001\n\rUpst" +
+      "reamChunk\022&\n\017stream_id_alias\030\001 \001(\rR\rstre" +
+      "amIdAlias\0228\n\014stream_chunk\030\002 \001(\0132\025.iscp2." +
+      "v1.StreamChunkR\013streamChunk\022+\n\010data_ids\030" +
+      "\003 \003(\0132\020.iscp2.v1.DataIDR\007dataIds\022\\\n\020exte" +
+      "nsion_fields\030\004 \001(\01321.iscp2.v1.extensions" +
+      ".UpstreamChunkExtensionFieldsR\017extension" +
+      "Fields\"\377\002\n\020UpstreamChunkAck\022&\n\017stream_id" +
+      "_alias\030\001 \001(\rR\rstreamIdAlias\0227\n\007results\030\002" +
+      " \003(\0132\035.iscp2.v1.UpstreamChunkResultR\007res" +
+      "ults\022U\n\017data_id_aliases\030\003 \003(\0132-.iscp2.v1" +
+      ".UpstreamChunkAck.DataIdAliasesEntryR\rda" +
+      "taIdAliases\022_\n\020extension_fields\030\004 \001(\01324." +
+      "iscp2.v1.extensions.UpstreamChunkAckExte" +
+      "nsionFieldsR\017extensionFields\032R\n\022DataIdAl" +
+      "iasesEntry\022\020\n\003key\030\001 \001(\rR\003key\022&\n\005value\030\002 " +
+      "\001(\0132\020.iscp2.v1.DataIDR\005value:\0028\001\"\321\001\n\020Ups" +
+      "treamMetadata\022\035\n\nrequest_id\030\001 \001(\rR\treque" +
+      "stId\0221\n\tbase_time\030\002 \001(\0132\022.iscp2.v1.BaseT" +
+      "imeH\000R\010baseTime\022_\n\020extension_fields\030\004 \001(" +
+      "\01324.iscp2.v1.extensions.UpstreamMetadata" +
+      "ExtensionFieldsR\017extensionFieldsB\n\n\010meta" +
+      "data\"\364\001\n\023UpstreamMetadataAck\022\035\n\nrequest_" +
+      "id\030\001 \001(\rR\trequestId\0225\n\013result_code\030\002 \001(\016" +
+      "2\024.iscp2.v1.ResultCodeR\nresultCode\022#\n\rre" +
+      "sult_string\030\003 \001(\tR\014resultString\022b\n\020exten" +
+      "sion_fields\030\004 \001(\01327.iscp2.v1.extensions." +
+      "UpstreamMetadataAckExtensionFieldsR\017exte" +
+      "nsionFields\"\376\001\n\023UpstreamChunkResult\022\'\n\017s" +
+      "equence_number\030\001 \001(\rR\016sequenceNumber\0225\n\013" +
+      "result_code\030\002 \001(\0162\024.iscp2.v1.ResultCodeR" +
+      "\nresultCode\022#\n\rresult_string\030\003 \001(\tR\014resu" +
+      "ltString\022b\n\020extension_fields\030\004 \001(\01327.isc" +
+      "p2.v1.extensions.UpstreamChunkResultExte" +
+      "nsionFieldsR\017extensionFieldsB\250\001\n com.git" +
+      "hub.aptpod.proto.iscp2.v1B\rUpstreamProto" +
+      "P\001Z4github.com/aptpod/iscp-proto/gen/go/" +
+      "iscp2/v1;iscp2v1\242\002\003IXX\252\002\010Iscp2.V1\312\002\010Iscp" +
+      "2\\V1\342\002\024Iscp2\\V1\\GPBMetadata\352\002\tIscp2::V1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -205,13 +209,13 @@ public final class UpstreamProto extends com.google.protobuf.GeneratedFile {
     internal_static_iscp2_v1_UpstreamOpenRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_iscp2_v1_UpstreamOpenRequest_descriptor,
-        new java.lang.String[] { "RequestId", "SessionId", "AckInterval", "ExpiryInterval", "DataIds", "Qos", "ExtensionFields", });
+        new java.lang.String[] { "RequestId", "SessionId", "AckInterval", "ExpiryInterval", "DataIds", "Qos", "ExtensionFields", "EnableResumeToken", });
     internal_static_iscp2_v1_UpstreamOpenResponse_descriptor =
       getDescriptor().getMessageType(1);
     internal_static_iscp2_v1_UpstreamOpenResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_iscp2_v1_UpstreamOpenResponse_descriptor,
-        new java.lang.String[] { "RequestId", "AssignedStreamId", "AssignedStreamIdAlias", "DataIdAliases", "ServerTime", "ResultCode", "ResultString", "ExtensionFields", });
+        new java.lang.String[] { "RequestId", "AssignedStreamId", "AssignedStreamIdAlias", "DataIdAliases", "ServerTime", "ResultCode", "ResultString", "ExtensionFields", "ResumeToken", });
     internal_static_iscp2_v1_UpstreamOpenResponse_DataIdAliasesEntry_descriptor =
       internal_static_iscp2_v1_UpstreamOpenResponse_descriptor.getNestedType(0);
     internal_static_iscp2_v1_UpstreamOpenResponse_DataIdAliasesEntry_fieldAccessorTable = new
@@ -223,13 +227,13 @@ public final class UpstreamProto extends com.google.protobuf.GeneratedFile {
     internal_static_iscp2_v1_UpstreamResumeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_iscp2_v1_UpstreamResumeRequest_descriptor,
-        new java.lang.String[] { "RequestId", "StreamId", "ExtensionFields", });
+        new java.lang.String[] { "RequestId", "StreamId", "ExtensionFields", "ResumeToken", });
     internal_static_iscp2_v1_UpstreamResumeResponse_descriptor =
       getDescriptor().getMessageType(3);
     internal_static_iscp2_v1_UpstreamResumeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_iscp2_v1_UpstreamResumeResponse_descriptor,
-        new java.lang.String[] { "RequestId", "AssignedStreamIdAlias", "ResultCode", "ResultString", "ExtensionFields", });
+        new java.lang.String[] { "RequestId", "AssignedStreamIdAlias", "ResultCode", "ResultString", "ExtensionFields", "ResumeToken", });
     internal_static_iscp2_v1_UpstreamCloseRequest_descriptor =
       getDescriptor().getMessageType(4);
     internal_static_iscp2_v1_UpstreamCloseRequest_fieldAccessorTable = new

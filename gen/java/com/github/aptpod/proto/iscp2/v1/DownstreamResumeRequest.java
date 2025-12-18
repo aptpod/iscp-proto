@@ -29,6 +29,7 @@ private static final long serialVersionUID = 0L;
   }
   private DownstreamResumeRequest() {
     streamId_ = com.google.protobuf.ByteString.EMPTY;
+    resumeToken_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -104,6 +105,45 @@ private static final long serialVersionUID = 0L;
     return extensionFields_ == null ? com.github.aptpod.proto.iscp2.v1.extensions.DownstreamResumeRequestExtensionFields.getDefaultInstance() : extensionFields_;
   }
 
+  public static final int RESUME_TOKEN_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resumeToken_ = "";
+  /**
+   * <code>string resume_token = 5 [json_name = "resumeToken"];</code>
+   * @return The resumeToken.
+   */
+  @java.lang.Override
+  public java.lang.String getResumeToken() {
+    java.lang.Object ref = resumeToken_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      resumeToken_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string resume_token = 5 [json_name = "resumeToken"];</code>
+   * @return The bytes for resumeToken.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getResumeTokenBytes() {
+    java.lang.Object ref = resumeToken_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      resumeToken_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -130,6 +170,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(4, getExtensionFields());
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(resumeToken_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 5, resumeToken_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -154,6 +197,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getExtensionFields());
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(resumeToken_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(5, resumeToken_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -181,6 +227,8 @@ private static final long serialVersionUID = 0L;
       if (!getExtensionFields()
           .equals(other.getExtensionFields())) return false;
     }
+    if (!getResumeToken()
+        .equals(other.getResumeToken())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -202,6 +250,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + EXTENSION_FIELDS_FIELD_NUMBER;
       hash = (53 * hash) + getExtensionFields().hashCode();
     }
+    hash = (37 * hash) + RESUME_TOKEN_FIELD_NUMBER;
+    hash = (53 * hash) + getResumeToken().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -347,6 +397,7 @@ private static final long serialVersionUID = 0L;
         extensionFieldsBuilder_.dispose();
         extensionFieldsBuilder_ = null;
       }
+      resumeToken_ = "";
       return this;
     }
 
@@ -396,6 +447,9 @@ private static final long serialVersionUID = 0L;
             : extensionFieldsBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.resumeToken_ = resumeToken_;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -422,6 +476,11 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasExtensionFields()) {
         mergeExtensionFields(other.getExtensionFields());
+      }
+      if (!other.getResumeToken().isEmpty()) {
+        resumeToken_ = other.resumeToken_;
+        bitField0_ |= 0x00000010;
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -471,6 +530,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 42: {
+              resumeToken_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -703,6 +767,78 @@ private static final long serialVersionUID = 0L;
         extensionFields_ = null;
       }
       return extensionFieldsBuilder_;
+    }
+
+    private java.lang.Object resumeToken_ = "";
+    /**
+     * <code>string resume_token = 5 [json_name = "resumeToken"];</code>
+     * @return The resumeToken.
+     */
+    public java.lang.String getResumeToken() {
+      java.lang.Object ref = resumeToken_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resumeToken_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string resume_token = 5 [json_name = "resumeToken"];</code>
+     * @return The bytes for resumeToken.
+     */
+    public com.google.protobuf.ByteString
+        getResumeTokenBytes() {
+      java.lang.Object ref = resumeToken_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resumeToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string resume_token = 5 [json_name = "resumeToken"];</code>
+     * @param value The resumeToken to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResumeToken(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      resumeToken_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string resume_token = 5 [json_name = "resumeToken"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearResumeToken() {
+      resumeToken_ = getDefaultInstance().getResumeToken();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string resume_token = 5 [json_name = "resumeToken"];</code>
+     * @param value The bytes for resumeToken to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResumeTokenBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      resumeToken_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
     }
 
     // @@protoc_insertion_point(builder_scope:iscp2.v1.DownstreamResumeRequest)

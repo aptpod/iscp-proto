@@ -59,4 +59,16 @@ public interface UpstreamResumeResponseOrBuilder extends
    * <code>.iscp2.v1.extensions.UpstreamResumeResponseExtensionFields extension_fields = 5 [json_name = "extensionFields"];</code>
    */
   com.github.aptpod.proto.iscp2.v1.extensions.UpstreamResumeResponseExtensionFieldsOrBuilder getExtensionFieldsOrBuilder();
+
+  /**
+   * <code>string resume_token = 6 [json_name = "resumeToken"];</code>
+   * @return The resumeToken.
+   */
+  java.lang.String getResumeToken();
+  /**
+   * <code>string resume_token = 6 [json_name = "resumeToken"];</code>
+   * @return The bytes for resumeToken.
+   */
+  com.google.protobuf.ByteString
+      getResumeTokenBytes();
 }

@@ -105,4 +105,16 @@ com.github.aptpod.proto.iscp2.v1.DataID defaultValue);
    * <code>.iscp2.v1.extensions.UpstreamOpenResponseExtensionFields extension_fields = 8 [json_name = "extensionFields"];</code>
    */
   com.github.aptpod.proto.iscp2.v1.extensions.UpstreamOpenResponseExtensionFieldsOrBuilder getExtensionFieldsOrBuilder();
+
+  /**
+   * <code>string resume_token = 9 [json_name = "resumeToken"];</code>
+   * @return The resumeToken.
+   */
+  java.lang.String getResumeToken();
+  /**
+   * <code>string resume_token = 9 [json_name = "resumeToken"];</code>
+   * @return The bytes for resumeToken.
+   */
+  com.google.protobuf.ByteString
+      getResumeTokenBytes();
 }
