@@ -6,10 +6,11 @@ package iscp2v1
 
 import (
 	fmt "fmt"
+	io "io"
+
 	extensions "github.com/aptpod/iscp-proto/gen/go/iscp2/v1/extensions"
 	protohelpers "github.com/planetscale/vtprotobuf/protohelpers"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	io "io"
 )
 
 const (

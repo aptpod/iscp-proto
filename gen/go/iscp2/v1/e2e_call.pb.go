@@ -7,12 +7,13 @@
 package iscp2v1
 
 import (
-	extensions "github.com/aptpod/iscp-proto/gen/go/iscp2/v1/extensions"
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	extensions "github.com/aptpod/iscp-proto/gen/go/iscp2/v1/extensions"
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
