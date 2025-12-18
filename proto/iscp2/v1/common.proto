@@ -36,6 +36,15 @@ message DownstreamFilter {
   repeated DataFilter data_filters = 2;
 }
 
+message DownstreamFilterReference {
+  uint32 downstream_filter_index = 1;
+  uint32 data_filter_index = 2;
+}
+
+message DownstreamFilterReferences {
+  repeated DownstreamFilterReference references = 1;
+}
+
 message DataFilter {
   string name = 1;
   string type = 2;

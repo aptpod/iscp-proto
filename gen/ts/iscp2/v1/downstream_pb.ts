@@ -5,7 +5,7 @@
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { Message, proto3, protoInt64 } from "@bufbuild/protobuf";
-import { DataID, DownstreamFilter, QoS, StreamChunk } from "./common_pb.js";
+import { DataID, DownstreamFilter, DownstreamFilterReferences, QoS, StreamChunk } from "./common_pb.js";
 import { DownstreamChunkAckCompleteExtensionFields, DownstreamChunkAckExtensionFields, DownstreamChunkExtensionFields, DownstreamChunkResultExtensionFields, DownstreamCloseRequestExtensionFields, DownstreamCloseResponseExtensionFields, DownstreamMetadataAckExtensionFields, DownstreamMetadataExtensionFields, DownstreamOpenRequestExtensionFields, DownstreamOpenResponseExtensionFields, DownstreamResumeRequestExtensionFields, DownstreamResumeResponseExtensionFields } from "./extensions/downstream_pb.js";
 import { ResultCode } from "./result_code_pb.js";
 import { BaseTime, DownstreamAbnormalClose, DownstreamNormalClose, DownstreamOpen, DownstreamResume, UpstreamAbnormalClose, UpstreamNormalClose, UpstreamOpen, UpstreamResume } from "./metadata_pb.js";
@@ -406,6 +406,11 @@ export class DownstreamChunk extends Message<DownstreamChunk> {
    */
   extensionFields?: DownstreamChunkExtensionFields;
 
+  /**
+   * @generated from field: repeated iscp2.v1.DownstreamFilterReferences downstream_filter_references = 6;
+   */
+  downstreamFilterReferences: DownstreamFilterReferences[] = [];
+
   constructor(data?: PartialMessage<DownstreamChunk>) {
     super();
     proto3.util.initPartial(data, this);
@@ -419,6 +424,7 @@ export class DownstreamChunk extends Message<DownstreamChunk> {
     { no: 3, name: "upstream_alias", kind: "scalar", T: 13 /* ScalarType.UINT32 */, oneof: "upstream_or_alias" },
     { no: 4, name: "stream_chunk", kind: "message", T: StreamChunk },
     { no: 5, name: "extension_fields", kind: "message", T: DownstreamChunkExtensionFields },
+    { no: 6, name: "downstream_filter_references", kind: "message", T: DownstreamFilterReferences, repeated: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DownstreamChunk {

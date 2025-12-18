@@ -267,6 +267,86 @@ export class DownstreamFilter extends Message<DownstreamFilter> {
 }
 
 /**
+ * @generated from message iscp2.v1.DownstreamFilterReference
+ */
+export class DownstreamFilterReference extends Message<DownstreamFilterReference> {
+  /**
+   * @generated from field: uint32 downstream_filter_index = 1;
+   */
+  downstreamFilterIndex = 0;
+
+  /**
+   * @generated from field: uint32 data_filter_index = 2;
+   */
+  dataFilterIndex = 0;
+
+  constructor(data?: PartialMessage<DownstreamFilterReference>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "iscp2.v1.DownstreamFilterReference";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "downstream_filter_index", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
+    { no: 2, name: "data_filter_index", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DownstreamFilterReference {
+    return new DownstreamFilterReference().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): DownstreamFilterReference {
+    return new DownstreamFilterReference().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): DownstreamFilterReference {
+    return new DownstreamFilterReference().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: DownstreamFilterReference | PlainMessage<DownstreamFilterReference> | undefined, b: DownstreamFilterReference | PlainMessage<DownstreamFilterReference> | undefined): boolean {
+    return proto3.util.equals(DownstreamFilterReference, a, b);
+  }
+}
+
+/**
+ * @generated from message iscp2.v1.DownstreamFilterReferences
+ */
+export class DownstreamFilterReferences extends Message<DownstreamFilterReferences> {
+  /**
+   * @generated from field: repeated iscp2.v1.DownstreamFilterReference references = 1;
+   */
+  references: DownstreamFilterReference[] = [];
+
+  constructor(data?: PartialMessage<DownstreamFilterReferences>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "iscp2.v1.DownstreamFilterReferences";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "references", kind: "message", T: DownstreamFilterReference, repeated: true },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DownstreamFilterReferences {
+    return new DownstreamFilterReferences().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): DownstreamFilterReferences {
+    return new DownstreamFilterReferences().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): DownstreamFilterReferences {
+    return new DownstreamFilterReferences().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: DownstreamFilterReferences | PlainMessage<DownstreamFilterReferences> | undefined, b: DownstreamFilterReferences | PlainMessage<DownstreamFilterReferences> | undefined): boolean {
+    return proto3.util.equals(DownstreamFilterReferences, a, b);
+  }
+}
+
+/**
  * @generated from message iscp2.v1.DataFilter
  */
 export class DataFilter extends Message<DataFilter> {

@@ -2,6 +2,7 @@
 // NO CHECKED-IN PROTOBUF GENCODE
 // source: iscp2/v1/downstream.proto
 
+@file:com.google.protobuf.Generated
 // Generated files should ignore deprecation warnings
 @file:Suppress("DEPRECATION")
 package com.github.aptpod.proto.iscp2.v1;
@@ -146,6 +147,77 @@ public object DownstreamChunkKt {
 
     public val DownstreamChunkKt.Dsl.extensionFieldsOrNull: com.github.aptpod.proto.iscp2.v1.extensions.DownstreamChunkExtensionFields?
       get() = _builder.extensionFieldsOrNull
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class DownstreamFilterReferencesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `repeated .iscp2.v1.DownstreamFilterReferences downstream_filter_references = 6 [json_name = "downstreamFilterReferences"];`
+     */
+     public val downstreamFilterReferences: com.google.protobuf.kotlin.DslList<com.github.aptpod.proto.iscp2.v1.DownstreamFilterReferences, DownstreamFilterReferencesProxy>
+      @kotlin.jvm.JvmSynthetic
+  get() = com.google.protobuf.kotlin.DslList(
+        _builder.downstreamFilterReferencesList
+      )
+    /**
+     * `repeated .iscp2.v1.DownstreamFilterReferences downstream_filter_references = 6 [json_name = "downstreamFilterReferences"];`
+     * @param value The downstreamFilterReferences to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("addDownstreamFilterReferences")
+    public fun com.google.protobuf.kotlin.DslList<com.github.aptpod.proto.iscp2.v1.DownstreamFilterReferences, DownstreamFilterReferencesProxy>.add(value: com.github.aptpod.proto.iscp2.v1.DownstreamFilterReferences) {
+      _builder.addDownstreamFilterReferences(value)
+    }
+    /**
+     * `repeated .iscp2.v1.DownstreamFilterReferences downstream_filter_references = 6 [json_name = "downstreamFilterReferences"];`
+     * @param value The downstreamFilterReferences to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("plusAssignDownstreamFilterReferences")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<com.github.aptpod.proto.iscp2.v1.DownstreamFilterReferences, DownstreamFilterReferencesProxy>.plusAssign(value: com.github.aptpod.proto.iscp2.v1.DownstreamFilterReferences) {
+      add(value)
+    }
+    /**
+     * `repeated .iscp2.v1.DownstreamFilterReferences downstream_filter_references = 6 [json_name = "downstreamFilterReferences"];`
+     * @param values The downstreamFilterReferences to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("addAllDownstreamFilterReferences")
+    public fun com.google.protobuf.kotlin.DslList<com.github.aptpod.proto.iscp2.v1.DownstreamFilterReferences, DownstreamFilterReferencesProxy>.addAll(values: kotlin.collections.Iterable<com.github.aptpod.proto.iscp2.v1.DownstreamFilterReferences>) {
+      _builder.addAllDownstreamFilterReferences(values)
+    }
+    /**
+     * `repeated .iscp2.v1.DownstreamFilterReferences downstream_filter_references = 6 [json_name = "downstreamFilterReferences"];`
+     * @param values The downstreamFilterReferences to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("plusAssignAllDownstreamFilterReferences")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<com.github.aptpod.proto.iscp2.v1.DownstreamFilterReferences, DownstreamFilterReferencesProxy>.plusAssign(values: kotlin.collections.Iterable<com.github.aptpod.proto.iscp2.v1.DownstreamFilterReferences>) {
+      addAll(values)
+    }
+    /**
+     * `repeated .iscp2.v1.DownstreamFilterReferences downstream_filter_references = 6 [json_name = "downstreamFilterReferences"];`
+     * @param index The index to set the value at.
+     * @param value The downstreamFilterReferences to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("setDownstreamFilterReferences")
+    public operator fun com.google.protobuf.kotlin.DslList<com.github.aptpod.proto.iscp2.v1.DownstreamFilterReferences, DownstreamFilterReferencesProxy>.set(index: kotlin.Int, value: com.github.aptpod.proto.iscp2.v1.DownstreamFilterReferences) {
+      _builder.setDownstreamFilterReferences(index, value)
+    }
+    /**
+     * `repeated .iscp2.v1.DownstreamFilterReferences downstream_filter_references = 6 [json_name = "downstreamFilterReferences"];`
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("clearDownstreamFilterReferences")
+    public fun com.google.protobuf.kotlin.DslList<com.github.aptpod.proto.iscp2.v1.DownstreamFilterReferences, DownstreamFilterReferencesProxy>.clear() {
+      _builder.clearDownstreamFilterReferences()
+    }
     public val upstreamOrAliasCase: com.github.aptpod.proto.iscp2.v1.DownstreamChunk.UpstreamOrAliasCase
     @kotlin.jvm.JvmName("getUpstreamOrAliasCase")
       get() = _builder.getUpstreamOrAliasCase()

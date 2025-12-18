@@ -37,13 +37,18 @@ namespace Iscp2.V1 {
             "MAoGRGF0YUlEEhIKBG5hbWUYASABKAlSBG5hbWUSEgoEdHlwZRgCIAEoCVIE",
             "dHlwZSJxChBEb3duc3RyZWFtRmlsdGVyEiQKDnNvdXJjZV9ub2RlX2lkGAEg",
             "ASgJUgxzb3VyY2VOb2RlSWQSNwoMZGF0YV9maWx0ZXJzGAIgAygLMhQuaXNj",
-            "cDIudjEuRGF0YUZpbHRlclILZGF0YUZpbHRlcnMiNAoKRGF0YUZpbHRlchIS",
-            "CgRuYW1lGAEgASgJUgRuYW1lEhIKBHR5cGUYAiABKAlSBHR5cGUqMAoDUW9T",
-            "Eg4KClVOUkVMSUFCTEUQABIMCghSRUxJQUJMRRABEgsKB1BBUlRJQUwQAkKm",
-            "AQogY29tLmdpdGh1Yi5hcHRwb2QucHJvdG8uaXNjcDIudjFCC0NvbW1vblBy",
-            "b3RvUAFaNGdpdGh1Yi5jb20vYXB0cG9kL2lzY3AtcHJvdG8vZ2VuL2dvL2lz",
-            "Y3AyL3YxO2lzY3AydjGiAgNJWFiqAghJc2NwMi5WMcoCCElzY3AyXFYx4gIU",
-            "SXNjcDJcVjFcR1BCTWV0YWRhdGHqAglJc2NwMjo6VjFiBnByb3RvMw=="));
+            "cDIudjEuRGF0YUZpbHRlclILZGF0YUZpbHRlcnMifwoZRG93bnN0cmVhbUZp",
+            "bHRlclJlZmVyZW5jZRI2Chdkb3duc3RyZWFtX2ZpbHRlcl9pbmRleBgBIAEo",
+            "DVIVZG93bnN0cmVhbUZpbHRlckluZGV4EioKEWRhdGFfZmlsdGVyX2luZGV4",
+            "GAIgASgNUg9kYXRhRmlsdGVySW5kZXgiYQoaRG93bnN0cmVhbUZpbHRlclJl",
+            "ZmVyZW5jZXMSQwoKcmVmZXJlbmNlcxgBIAMoCzIjLmlzY3AyLnYxLkRvd25z",
+            "dHJlYW1GaWx0ZXJSZWZlcmVuY2VSCnJlZmVyZW5jZXMiNAoKRGF0YUZpbHRl",
+            "chISCgRuYW1lGAEgASgJUgRuYW1lEhIKBHR5cGUYAiABKAlSBHR5cGUqMAoD",
+            "UW9TEg4KClVOUkVMSUFCTEUQABIMCghSRUxJQUJMRRABEgsKB1BBUlRJQUwQ",
+            "AkKmAQogY29tLmdpdGh1Yi5hcHRwb2QucHJvdG8uaXNjcDIudjFCC0NvbW1v",
+            "blByb3RvUAFaNGdpdGh1Yi5jb20vYXB0cG9kL2lzY3AtcHJvdG8vZ2VuL2dv",
+            "L2lzY3AyL3YxO2lzY3AydjGiAgNJWFiqAghJc2NwMi5WMcoCCElzY3AyXFYx",
+            "4gIUSXNjcDJcVjFcR1BCTWV0YWRhdGHqAglJc2NwMjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Iscp2.V1.QoS), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -52,6 +57,8 @@ namespace Iscp2.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DataPoint), global::Iscp2.V1.DataPoint.Parser, new[]{ "ElapsedTime", "Payload" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DataID), global::Iscp2.V1.DataID.Parser, new[]{ "Name", "Type" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamFilter), global::Iscp2.V1.DownstreamFilter.Parser, new[]{ "SourceNodeId", "DataFilters" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamFilterReference), global::Iscp2.V1.DownstreamFilterReference.Parser, new[]{ "DownstreamFilterIndex", "DataFilterIndex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DownstreamFilterReferences), global::Iscp2.V1.DownstreamFilterReferences.Parser, new[]{ "References" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Iscp2.V1.DataFilter), global::Iscp2.V1.DataFilter.Parser, new[]{ "Name", "Type" }, null, null, null, null)
           }));
     }
@@ -1336,6 +1343,428 @@ namespace Iscp2.V1 {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  internal sealed partial class DownstreamFilterReference : pb::IMessage<DownstreamFilterReference>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DownstreamFilterReference> _parser = new pb::MessageParser<DownstreamFilterReference>(() => new DownstreamFilterReference());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DownstreamFilterReference> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Iscp2.V1.CommonReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DownstreamFilterReference() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DownstreamFilterReference(DownstreamFilterReference other) : this() {
+      downstreamFilterIndex_ = other.downstreamFilterIndex_;
+      dataFilterIndex_ = other.dataFilterIndex_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DownstreamFilterReference Clone() {
+      return new DownstreamFilterReference(this);
+    }
+
+    /// <summary>Field number for the "downstream_filter_index" field.</summary>
+    public const int DownstreamFilterIndexFieldNumber = 1;
+    private uint downstreamFilterIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DownstreamFilterIndex {
+      get { return downstreamFilterIndex_; }
+      set {
+        downstreamFilterIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "data_filter_index" field.</summary>
+    public const int DataFilterIndexFieldNumber = 2;
+    private uint dataFilterIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DataFilterIndex {
+      get { return dataFilterIndex_; }
+      set {
+        dataFilterIndex_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DownstreamFilterReference);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DownstreamFilterReference other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DownstreamFilterIndex != other.DownstreamFilterIndex) return false;
+      if (DataFilterIndex != other.DataFilterIndex) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DownstreamFilterIndex != 0) hash ^= DownstreamFilterIndex.GetHashCode();
+      if (DataFilterIndex != 0) hash ^= DataFilterIndex.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (DownstreamFilterIndex != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(DownstreamFilterIndex);
+      }
+      if (DataFilterIndex != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(DataFilterIndex);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DownstreamFilterIndex != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(DownstreamFilterIndex);
+      }
+      if (DataFilterIndex != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(DataFilterIndex);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (DownstreamFilterIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DownstreamFilterIndex);
+      }
+      if (DataFilterIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DataFilterIndex);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DownstreamFilterReference other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DownstreamFilterIndex != 0) {
+        DownstreamFilterIndex = other.DownstreamFilterIndex;
+      }
+      if (other.DataFilterIndex != 0) {
+        DataFilterIndex = other.DataFilterIndex;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            DownstreamFilterIndex = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            DataFilterIndex = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            DownstreamFilterIndex = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            DataFilterIndex = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  internal sealed partial class DownstreamFilterReferences : pb::IMessage<DownstreamFilterReferences>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DownstreamFilterReferences> _parser = new pb::MessageParser<DownstreamFilterReferences>(() => new DownstreamFilterReferences());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DownstreamFilterReferences> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Iscp2.V1.CommonReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DownstreamFilterReferences() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DownstreamFilterReferences(DownstreamFilterReferences other) : this() {
+      references_ = other.references_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DownstreamFilterReferences Clone() {
+      return new DownstreamFilterReferences(this);
+    }
+
+    /// <summary>Field number for the "references" field.</summary>
+    public const int ReferencesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Iscp2.V1.DownstreamFilterReference> _repeated_references_codec
+        = pb::FieldCodec.ForMessage(10, global::Iscp2.V1.DownstreamFilterReference.Parser);
+    private readonly pbc::RepeatedField<global::Iscp2.V1.DownstreamFilterReference> references_ = new pbc::RepeatedField<global::Iscp2.V1.DownstreamFilterReference>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Iscp2.V1.DownstreamFilterReference> References {
+      get { return references_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DownstreamFilterReferences);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DownstreamFilterReferences other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!references_.Equals(other.references_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= references_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      references_.WriteTo(output, _repeated_references_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      references_.WriteTo(ref output, _repeated_references_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += references_.CalculateSize(_repeated_references_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DownstreamFilterReferences other) {
+      if (other == null) {
+        return;
+      }
+      references_.Add(other.references_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            references_.AddEntriesFrom(input, _repeated_references_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            references_.AddEntriesFrom(ref input, _repeated_references_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   internal sealed partial class DataFilter : pb::IMessage<DataFilter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1350,7 +1779,7 @@ namespace Iscp2.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Iscp2.V1.CommonReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Iscp2.V1.CommonReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
