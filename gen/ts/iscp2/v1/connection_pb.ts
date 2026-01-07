@@ -42,6 +42,27 @@ export class ConnectRequest extends Message<ConnectRequest> {
    */
   extensionFields?: ConnectRequestExtensionFields;
 
+  /**
+   * 再接続時に既存接続を指定
+   *
+   * @generated from field: string connection_id = 7;
+   */
+  connectionId = "";
+
+  /**
+   * マルチコネクションで指定する。
+   *
+   * @generated from field: string connection_group_id = 8;
+   */
+  connectionGroupId = "";
+
+  /**
+   * コネクションの有効期限（秒）
+   *
+   * @generated from field: uint32 expiry_interval = 9;
+   */
+  expiryInterval = 0;
+
   constructor(data?: PartialMessage<ConnectRequest>) {
     super();
     proto3.util.initPartial(data, this);
@@ -56,6 +77,9 @@ export class ConnectRequest extends Message<ConnectRequest> {
     { no: 4, name: "ping_interval", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
     { no: 5, name: "ping_timeout", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
     { no: 6, name: "extension_fields", kind: "message", T: ConnectRequestExtensionFields },
+    { no: 7, name: "connection_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 8, name: "connection_group_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 9, name: "expiry_interval", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ConnectRequest {
@@ -104,6 +128,16 @@ export class ConnectResponse extends Message<ConnectResponse> {
    */
   extensionFields?: ConnectResponseExtensionFields;
 
+  /**
+   * @generated from field: string connection_id = 6;
+   */
+  connectionId = "";
+
+  /**
+   * @generated from field: string connection_group_id = 8;
+   */
+  connectionGroupId = "";
+
   constructor(data?: PartialMessage<ConnectResponse>) {
     super();
     proto3.util.initPartial(data, this);
@@ -117,6 +151,8 @@ export class ConnectResponse extends Message<ConnectResponse> {
     { no: 3, name: "result_code", kind: "enum", T: proto3.getEnumType(ResultCode) },
     { no: 4, name: "result_string", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 5, name: "extension_fields", kind: "message", T: ConnectResponseExtensionFields },
+    { no: 6, name: "connection_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 8, name: "connection_group_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ConnectResponse {

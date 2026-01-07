@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x15iscp2/v1/common.proto\x12\x08iscp2.v1\"|\n\x0bStreamChunk\x12\'\n\x0fsequence_number\x18\x01 \x01(\rR\x0esequenceNumber\x12\x44\n\x11\x64\x61ta_point_groups\x18\x02 \x03(\x0b\x32\x18.iscp2.v1.DataPointGroupR\x0f\x64\x61taPointGroups\"\xad\x01\n\x0e\x44\x61taPointGroup\x12+\n\x07\x64\x61ta_id\x18\x01 \x01(\x0b\x32\x10.iscp2.v1.DataIDH\x00R\x06\x64\x61taId\x12$\n\rdata_id_alias\x18\x02 \x01(\rH\x00R\x0b\x64\x61taIdAlias\x12\x34\n\x0b\x64\x61ta_points\x18\x03 \x03(\x0b\x32\x13.iscp2.v1.DataPointR\ndataPointsB\x12\n\x10\x64\x61ta_id_or_alias\"H\n\tDataPoint\x12!\n\x0c\x65lapsed_time\x18\x01 \x01(\x12R\x0b\x65lapsedTime\x12\x18\n\x07payload\x18\x02 \x01(\x0cR\x07payload\"0\n\x06\x44\x61taID\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12\x12\n\x04type\x18\x02 \x01(\tR\x04type\"q\n\x10\x44ownstreamFilter\x12$\n\x0esource_node_id\x18\x01 \x01(\tR\x0csourceNodeId\x12\x37\n\x0c\x64\x61ta_filters\x18\x02 \x03(\x0b\x32\x14.iscp2.v1.DataFilterR\x0b\x64\x61taFilters\"\x7f\n\x19\x44ownstreamFilterReference\x12\x36\n\x17\x64ownstream_filter_index\x18\x01 \x01(\rR\x15\x64ownstreamFilterIndex\x12*\n\x11\x64\x61ta_filter_index\x18\x02 \x01(\rR\x0f\x64\x61taFilterIndex\"a\n\x1a\x44ownstreamFilterReferences\x12\x43\n\nreferences\x18\x01 \x03(\x0b\x32#.iscp2.v1.DownstreamFilterReferenceR\nreferences\"4\n\nDataFilter\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12\x12\n\x04type\x18\x02 \x01(\tR\x04type*0\n\x03QoS\x12\x0e\n\nUNRELIABLE\x10\x00\x12\x0c\n\x08RELIABLE\x10\x01\x12\x0b\n\x07PARTIAL\x10\x02\x42\xa6\x01\n com.github.aptpod.proto.iscp2.v1B\x0b\x43ommonProtoP\x01Z4github.com/aptpod/iscp-proto/gen/go/iscp2/v1;iscp2v1\xa2\x02\x03IXX\xaa\x02\x08Iscp2.V1\xca\x02\x08Iscp2\\V1\xe2\x02\x14Iscp2\\V1\\GPBMetadata\xea\x02\tIscp2::V1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x15iscp2/v1/common.proto\x12\x08iscp2.v1\"|\n\x0bStreamChunk\x12\'\n\x0fsequence_number\x18\x01 \x01(\rR\x0esequenceNumber\x12\x44\n\x11\x64\x61ta_point_groups\x18\x02 \x03(\x0b\x32\x18.iscp2.v1.DataPointGroupR\x0f\x64\x61taPointGroups\"\xd5\x01\n\x0e\x44\x61taPointGroup\x12+\n\x07\x64\x61ta_id\x18\x01 \x01(\x0b\x32\x10.iscp2.v1.DataIDH\x00R\x06\x64\x61taId\x12$\n\rdata_id_alias\x18\x02 \x01(\rH\x00R\x0b\x64\x61taIdAlias\x12\x34\n\x0b\x64\x61ta_points\x18\x03 \x03(\x0b\x32\x13.iscp2.v1.DataPointR\ndataPoints\x12&\n\x0f\x64\x61ta_filter_ids\x18\x04 \x03(\rR\rdataFilterIdsB\x12\n\x10\x64\x61ta_id_or_alias\"H\n\tDataPoint\x12!\n\x0c\x65lapsed_time\x18\x01 \x01(\x12R\x0b\x65lapsedTime\x12\x18\n\x07payload\x18\x02 \x01(\x0cR\x07payload\"0\n\x06\x44\x61taID\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12\x12\n\x04type\x18\x02 \x01(\tR\x04type\"q\n\x10\x44ownstreamFilter\x12$\n\x0esource_node_id\x18\x01 \x01(\tR\x0csourceNodeId\x12\x37\n\x0c\x64\x61ta_filters\x18\x02 \x03(\x0b\x32\x14.iscp2.v1.DataFilterR\x0b\x64\x61taFilters\"\x7f\n\x19\x44ownstreamFilterReference\x12\x36\n\x17\x64ownstream_filter_index\x18\x01 \x01(\rR\x15\x64ownstreamFilterIndex\x12*\n\x11\x64\x61ta_filter_index\x18\x02 \x01(\rR\x0f\x64\x61taFilterIndex\"a\n\x1a\x44ownstreamFilterReferences\x12\x43\n\nreferences\x18\x01 \x03(\x0b\x32#.iscp2.v1.DownstreamFilterReferenceR\nreferences\"4\n\nDataFilter\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12\x12\n\x04type\x18\x02 \x01(\tR\x04type*0\n\x03QoS\x12\x0e\n\nUNRELIABLE\x10\x00\x12\x0c\n\x08RELIABLE\x10\x01\x12\x0b\n\x07PARTIAL\x10\x02\x42\xa6\x01\n com.github.aptpod.proto.iscp2.v1B\x0b\x43ommonProtoP\x01Z4github.com/aptpod/iscp-proto/gen/go/iscp2/v1;iscp2v1\xa2\x02\x03IXX\xaa\x02\x08Iscp2.V1\xca\x02\x08Iscp2\\V1\xe2\x02\x14Iscp2\\V1\\GPBMetadata\xea\x02\tIscp2::V1b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -22,22 +22,22 @@ if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
   DESCRIPTOR._serialized_options = b'\n com.github.aptpod.proto.iscp2.v1B\013CommonProtoP\001Z4github.com/aptpod/iscp-proto/gen/go/iscp2/v1;iscp2v1\242\002\003IXX\252\002\010Iscp2.V1\312\002\010Iscp2\\V1\342\002\024Iscp2\\V1\\GPBMetadata\352\002\tIscp2::V1'
-  _globals['_QOS']._serialized_start=858
-  _globals['_QOS']._serialized_end=906
+  _globals['_QOS']._serialized_start=898
+  _globals['_QOS']._serialized_end=946
   _globals['_STREAMCHUNK']._serialized_start=35
   _globals['_STREAMCHUNK']._serialized_end=159
   _globals['_DATAPOINTGROUP']._serialized_start=162
-  _globals['_DATAPOINTGROUP']._serialized_end=335
-  _globals['_DATAPOINT']._serialized_start=337
-  _globals['_DATAPOINT']._serialized_end=409
-  _globals['_DATAID']._serialized_start=411
-  _globals['_DATAID']._serialized_end=459
-  _globals['_DOWNSTREAMFILTER']._serialized_start=461
-  _globals['_DOWNSTREAMFILTER']._serialized_end=574
-  _globals['_DOWNSTREAMFILTERREFERENCE']._serialized_start=576
-  _globals['_DOWNSTREAMFILTERREFERENCE']._serialized_end=703
-  _globals['_DOWNSTREAMFILTERREFERENCES']._serialized_start=705
-  _globals['_DOWNSTREAMFILTERREFERENCES']._serialized_end=802
-  _globals['_DATAFILTER']._serialized_start=804
-  _globals['_DATAFILTER']._serialized_end=856
+  _globals['_DATAPOINTGROUP']._serialized_end=375
+  _globals['_DATAPOINT']._serialized_start=377
+  _globals['_DATAPOINT']._serialized_end=449
+  _globals['_DATAID']._serialized_start=451
+  _globals['_DATAID']._serialized_end=499
+  _globals['_DOWNSTREAMFILTER']._serialized_start=501
+  _globals['_DOWNSTREAMFILTER']._serialized_end=614
+  _globals['_DOWNSTREAMFILTERREFERENCE']._serialized_start=616
+  _globals['_DOWNSTREAMFILTERREFERENCE']._serialized_end=743
+  _globals['_DOWNSTREAMFILTERREFERENCES']._serialized_start=745
+  _globals['_DOWNSTREAMFILTERREFERENCES']._serialized_end=842
+  _globals['_DATAFILTER']._serialized_start=844
+  _globals['_DATAFILTER']._serialized_end=896
 # @@protoc_insertion_point(module_scope)

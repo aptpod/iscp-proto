@@ -2,6 +2,7 @@
 // NO CHECKED-IN PROTOBUF GENCODE
 // source: iscp2/v1/downstream.proto
 
+@file:com.google.protobuf.Generated
 // Generated files should ignore deprecation warnings
 @file:Suppress("DEPRECATION")
 package com.github.aptpod.proto.iscp2.v1;
@@ -105,6 +106,23 @@ public object DownstreamResumeRequestKt {
 
     public val DownstreamResumeRequestKt.Dsl.extensionFieldsOrNull: com.github.aptpod.proto.iscp2.v1.extensions.DownstreamResumeRequestExtensionFields?
       get() = _builder.extensionFieldsOrNull
+
+    /**
+     * `string resume_token = 5 [json_name = "resumeToken"];`
+     */
+    public var resumeToken: kotlin.String
+      @kotlin.jvm.JvmName("getResumeToken")
+        get() = _builder.resumeToken
+      @kotlin.jvm.JvmName("setResumeToken")
+        set(value) {
+        _builder.resumeToken = value
+      }
+    /**
+     * `string resume_token = 5 [json_name = "resumeToken"];`
+     */
+    public fun clearResumeToken() {
+      _builder.clearResumeToken()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

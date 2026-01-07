@@ -24,7 +24,7 @@ namespace Iscp2.V1 {
     static ResultCodeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chppc2NwMi92MS9yZXN1bHRfY29kZS5wcm90bxIIaXNjcDIudjEq/AYKClJl",
+            "Chppc2NwMi92MS9yZXN1bHRfY29kZS5wcm90bxIIaXNjcDIudjEq3AcKClJl",
             "c3VsdENvZGUSDQoJU1VDQ0VFREVEEAASEgoOTk9STUFMX0NMT1NVUkUQABIY",
             "ChRJTkNPTVBBVElCTEVfVkVSU0lPThABEhkKFU1BWElNVU1fREFUQV9JRF9B",
             "TElBUxACEhoKFk1BWElNVU1fVVBTVFJFQU1fQUxJQVMQAxIVChFVTlNQRUNJ",
@@ -42,13 +42,15 @@ namespace Iscp2.V1 {
             "VEFfRklMVEVSUxBVEhwKGFRPT19MT05HX0VYUElSWV9JTlRFUlZBTBBWEhkK",
             "FVRPT19MT05HX1BJTkdfVElNRU9VVBBXEhsKF1RPT19TSE9SVF9QSU5HX0lO",
             "VEVSVkFMEFgSGgoWVE9PX1NIT1JUX1BJTkdfVElNRU9VVBBZEhYKElJBVEVf",
-            "TElNSVRfUkVBQ0hFRBBaEhUKEE5PREVfSURfTUlTTUFUQ0gQgAESFgoRU0VT",
-            "U0lPTl9OT1RfRk9VTkQQgQESGwoWU0VTU0lPTl9BTFJFQURZX0NMT1NFRBCC",
-            "ARIaChVTRVNTSU9OX0NBTk5PVF9DTE9TRUQQgwEaAhABQqoBCiBjb20uZ2l0",
-            "aHViLmFwdHBvZC5wcm90by5pc2NwMi52MUIPUmVzdWx0Q29kZVByb3RvUAFa",
-            "NGdpdGh1Yi5jb20vYXB0cG9kL2lzY3AtcHJvdG8vZ2VuL2dvL2lzY3AyL3Yx",
-            "O2lzY3AydjGiAgNJWFiqAghJc2NwMi5WMcoCCElzY3AyXFYx4gIUSXNjcDJc",
-            "VjFcR1BCTWV0YWRhdGHqAglJc2NwMjo6VjFiBnByb3RvMw=="));
+            "TElNSVRfUkVBQ0hFRBBaEhUKEVRPT19MQVJHRV9GRUVEX0lEEFsSGQoVVE9P",
+            "X01BTllfVEFSR0VUX05PREVTEFwSEgoORkVFRF9OT1RfRk9VTkQQXRIYChRJ",
+            "TlZBTElEX1JFU1VNRV9UT0tFThBeEhUKEE5PREVfSURfTUlTTUFUQ0gQgAES",
+            "FgoRU0VTU0lPTl9OT1RfRk9VTkQQgQESGwoWU0VTU0lPTl9BTFJFQURZX0NM",
+            "T1NFRBCCARIaChVTRVNTSU9OX0NBTk5PVF9DTE9TRUQQgwEaAhABQqoBCiBj",
+            "b20uZ2l0aHViLmFwdHBvZC5wcm90by5pc2NwMi52MUIPUmVzdWx0Q29kZVBy",
+            "b3RvUAFaNGdpdGh1Yi5jb20vYXB0cG9kL2lzY3AtcHJvdG8vZ2VuL2dvL2lz",
+            "Y3AyL3YxO2lzY3AydjGiAgNJWFiqAghJc2NwMi5WMcoCCElzY3AyXFYx4gIU",
+            "SXNjcDJcVjFcR1BCTWV0YWRhdGHqAglJc2NwMjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Iscp2.V1.ResultCode), }, null, null));
@@ -90,6 +92,10 @@ namespace Iscp2.V1 {
     [pbr::OriginalName("TOO_SHORT_PING_INTERVAL")] TooShortPingInterval = 88,
     [pbr::OriginalName("TOO_SHORT_PING_TIMEOUT")] TooShortPingTimeout = 89,
     [pbr::OriginalName("RATE_LIMIT_REACHED")] RateLimitReached = 90,
+    [pbr::OriginalName("TOO_LARGE_FEED_ID")] TooLargeFeedId = 91,
+    [pbr::OriginalName("TOO_MANY_TARGET_NODES")] TooManyTargetNodes = 92,
+    [pbr::OriginalName("FEED_NOT_FOUND")] FeedNotFound = 93,
+    [pbr::OriginalName("INVALID_RESUME_TOKEN")] InvalidResumeToken = 94,
     [pbr::OriginalName("NODE_ID_MISMATCH")] NodeIdMismatch = 128,
     [pbr::OriginalName("SESSION_NOT_FOUND")] SessionNotFound = 129,
     [pbr::OriginalName("SESSION_ALREADY_CLOSED")] SessionAlreadyClosed = 130,

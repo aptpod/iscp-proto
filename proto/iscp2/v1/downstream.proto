@@ -19,6 +19,7 @@ message DownstreamOpenRequest {
   QoS qos = 6;
   iscp2.v1.extensions.DownstreamOpenRequestExtensionFields extension_fields = 7;
   bool omit_empty_chunk = 8;
+  bool enable_resume_token = 9;
 }
 
 message DownstreamOpenResponse {
@@ -28,6 +29,7 @@ message DownstreamOpenResponse {
   ResultCode result_code = 4;
   string result_string = 5;
   iscp2.v1.extensions.DownstreamOpenResponseExtensionFields extension_fields = 6;
+  string resume_token = 7;
 }
 
 message DownstreamResumeRequest {
@@ -35,6 +37,7 @@ message DownstreamResumeRequest {
   bytes stream_id = 2;
   uint32 desired_stream_id_alias = 3;
   iscp2.v1.extensions.DownstreamResumeRequestExtensionFields extension_fields = 4;
+  string resume_token = 5;
 }
 
 message DownstreamResumeResponse {
@@ -42,6 +45,7 @@ message DownstreamResumeResponse {
   ResultCode result_code = 2;
   string result_string = 3;
   iscp2.v1.extensions.DownstreamResumeResponseExtensionFields extension_fields = 4;
+  string resume_token = 5;
 }
 
 message DownstreamCloseRequest {

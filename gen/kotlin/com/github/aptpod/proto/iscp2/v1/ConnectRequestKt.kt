@@ -2,6 +2,7 @@
 // NO CHECKED-IN PROTOBUF GENCODE
 // source: iscp2/v1/connection.proto
 
+@file:com.google.protobuf.Generated
 // Generated files should ignore deprecation warnings
 @file:Suppress("DEPRECATION")
 package com.github.aptpod.proto.iscp2.v1;
@@ -139,6 +140,81 @@ public object ConnectRequestKt {
 
     public val ConnectRequestKt.Dsl.extensionFieldsOrNull: com.github.aptpod.proto.iscp2.v1.extensions.ConnectRequestExtensionFields?
       get() = _builder.extensionFieldsOrNull
+
+    /**
+     * ```
+     * 再接続時に既存接続を指定
+     * ```
+     *
+     * `string connection_id = 7 [json_name = "connectionId"];`
+     */
+    public var connectionId: kotlin.String
+      @kotlin.jvm.JvmName("getConnectionId")
+        get() = _builder.connectionId
+      @kotlin.jvm.JvmName("setConnectionId")
+        set(value) {
+        _builder.connectionId = value
+      }
+    /**
+     * ```
+     * 再接続時に既存接続を指定
+     * ```
+     *
+     * `string connection_id = 7 [json_name = "connectionId"];`
+     */
+    public fun clearConnectionId() {
+      _builder.clearConnectionId()
+    }
+
+    /**
+     * ```
+     * マルチコネクションで指定する。
+     * ```
+     *
+     * `string connection_group_id = 8 [json_name = "connectionGroupId"];`
+     */
+    public var connectionGroupId: kotlin.String
+      @kotlin.jvm.JvmName("getConnectionGroupId")
+        get() = _builder.connectionGroupId
+      @kotlin.jvm.JvmName("setConnectionGroupId")
+        set(value) {
+        _builder.connectionGroupId = value
+      }
+    /**
+     * ```
+     * マルチコネクションで指定する。
+     * ```
+     *
+     * `string connection_group_id = 8 [json_name = "connectionGroupId"];`
+     */
+    public fun clearConnectionGroupId() {
+      _builder.clearConnectionGroupId()
+    }
+
+    /**
+     * ```
+     * コネクションの有効期限（秒）
+     * ```
+     *
+     * `uint32 expiry_interval = 9 [json_name = "expiryInterval"];`
+     */
+    public var expiryInterval: kotlin.Int
+      @kotlin.jvm.JvmName("getExpiryInterval")
+        get() = _builder.expiryInterval
+      @kotlin.jvm.JvmName("setExpiryInterval")
+        set(value) {
+        _builder.expiryInterval = value
+      }
+    /**
+     * ```
+     * コネクションの有効期限（秒）
+     * ```
+     *
+     * `uint32 expiry_interval = 9 [json_name = "expiryInterval"];`
+     */
+    public fun clearExpiryInterval() {
+      _builder.clearExpiryInterval()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

@@ -2,6 +2,7 @@
 // NO CHECKED-IN PROTOBUF GENCODE
 // source: iscp2/v1/connection.proto
 
+@file:com.google.protobuf.Generated
 // Generated files should ignore deprecation warnings
 @file:Suppress("DEPRECATION")
 package com.github.aptpod.proto.iscp2.v1;
@@ -129,6 +130,40 @@ public object ConnectResponseKt {
 
     public val ConnectResponseKt.Dsl.extensionFieldsOrNull: com.github.aptpod.proto.iscp2.v1.extensions.ConnectResponseExtensionFields?
       get() = _builder.extensionFieldsOrNull
+
+    /**
+     * `string connection_id = 6 [json_name = "connectionId"];`
+     */
+    public var connectionId: kotlin.String
+      @kotlin.jvm.JvmName("getConnectionId")
+        get() = _builder.connectionId
+      @kotlin.jvm.JvmName("setConnectionId")
+        set(value) {
+        _builder.connectionId = value
+      }
+    /**
+     * `string connection_id = 6 [json_name = "connectionId"];`
+     */
+    public fun clearConnectionId() {
+      _builder.clearConnectionId()
+    }
+
+    /**
+     * `string connection_group_id = 8 [json_name = "connectionGroupId"];`
+     */
+    public var connectionGroupId: kotlin.String
+      @kotlin.jvm.JvmName("getConnectionGroupId")
+        get() = _builder.connectionGroupId
+      @kotlin.jvm.JvmName("setConnectionGroupId")
+        set(value) {
+        _builder.connectionGroupId = value
+      }
+    /**
+     * `string connection_group_id = 8 [json_name = "connectionGroupId"];`
+     */
+    public fun clearConnectionGroupId() {
+      _builder.clearConnectionGroupId()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

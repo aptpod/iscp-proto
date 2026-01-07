@@ -18,6 +18,7 @@ message UpstreamOpenRequest {
   repeated DataID data_ids = 6;
   QoS qos = 7;
   iscp2.v1.extensions.UpstreamOpenRequestExtensionFields extension_fields = 8;
+  bool enable_resume_token = 9;
 }
 
 message UpstreamOpenResponse {
@@ -29,12 +30,14 @@ message UpstreamOpenResponse {
   ResultCode result_code = 6;
   string result_string = 7;
   iscp2.v1.extensions.UpstreamOpenResponseExtensionFields extension_fields = 8;
+  string resume_token = 9;
 }
 
 message UpstreamResumeRequest {
   uint32 request_id = 1;
   bytes stream_id = 2;
   iscp2.v1.extensions.UpstreamResumeRequestExtensionFields extension_fields = 3;
+  string resume_token = 4;
 }
 
 message UpstreamResumeResponse {
@@ -43,6 +46,7 @@ message UpstreamResumeResponse {
   ResultCode result_code = 3;
   string result_string = 4;
   iscp2.v1.extensions.UpstreamResumeResponseExtensionFields extension_fields = 5;
+  string resume_token = 6;
 }
 
 message UpstreamCloseRequest {

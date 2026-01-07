@@ -54,6 +54,11 @@ export class DownstreamOpenRequest extends Message<DownstreamOpenRequest> {
    */
   omitEmptyChunk = false;
 
+  /**
+   * @generated from field: bool enable_resume_token = 9;
+   */
+  enableResumeToken = false;
+
   constructor(data?: PartialMessage<DownstreamOpenRequest>) {
     super();
     proto3.util.initPartial(data, this);
@@ -70,6 +75,7 @@ export class DownstreamOpenRequest extends Message<DownstreamOpenRequest> {
     { no: 6, name: "qos", kind: "enum", T: proto3.getEnumType(QoS) },
     { no: 7, name: "extension_fields", kind: "message", T: DownstreamOpenRequestExtensionFields },
     { no: 8, name: "omit_empty_chunk", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    { no: 9, name: "enable_resume_token", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DownstreamOpenRequest {
@@ -123,6 +129,11 @@ export class DownstreamOpenResponse extends Message<DownstreamOpenResponse> {
    */
   extensionFields?: DownstreamOpenResponseExtensionFields;
 
+  /**
+   * @generated from field: string resume_token = 7;
+   */
+  resumeToken = "";
+
   constructor(data?: PartialMessage<DownstreamOpenResponse>) {
     super();
     proto3.util.initPartial(data, this);
@@ -137,6 +148,7 @@ export class DownstreamOpenResponse extends Message<DownstreamOpenResponse> {
     { no: 4, name: "result_code", kind: "enum", T: proto3.getEnumType(ResultCode) },
     { no: 5, name: "result_string", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 6, name: "extension_fields", kind: "message", T: DownstreamOpenResponseExtensionFields },
+    { no: 7, name: "resume_token", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DownstreamOpenResponse {
@@ -180,6 +192,11 @@ export class DownstreamResumeRequest extends Message<DownstreamResumeRequest> {
    */
   extensionFields?: DownstreamResumeRequestExtensionFields;
 
+  /**
+   * @generated from field: string resume_token = 5;
+   */
+  resumeToken = "";
+
   constructor(data?: PartialMessage<DownstreamResumeRequest>) {
     super();
     proto3.util.initPartial(data, this);
@@ -192,6 +209,7 @@ export class DownstreamResumeRequest extends Message<DownstreamResumeRequest> {
     { no: 2, name: "stream_id", kind: "scalar", T: 12 /* ScalarType.BYTES */ },
     { no: 3, name: "desired_stream_id_alias", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
     { no: 4, name: "extension_fields", kind: "message", T: DownstreamResumeRequestExtensionFields },
+    { no: 5, name: "resume_token", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DownstreamResumeRequest {
@@ -235,6 +253,11 @@ export class DownstreamResumeResponse extends Message<DownstreamResumeResponse> 
    */
   extensionFields?: DownstreamResumeResponseExtensionFields;
 
+  /**
+   * @generated from field: string resume_token = 5;
+   */
+  resumeToken = "";
+
   constructor(data?: PartialMessage<DownstreamResumeResponse>) {
     super();
     proto3.util.initPartial(data, this);
@@ -247,6 +270,7 @@ export class DownstreamResumeResponse extends Message<DownstreamResumeResponse> 
     { no: 2, name: "result_code", kind: "enum", T: proto3.getEnumType(ResultCode) },
     { no: 3, name: "result_string", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 4, name: "extension_fields", kind: "message", T: DownstreamResumeResponseExtensionFields },
+    { no: 5, name: "resume_token", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DownstreamResumeResponse {

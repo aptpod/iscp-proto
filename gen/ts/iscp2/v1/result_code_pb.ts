@@ -170,6 +170,26 @@ export enum ResultCode {
   RATE_LIMIT_REACHED = 90,
 
   /**
+   * @generated from enum value: TOO_LARGE_FEED_ID = 91;
+   */
+  TOO_LARGE_FEED_ID = 91,
+
+  /**
+   * @generated from enum value: TOO_MANY_TARGET_NODES = 92;
+   */
+  TOO_MANY_TARGET_NODES = 92,
+
+  /**
+   * @generated from enum value: FEED_NOT_FOUND = 93;
+   */
+  FEED_NOT_FOUND = 93,
+
+  /**
+   * @generated from enum value: INVALID_RESUME_TOKEN = 94;
+   */
+  INVALID_RESUME_TOKEN = 94,
+
+  /**
    * @generated from enum value: NODE_ID_MISMATCH = 128;
    */
   NODE_ID_MISMATCH = 128,
@@ -223,6 +243,10 @@ proto3.util.setEnumType(ResultCode, "iscp2.v1.ResultCode", [
   { no: 88, name: "TOO_SHORT_PING_INTERVAL" },
   { no: 89, name: "TOO_SHORT_PING_TIMEOUT" },
   { no: 90, name: "RATE_LIMIT_REACHED" },
+  { no: 91, name: "TOO_LARGE_FEED_ID" },
+  { no: 92, name: "TOO_MANY_TARGET_NODES" },
+  { no: 93, name: "FEED_NOT_FOUND" },
+  { no: 94, name: "INVALID_RESUME_TOKEN" },
   { no: 128, name: "NODE_ID_MISMATCH" },
   { no: 129, name: "SESSION_NOT_FOUND" },
   { no: 130, name: "SESSION_ALREADY_CLOSED" },

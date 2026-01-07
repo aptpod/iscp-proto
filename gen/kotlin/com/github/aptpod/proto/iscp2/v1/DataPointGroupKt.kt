@@ -2,6 +2,7 @@
 // NO CHECKED-IN PROTOBUF GENCODE
 // source: iscp2/v1/common.proto
 
+@file:com.google.protobuf.Generated
 // Generated files should ignore deprecation warnings
 @file:Suppress("DEPRECATION")
 package com.github.aptpod.proto.iscp2.v1;
@@ -146,7 +147,72 @@ public object DataPointGroupKt {
     public fun com.google.protobuf.kotlin.DslList<com.github.aptpod.proto.iscp2.v1.DataPoint, DataPointsProxy>.clear() {
       _builder.clearDataPoints()
     }
-    public val dataIdOrAliasCase: com.github.aptpod.proto.iscp2.v1.DataPointGroup.DataIdOrAliasCase
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class DataFilterIdsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `repeated uint32 data_filter_ids = 4 [json_name = "dataFilterIds"];`
+     */
+     public val dataFilterIds: com.google.protobuf.kotlin.DslList<kotlin.Int, DataFilterIdsProxy>
+      @kotlin.jvm.JvmSynthetic
+  get() = com.google.protobuf.kotlin.DslList(
+        _builder.dataFilterIdsList
+      )
+    /**
+     * `repeated uint32 data_filter_ids = 4 [json_name = "dataFilterIds"];`
+     * @param value The dataFilterIds to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("addDataFilterIds")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.Int, DataFilterIdsProxy>.add(value: kotlin.Int) {
+      _builder.addDataFilterIds(value)
+    }/**
+     * `repeated uint32 data_filter_ids = 4 [json_name = "dataFilterIds"];`
+     * @param value The dataFilterIds to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("plusAssignDataFilterIds")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, DataFilterIdsProxy>.plusAssign(value: kotlin.Int) {
+      add(value)
+    }/**
+     * `repeated uint32 data_filter_ids = 4 [json_name = "dataFilterIds"];`
+     * @param values The dataFilterIds to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("addAllDataFilterIds")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.Int, DataFilterIdsProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Int>) {
+      _builder.addAllDataFilterIds(values)
+    }/**
+     * `repeated uint32 data_filter_ids = 4 [json_name = "dataFilterIds"];`
+     * @param values The dataFilterIds to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("plusAssignAllDataFilterIds")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, DataFilterIdsProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Int>) {
+      addAll(values)
+    }/**
+     * `repeated uint32 data_filter_ids = 4 [json_name = "dataFilterIds"];`
+     * @param index The index to set the value at.
+     * @param value The dataFilterIds to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("setDataFilterIds")
+    public operator fun com.google.protobuf.kotlin.DslList<kotlin.Int, DataFilterIdsProxy>.set(index: kotlin.Int, value: kotlin.Int) {
+      _builder.setDataFilterIds(index, value)
+    }/**
+     * `repeated uint32 data_filter_ids = 4 [json_name = "dataFilterIds"];`
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("clearDataFilterIds")
+    public fun com.google.protobuf.kotlin.DslList<kotlin.Int, DataFilterIdsProxy>.clear() {
+      _builder.clearDataFilterIds()
+    }public val dataIdOrAliasCase: com.github.aptpod.proto.iscp2.v1.DataPointGroup.DataIdOrAliasCase
     @kotlin.jvm.JvmName("getDataIdOrAliasCase")
       get() = _builder.getDataIdOrAliasCase()
 

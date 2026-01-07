@@ -54,6 +54,10 @@ enum Iscp2_V1_ResultCode: SwiftProtobuf.Enum {
   case tooShortPingInterval // = 88
   case tooShortPingTimeout // = 89
   case rateLimitReached // = 90
+  case tooLargeFeedID // = 91
+  case tooManyTargetNodes // = 92
+  case feedNotFound // = 93
+  case invalidResumeToken // = 94
   case nodeIDMismatch // = 128
   case sessionNotFound // = 129
   case sessionAlreadyClosed // = 130
@@ -97,6 +101,10 @@ enum Iscp2_V1_ResultCode: SwiftProtobuf.Enum {
     case 88: self = .tooShortPingInterval
     case 89: self = .tooShortPingTimeout
     case 90: self = .rateLimitReached
+    case 91: self = .tooLargeFeedID
+    case 92: self = .tooManyTargetNodes
+    case 93: self = .feedNotFound
+    case 94: self = .invalidResumeToken
     case 128: self = .nodeIDMismatch
     case 129: self = .sessionNotFound
     case 130: self = .sessionAlreadyClosed
@@ -138,6 +146,10 @@ enum Iscp2_V1_ResultCode: SwiftProtobuf.Enum {
     case .tooShortPingInterval: return 88
     case .tooShortPingTimeout: return 89
     case .rateLimitReached: return 90
+    case .tooLargeFeedID: return 91
+    case .tooManyTargetNodes: return 92
+    case .feedNotFound: return 93
+    case .invalidResumeToken: return 94
     case .nodeIDMismatch: return 128
     case .sessionNotFound: return 129
     case .sessionAlreadyClosed: return 130
@@ -184,6 +196,10 @@ extension Iscp2_V1_ResultCode: CaseIterable {
     .tooShortPingInterval,
     .tooShortPingTimeout,
     .rateLimitReached,
+    .tooLargeFeedID,
+    .tooManyTargetNodes,
+    .feedNotFound,
+    .invalidResumeToken,
     .nodeIDMismatch,
     .sessionNotFound,
     .sessionAlreadyClosed,
@@ -232,6 +248,10 @@ extension Iscp2_V1_ResultCode: SwiftProtobuf._ProtoNameProviding {
     88: .same(proto: "TOO_SHORT_PING_INTERVAL"),
     89: .same(proto: "TOO_SHORT_PING_TIMEOUT"),
     90: .same(proto: "RATE_LIMIT_REACHED"),
+    91: .same(proto: "TOO_LARGE_FEED_ID"),
+    92: .same(proto: "TOO_MANY_TARGET_NODES"),
+    93: .same(proto: "FEED_NOT_FOUND"),
+    94: .same(proto: "INVALID_RESUME_TOKEN"),
     128: .same(proto: "NODE_ID_MISMATCH"),
     129: .same(proto: "SESSION_NOT_FOUND"),
     130: .same(proto: "SESSION_ALREADY_CLOSED"),

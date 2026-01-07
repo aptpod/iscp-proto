@@ -101,6 +101,11 @@ export class DataPointGroup extends Message<DataPointGroup> {
    */
   dataPoints: DataPoint[] = [];
 
+  /**
+   * @generated from field: repeated uint32 data_filter_ids = 4;
+   */
+  dataFilterIds: number[] = [];
+
   constructor(data?: PartialMessage<DataPointGroup>) {
     super();
     proto3.util.initPartial(data, this);
@@ -112,6 +117,7 @@ export class DataPointGroup extends Message<DataPointGroup> {
     { no: 1, name: "data_id", kind: "message", T: DataID, oneof: "data_id_or_alias" },
     { no: 2, name: "data_id_alias", kind: "scalar", T: 13 /* ScalarType.UINT32 */, oneof: "data_id_or_alias" },
     { no: 3, name: "data_points", kind: "message", T: DataPoint, repeated: true },
+    { no: 4, name: "data_filter_ids", kind: "scalar", T: 13 /* ScalarType.UINT32 */, repeated: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DataPointGroup {

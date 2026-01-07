@@ -50,6 +50,16 @@ func (m *UpstreamOpenRequest) MarshalToSizedBufferVT(dAtA []byte) (int, error) {
 		i -= len(m.unknownFields)
 		copy(dAtA[i:], m.unknownFields)
 	}
+	if m.EnableResumeToken {
+		i--
+		if m.EnableResumeToken {
+			dAtA[i] = 1
+		} else {
+			dAtA[i] = 0
+		}
+		i--
+		dAtA[i] = 0x48
+	}
 	if m.ExtensionFields != nil {
 		size, err := m.ExtensionFields.MarshalToSizedBufferVT(dAtA[:i])
 		if err != nil {
@@ -131,6 +141,13 @@ func (m *UpstreamOpenResponse) MarshalToSizedBufferVT(dAtA []byte) (int, error) 
 	if m.unknownFields != nil {
 		i -= len(m.unknownFields)
 		copy(dAtA[i:], m.unknownFields)
+	}
+	if len(m.ResumeToken) > 0 {
+		i -= len(m.ResumeToken)
+		copy(dAtA[i:], m.ResumeToken)
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(len(m.ResumeToken)))
+		i--
+		dAtA[i] = 0x4a
 	}
 	if m.ExtensionFields != nil {
 		size, err := m.ExtensionFields.MarshalToSizedBufferVT(dAtA[:i])
@@ -229,6 +246,13 @@ func (m *UpstreamResumeRequest) MarshalToSizedBufferVT(dAtA []byte) (int, error)
 		i -= len(m.unknownFields)
 		copy(dAtA[i:], m.unknownFields)
 	}
+	if len(m.ResumeToken) > 0 {
+		i -= len(m.ResumeToken)
+		copy(dAtA[i:], m.ResumeToken)
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(len(m.ResumeToken)))
+		i--
+		dAtA[i] = 0x22
+	}
 	if m.ExtensionFields != nil {
 		size, err := m.ExtensionFields.MarshalToSizedBufferVT(dAtA[:i])
 		if err != nil {
@@ -283,6 +307,13 @@ func (m *UpstreamResumeResponse) MarshalToSizedBufferVT(dAtA []byte) (int, error
 	if m.unknownFields != nil {
 		i -= len(m.unknownFields)
 		copy(dAtA[i:], m.unknownFields)
+	}
+	if len(m.ResumeToken) > 0 {
+		i -= len(m.ResumeToken)
+		copy(dAtA[i:], m.ResumeToken)
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(len(m.ResumeToken)))
+		i--
+		dAtA[i] = 0x32
 	}
 	if m.ExtensionFields != nil {
 		size, err := m.ExtensionFields.MarshalToSizedBufferVT(dAtA[:i])
@@ -822,6 +853,9 @@ func (m *UpstreamOpenRequest) SizeVT() (n int) {
 		l = m.ExtensionFields.SizeVT()
 		n += 1 + l + protohelpers.SizeOfVarint(uint64(l))
 	}
+	if m.EnableResumeToken {
+		n += 2
+	}
 	n += len(m.unknownFields)
 	return n
 }
@@ -869,6 +903,10 @@ func (m *UpstreamOpenResponse) SizeVT() (n int) {
 		l = m.ExtensionFields.SizeVT()
 		n += 1 + l + protohelpers.SizeOfVarint(uint64(l))
 	}
+	l = len(m.ResumeToken)
+	if l > 0 {
+		n += 1 + l + protohelpers.SizeOfVarint(uint64(l))
+	}
 	n += len(m.unknownFields)
 	return n
 }
@@ -888,6 +926,10 @@ func (m *UpstreamResumeRequest) SizeVT() (n int) {
 	}
 	if m.ExtensionFields != nil {
 		l = m.ExtensionFields.SizeVT()
+		n += 1 + l + protohelpers.SizeOfVarint(uint64(l))
+	}
+	l = len(m.ResumeToken)
+	if l > 0 {
 		n += 1 + l + protohelpers.SizeOfVarint(uint64(l))
 	}
 	n += len(m.unknownFields)
@@ -915,6 +957,10 @@ func (m *UpstreamResumeResponse) SizeVT() (n int) {
 	}
 	if m.ExtensionFields != nil {
 		l = m.ExtensionFields.SizeVT()
+		n += 1 + l + protohelpers.SizeOfVarint(uint64(l))
+	}
+	l = len(m.ResumeToken)
+	if l > 0 {
 		n += 1 + l + protohelpers.SizeOfVarint(uint64(l))
 	}
 	n += len(m.unknownFields)
@@ -1322,6 +1368,26 @@ func (m *UpstreamOpenRequest) UnmarshalVT(dAtA []byte) error {
 				return err
 			}
 			iNdEx = postIndex
+		case 9:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field EnableResumeToken", wireType)
+			}
+			var v int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return protohelpers.ErrIntOverflow
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				v |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			m.EnableResumeToken = bool(v != 0)
 		default:
 			iNdEx = preIndex
 			skippy, err := protohelpers.Skip(dAtA[iNdEx:])
@@ -1668,6 +1734,38 @@ func (m *UpstreamOpenResponse) UnmarshalVT(dAtA []byte) error {
 				return err
 			}
 			iNdEx = postIndex
+		case 9:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field ResumeToken", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return protohelpers.ErrIntOverflow
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				stringLen |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return protohelpers.ErrInvalidLength
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex < 0 {
+				return protohelpers.ErrInvalidLength
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.ResumeToken = string(dAtA[iNdEx:postIndex])
+			iNdEx = postIndex
 		default:
 			iNdEx = preIndex
 			skippy, err := protohelpers.Skip(dAtA[iNdEx:])
@@ -1807,6 +1905,38 @@ func (m *UpstreamResumeRequest) UnmarshalVT(dAtA []byte) error {
 			if err := m.ExtensionFields.UnmarshalVT(dAtA[iNdEx:postIndex]); err != nil {
 				return err
 			}
+			iNdEx = postIndex
+		case 4:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field ResumeToken", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return protohelpers.ErrIntOverflow
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				stringLen |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return protohelpers.ErrInvalidLength
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex < 0 {
+				return protohelpers.ErrInvalidLength
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.ResumeToken = string(dAtA[iNdEx:postIndex])
 			iNdEx = postIndex
 		default:
 			iNdEx = preIndex
@@ -1983,6 +2113,38 @@ func (m *UpstreamResumeResponse) UnmarshalVT(dAtA []byte) error {
 			if err := m.ExtensionFields.UnmarshalVT(dAtA[iNdEx:postIndex]); err != nil {
 				return err
 			}
+			iNdEx = postIndex
+		case 6:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field ResumeToken", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return protohelpers.ErrIntOverflow
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				stringLen |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return protohelpers.ErrInvalidLength
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex < 0 {
+				return protohelpers.ErrInvalidLength
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.ResumeToken = string(dAtA[iNdEx:postIndex])
 			iNdEx = postIndex
 		default:
 			iNdEx = preIndex

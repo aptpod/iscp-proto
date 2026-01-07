@@ -103,6 +103,8 @@ struct Iscp2_V1_DataPointGroup {
 
   var dataPoints: [Iscp2_V1_DataPoint] = []
 
+  var dataFilterIds: [UInt32] = []
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   enum OneOf_DataIDOrAlias: Equatable {
@@ -283,6 +285,7 @@ extension Iscp2_V1_DataPointGroup: SwiftProtobuf.Message, SwiftProtobuf._Message
     1: .standard(proto: "data_id"),
     2: .standard(proto: "data_id_alias"),
     3: .standard(proto: "data_points"),
+    4: .standard(proto: "data_filter_ids"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -313,6 +316,7 @@ extension Iscp2_V1_DataPointGroup: SwiftProtobuf.Message, SwiftProtobuf._Message
         }
       }()
       case 3: try { try decoder.decodeRepeatedMessageField(value: &self.dataPoints) }()
+      case 4: try { try decoder.decodeRepeatedUInt32Field(value: &self.dataFilterIds) }()
       default: break
       }
     }
@@ -337,12 +341,16 @@ extension Iscp2_V1_DataPointGroup: SwiftProtobuf.Message, SwiftProtobuf._Message
     if !self.dataPoints.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.dataPoints, fieldNumber: 3)
     }
+    if !self.dataFilterIds.isEmpty {
+      try visitor.visitPackedUInt32Field(value: self.dataFilterIds, fieldNumber: 4)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Iscp2_V1_DataPointGroup, rhs: Iscp2_V1_DataPointGroup) -> Bool {
     if lhs.dataIDOrAlias != rhs.dataIDOrAlias {return false}
     if lhs.dataPoints != rhs.dataPoints {return false}
+    if lhs.dataFilterIds != rhs.dataFilterIds {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
