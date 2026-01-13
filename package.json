@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@bufbuild/buf": "^1.61.0",
+    "@bufbuild/buf": "^1.63.0",
     "@bufbuild/protobuf": "^1.10.1",
     "@bufbuild/protoc-gen-es": "^1.10.1"
   }

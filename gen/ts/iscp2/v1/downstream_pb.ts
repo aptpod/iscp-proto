@@ -54,11 +54,6 @@ export class DownstreamOpenRequest extends Message<DownstreamOpenRequest> {
    */
   omitEmptyChunk = false;
 
-  /**
-   * @generated from field: bool enable_resume_token = 9;
-   */
-  enableResumeToken = false;
-
   constructor(data?: PartialMessage<DownstreamOpenRequest>) {
     super();
     proto3.util.initPartial(data, this);
@@ -75,7 +70,6 @@ export class DownstreamOpenRequest extends Message<DownstreamOpenRequest> {
     { no: 6, name: "qos", kind: "enum", T: proto3.getEnumType(QoS) },
     { no: 7, name: "extension_fields", kind: "message", T: DownstreamOpenRequestExtensionFields },
     { no: 8, name: "omit_empty_chunk", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
-    { no: 9, name: "enable_resume_token", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DownstreamOpenRequest {

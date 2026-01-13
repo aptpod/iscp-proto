@@ -46,8 +46,6 @@ struct Iscp2_V1_UpstreamOpenRequest {
   /// Clears the value of `extensionFields`. Subsequent reads from it will return its default value.
   mutating func clearExtensionFields() {self._extensionFields = nil}
 
-  var enableResumeToken: Bool = false
-
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -402,7 +400,6 @@ extension Iscp2_V1_UpstreamOpenRequest: SwiftProtobuf.Message, SwiftProtobuf._Me
     6: .standard(proto: "data_ids"),
     7: .same(proto: "qos"),
     8: .standard(proto: "extension_fields"),
-    9: .standard(proto: "enable_resume_token"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -418,7 +415,6 @@ extension Iscp2_V1_UpstreamOpenRequest: SwiftProtobuf.Message, SwiftProtobuf._Me
       case 6: try { try decoder.decodeRepeatedMessageField(value: &self.dataIds) }()
       case 7: try { try decoder.decodeSingularEnumField(value: &self.qos) }()
       case 8: try { try decoder.decodeSingularMessageField(value: &self._extensionFields) }()
-      case 9: try { try decoder.decodeSingularBoolField(value: &self.enableResumeToken) }()
       default: break
       }
     }
@@ -450,9 +446,6 @@ extension Iscp2_V1_UpstreamOpenRequest: SwiftProtobuf.Message, SwiftProtobuf._Me
     try { if let v = self._extensionFields {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
     } }()
-    if self.enableResumeToken != false {
-      try visitor.visitSingularBoolField(value: self.enableResumeToken, fieldNumber: 9)
-    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -464,7 +457,6 @@ extension Iscp2_V1_UpstreamOpenRequest: SwiftProtobuf.Message, SwiftProtobuf._Me
     if lhs.dataIds != rhs.dataIds {return false}
     if lhs.qos != rhs.qos {return false}
     if lhs._extensionFields != rhs._extensionFields {return false}
-    if lhs.enableResumeToken != rhs.enableResumeToken {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

@@ -49,11 +49,6 @@ export class UpstreamOpenRequest extends Message<UpstreamOpenRequest> {
    */
   extensionFields?: UpstreamOpenRequestExtensionFields;
 
-  /**
-   * @generated from field: bool enable_resume_token = 9;
-   */
-  enableResumeToken = false;
-
   constructor(data?: PartialMessage<UpstreamOpenRequest>) {
     super();
     proto3.util.initPartial(data, this);
@@ -69,7 +64,6 @@ export class UpstreamOpenRequest extends Message<UpstreamOpenRequest> {
     { no: 6, name: "data_ids", kind: "message", T: DataID, repeated: true },
     { no: 7, name: "qos", kind: "enum", T: proto3.getEnumType(QoS) },
     { no: 8, name: "extension_fields", kind: "message", T: UpstreamOpenRequestExtensionFields },
-    { no: 9, name: "enable_resume_token", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UpstreamOpenRequest {
