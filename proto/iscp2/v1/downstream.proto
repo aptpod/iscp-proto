@@ -19,7 +19,6 @@ message DownstreamOpenRequest {
   QoS qos = 6;
   iscp2.v1.extensions.DownstreamOpenRequestExtensionFields extension_fields = 7;
   bool omit_empty_chunk = 8;
-  bool enable_resume_token = 9;
 }
 
 message DownstreamOpenResponse {

@@ -33,7 +33,6 @@ type DownstreamOpenRequest struct {
 	Qos                  QoS                                              `protobuf:"varint,6,opt,name=qos,proto3,enum=iscp2.v1.QoS" json:"qos,omitempty"`
 	ExtensionFields      *extensions.DownstreamOpenRequestExtensionFields `protobuf:"bytes,7,opt,name=extension_fields,json=extensionFields,proto3" json:"extension_fields,omitempty"`
 	OmitEmptyChunk       bool                                             `protobuf:"varint,8,opt,name=omit_empty_chunk,json=omitEmptyChunk,proto3" json:"omit_empty_chunk,omitempty"`
-	EnableResumeToken    bool                                             `protobuf:"varint,9,opt,name=enable_resume_token,json=enableResumeToken,proto3" json:"enable_resume_token,omitempty"`
 	unknownFields        protoimpl.UnknownFields
 	sizeCache            protoimpl.SizeCache
 }
@@ -120,13 +119,6 @@ func (x *DownstreamOpenRequest) GetExtensionFields() *extensions.DownstreamOpenR
 func (x *DownstreamOpenRequest) GetOmitEmptyChunk() bool {
 	if x != nil {
 		return x.OmitEmptyChunk
-	}
-	return false
-}
-
-func (x *DownstreamOpenRequest) GetEnableResumeToken() bool {
-	if x != nil {
-		return x.EnableResumeToken
 	}
 	return false
 }
@@ -1211,7 +1203,7 @@ var File_iscp2_v1_downstream_proto protoreflect.FileDescriptor
 
 const file_iscp2_v1_downstream_proto_rawDesc = "" +
 	"\n" +
-	"\x19iscp2/v1/downstream.proto\x12\biscp2.v1\x1a\x15iscp2/v1/common.proto\x1a$iscp2/v1/extensions/downstream.proto\x1a\x17iscp2/v1/metadata.proto\x1a\x1aiscp2/v1/result_code.proto\"\xf2\x04\n" +
+	"\x19iscp2/v1/downstream.proto\x12\biscp2.v1\x1a\x15iscp2/v1/common.proto\x1a$iscp2/v1/extensions/downstream.proto\x1a\x17iscp2/v1/metadata.proto\x1a\x1aiscp2/v1/result_code.proto\"\xc2\x04\n" +
 	"\x15DownstreamOpenRequest\x12\x1d\n" +
 	"\n" +
 	"request_id\x18\x01 \x01(\rR\trequestId\x125\n" +
@@ -1221,8 +1213,7 @@ const file_iscp2_v1_downstream_proto_rawDesc = "" +
 	"\x0fdata_id_aliases\x18\x05 \x03(\v22.iscp2.v1.DownstreamOpenRequest.DataIdAliasesEntryR\rdataIdAliases\x12\x1f\n" +
 	"\x03qos\x18\x06 \x01(\x0e2\r.iscp2.v1.QoSR\x03qos\x12d\n" +
 	"\x10extension_fields\x18\a \x01(\v29.iscp2.v1.extensions.DownstreamOpenRequestExtensionFieldsR\x0fextensionFields\x12(\n" +
-	"\x10omit_empty_chunk\x18\b \x01(\bR\x0eomitEmptyChunk\x12.\n" +
-	"\x13enable_resume_token\x18\t \x01(\bR\x11enableResumeToken\x1aR\n" +
+	"\x10omit_empty_chunk\x18\b \x01(\bR\x0eomitEmptyChunk\x1aR\n" +
 	"\x12DataIdAliasesEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\rR\x03key\x12&\n" +
 	"\x05value\x18\x02 \x01(\v2\x10.iscp2.v1.DataIDR\x05value:\x028\x01\"\xec\x02\n" +

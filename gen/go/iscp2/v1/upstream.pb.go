@@ -24,17 +24,16 @@ const (
 )
 
 type UpstreamOpenRequest struct {
-	state             protoimpl.MessageState                         `protogen:"open.v1"`
-	RequestId         uint32                                         `protobuf:"varint,1,opt,name=request_id,json=requestId,proto3" json:"request_id,omitempty"`
-	SessionId         string                                         `protobuf:"bytes,2,opt,name=session_id,json=sessionId,proto3" json:"session_id,omitempty"`
-	AckInterval       uint32                                         `protobuf:"varint,3,opt,name=ack_interval,json=ackInterval,proto3" json:"ack_interval,omitempty"`
-	ExpiryInterval    uint32                                         `protobuf:"varint,5,opt,name=expiry_interval,json=expiryInterval,proto3" json:"expiry_interval,omitempty"`
-	DataIds           []*DataID                                      `protobuf:"bytes,6,rep,name=data_ids,json=dataIds,proto3" json:"data_ids,omitempty"`
-	Qos               QoS                                            `protobuf:"varint,7,opt,name=qos,proto3,enum=iscp2.v1.QoS" json:"qos,omitempty"`
-	ExtensionFields   *extensions.UpstreamOpenRequestExtensionFields `protobuf:"bytes,8,opt,name=extension_fields,json=extensionFields,proto3" json:"extension_fields,omitempty"`
-	EnableResumeToken bool                                           `protobuf:"varint,9,opt,name=enable_resume_token,json=enableResumeToken,proto3" json:"enable_resume_token,omitempty"`
-	unknownFields     protoimpl.UnknownFields
-	sizeCache         protoimpl.SizeCache
+	state           protoimpl.MessageState                         `protogen:"open.v1"`
+	RequestId       uint32                                         `protobuf:"varint,1,opt,name=request_id,json=requestId,proto3" json:"request_id,omitempty"`
+	SessionId       string                                         `protobuf:"bytes,2,opt,name=session_id,json=sessionId,proto3" json:"session_id,omitempty"`
+	AckInterval     uint32                                         `protobuf:"varint,3,opt,name=ack_interval,json=ackInterval,proto3" json:"ack_interval,omitempty"`
+	ExpiryInterval  uint32                                         `protobuf:"varint,5,opt,name=expiry_interval,json=expiryInterval,proto3" json:"expiry_interval,omitempty"`
+	DataIds         []*DataID                                      `protobuf:"bytes,6,rep,name=data_ids,json=dataIds,proto3" json:"data_ids,omitempty"`
+	Qos             QoS                                            `protobuf:"varint,7,opt,name=qos,proto3,enum=iscp2.v1.QoS" json:"qos,omitempty"`
+	ExtensionFields *extensions.UpstreamOpenRequestExtensionFields `protobuf:"bytes,8,opt,name=extension_fields,json=extensionFields,proto3" json:"extension_fields,omitempty"`
+	unknownFields   protoimpl.UnknownFields
+	sizeCache       protoimpl.SizeCache
 }
 
 func (x *UpstreamOpenRequest) Reset() {
@@ -114,13 +113,6 @@ func (x *UpstreamOpenRequest) GetExtensionFields() *extensions.UpstreamOpenReque
 		return x.ExtensionFields
 	}
 	return nil
-}
-
-func (x *UpstreamOpenRequest) GetEnableResumeToken() bool {
-	if x != nil {
-		return x.EnableResumeToken
-	}
-	return false
 }
 
 type UpstreamOpenResponse struct {
@@ -885,7 +877,7 @@ var File_iscp2_v1_upstream_proto protoreflect.FileDescriptor
 
 const file_iscp2_v1_upstream_proto_rawDesc = "" +
 	"\n" +
-	"\x17iscp2/v1/upstream.proto\x12\biscp2.v1\x1a\x15iscp2/v1/common.proto\x1a\"iscp2/v1/extensions/upstream.proto\x1a\x17iscp2/v1/metadata.proto\x1a\x1aiscp2/v1/result_code.proto\"\x81\x03\n" +
+	"\x17iscp2/v1/upstream.proto\x12\biscp2.v1\x1a\x15iscp2/v1/common.proto\x1a\"iscp2/v1/extensions/upstream.proto\x1a\x17iscp2/v1/metadata.proto\x1a\x1aiscp2/v1/result_code.proto\"\xd1\x02\n" +
 	"\x13UpstreamOpenRequest\x12\x1d\n" +
 	"\n" +
 	"request_id\x18\x01 \x01(\rR\trequestId\x12\x1d\n" +
@@ -895,8 +887,7 @@ const file_iscp2_v1_upstream_proto_rawDesc = "" +
 	"\x0fexpiry_interval\x18\x05 \x01(\rR\x0eexpiryInterval\x12+\n" +
 	"\bdata_ids\x18\x06 \x03(\v2\x10.iscp2.v1.DataIDR\adataIds\x12\x1f\n" +
 	"\x03qos\x18\a \x01(\x0e2\r.iscp2.v1.QoSR\x03qos\x12b\n" +
-	"\x10extension_fields\x18\b \x01(\v27.iscp2.v1.extensions.UpstreamOpenRequestExtensionFieldsR\x0fextensionFields\x12.\n" +
-	"\x13enable_resume_token\x18\t \x01(\bR\x11enableResumeToken\"\xd0\x04\n" +
+	"\x10extension_fields\x18\b \x01(\v27.iscp2.v1.extensions.UpstreamOpenRequestExtensionFieldsR\x0fextensionFields\"\xd0\x04\n" +
 	"\x14UpstreamOpenResponse\x12\x1d\n" +
 	"\n" +
 	"request_id\x18\x01 \x01(\rR\trequestId\x12,\n" +

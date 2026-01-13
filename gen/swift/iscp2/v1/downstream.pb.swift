@@ -48,8 +48,6 @@ struct Iscp2_V1_DownstreamOpenRequest {
 
   var omitEmptyChunk: Bool = false
 
-  var enableResumeToken: Bool = false
-
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -602,7 +600,6 @@ extension Iscp2_V1_DownstreamOpenRequest: SwiftProtobuf.Message, SwiftProtobuf._
     6: .same(proto: "qos"),
     7: .standard(proto: "extension_fields"),
     8: .standard(proto: "omit_empty_chunk"),
-    9: .standard(proto: "enable_resume_token"),
   ]
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -619,7 +616,6 @@ extension Iscp2_V1_DownstreamOpenRequest: SwiftProtobuf.Message, SwiftProtobuf._
       case 6: try { try decoder.decodeSingularEnumField(value: &self.qos) }()
       case 7: try { try decoder.decodeSingularMessageField(value: &self._extensionFields) }()
       case 8: try { try decoder.decodeSingularBoolField(value: &self.omitEmptyChunk) }()
-      case 9: try { try decoder.decodeSingularBoolField(value: &self.enableResumeToken) }()
       default: break
       }
     }
@@ -654,9 +650,6 @@ extension Iscp2_V1_DownstreamOpenRequest: SwiftProtobuf.Message, SwiftProtobuf._
     if self.omitEmptyChunk != false {
       try visitor.visitSingularBoolField(value: self.omitEmptyChunk, fieldNumber: 8)
     }
-    if self.enableResumeToken != false {
-      try visitor.visitSingularBoolField(value: self.enableResumeToken, fieldNumber: 9)
-    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -669,7 +662,6 @@ extension Iscp2_V1_DownstreamOpenRequest: SwiftProtobuf.Message, SwiftProtobuf._
     if lhs.qos != rhs.qos {return false}
     if lhs._extensionFields != rhs._extensionFields {return false}
     if lhs.omitEmptyChunk != rhs.omitEmptyChunk {return false}
-    if lhs.enableResumeToken != rhs.enableResumeToken {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
