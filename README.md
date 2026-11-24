@@ -31,6 +31,6 @@ buf generate iscp-proto/proto
 
 `gen` ディレクトリに生成したコードは配置済みです。
 
-`gen/gogofast` は非推奨です。生成はやめており、proto を変更しても更新されません。Go からは `gen/go`（google.golang.org/protobuf と vtprotobuf）を使ってください。`gen/gogofast` は別の Go module（`github.com/aptpod/iscp-proto/gen/gogofast`）で、使う場合は iscp-proto と別に require します。
+`gen/gogofast` は非推奨です。生成はやめており、proto を変更しても更新されません。Go からは `gen/go`（google.golang.org/protobuf と vtprotobuf）を使ってください。`gen/gogofast` は別の Go module（`github.com/aptpod/iscp-proto/gen/gogofast`）で、使う場合は iscp-proto と別に require します。先に iscp-proto をこの構成の版へ上げてから `go mod tidy` で追加してください。iscp-proto が古い版のまま追加すると、同じ package が 2 つの module にあることになり `ambiguous import` でビルドが失敗します。
 
 ## License
