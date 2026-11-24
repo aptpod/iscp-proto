@@ -811,6 +811,795 @@ func (m *UpstreamChunkResult) MarshalToSizedBufferVT(dAtA []byte) (int, error) {
 	return len(dAtA) - i, nil
 }
 
+func (m *UpstreamOpenRequest) MarshalVTStrict() (dAtA []byte, err error) {
+	if m == nil {
+		return nil, nil
+	}
+	size := m.SizeVT()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBufferVTStrict(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *UpstreamOpenRequest) MarshalToVTStrict(dAtA []byte) (int, error) {
+	size := m.SizeVT()
+	return m.MarshalToSizedBufferVTStrict(dAtA[:size])
+}
+
+func (m *UpstreamOpenRequest) MarshalToSizedBufferVTStrict(dAtA []byte) (int, error) {
+	if m == nil {
+		return 0, nil
+	}
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	if m.unknownFields != nil {
+		i -= len(m.unknownFields)
+		copy(dAtA[i:], m.unknownFields)
+	}
+	if m.ExtensionFields != nil {
+		size, err := m.ExtensionFields.MarshalToSizedBufferVTStrict(dAtA[:i])
+		if err != nil {
+			return 0, err
+		}
+		i -= size
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(size))
+		i--
+		dAtA[i] = 0x42
+	}
+	if m.Qos != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.Qos))
+		i--
+		dAtA[i] = 0x38
+	}
+	if len(m.DataIds) > 0 {
+		for iNdEx := len(m.DataIds) - 1; iNdEx >= 0; iNdEx-- {
+			size, err := m.DataIds[iNdEx].MarshalToSizedBufferVTStrict(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = protohelpers.EncodeVarint(dAtA, i, uint64(size))
+			i--
+			dAtA[i] = 0x32
+		}
+	}
+	if m.ExpiryInterval != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.ExpiryInterval))
+		i--
+		dAtA[i] = 0x28
+	}
+	if m.AckInterval != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.AckInterval))
+		i--
+		dAtA[i] = 0x18
+	}
+	if len(m.SessionId) > 0 {
+		i -= len(m.SessionId)
+		copy(dAtA[i:], m.SessionId)
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(len(m.SessionId)))
+		i--
+		dAtA[i] = 0x12
+	}
+	if m.RequestId != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.RequestId))
+		i--
+		dAtA[i] = 0x8
+	}
+	return len(dAtA) - i, nil
+}
+
+func (m *UpstreamOpenResponse) MarshalVTStrict() (dAtA []byte, err error) {
+	if m == nil {
+		return nil, nil
+	}
+	size := m.SizeVT()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBufferVTStrict(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *UpstreamOpenResponse) MarshalToVTStrict(dAtA []byte) (int, error) {
+	size := m.SizeVT()
+	return m.MarshalToSizedBufferVTStrict(dAtA[:size])
+}
+
+func (m *UpstreamOpenResponse) MarshalToSizedBufferVTStrict(dAtA []byte) (int, error) {
+	if m == nil {
+		return 0, nil
+	}
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	if m.unknownFields != nil {
+		i -= len(m.unknownFields)
+		copy(dAtA[i:], m.unknownFields)
+	}
+	if len(m.ResumeToken) > 0 {
+		i -= len(m.ResumeToken)
+		copy(dAtA[i:], m.ResumeToken)
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(len(m.ResumeToken)))
+		i--
+		dAtA[i] = 0x4a
+	}
+	if m.ExtensionFields != nil {
+		size, err := m.ExtensionFields.MarshalToSizedBufferVTStrict(dAtA[:i])
+		if err != nil {
+			return 0, err
+		}
+		i -= size
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(size))
+		i--
+		dAtA[i] = 0x42
+	}
+	if len(m.ResultString) > 0 {
+		i -= len(m.ResultString)
+		copy(dAtA[i:], m.ResultString)
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(len(m.ResultString)))
+		i--
+		dAtA[i] = 0x3a
+	}
+	if m.ResultCode != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.ResultCode))
+		i--
+		dAtA[i] = 0x30
+	}
+	if m.ServerTime != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64((uint64(m.ServerTime)<<1)^uint64((m.ServerTime>>63))))
+		i--
+		dAtA[i] = 0x28
+	}
+	if len(m.DataIdAliases) > 0 {
+		for k := range m.DataIdAliases {
+			v := m.DataIdAliases[k]
+			baseI := i
+			size, err := v.MarshalToSizedBufferVTStrict(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = protohelpers.EncodeVarint(dAtA, i, uint64(size))
+			i--
+			dAtA[i] = 0x12
+			i = protohelpers.EncodeVarint(dAtA, i, uint64(k))
+			i--
+			dAtA[i] = 0x8
+			i = protohelpers.EncodeVarint(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x22
+		}
+	}
+	if m.AssignedStreamIdAlias != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.AssignedStreamIdAlias))
+		i--
+		dAtA[i] = 0x18
+	}
+	if len(m.AssignedStreamId) > 0 {
+		i -= len(m.AssignedStreamId)
+		copy(dAtA[i:], m.AssignedStreamId)
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(len(m.AssignedStreamId)))
+		i--
+		dAtA[i] = 0x12
+	}
+	if m.RequestId != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.RequestId))
+		i--
+		dAtA[i] = 0x8
+	}
+	return len(dAtA) - i, nil
+}
+
+func (m *UpstreamResumeRequest) MarshalVTStrict() (dAtA []byte, err error) {
+	if m == nil {
+		return nil, nil
+	}
+	size := m.SizeVT()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBufferVTStrict(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *UpstreamResumeRequest) MarshalToVTStrict(dAtA []byte) (int, error) {
+	size := m.SizeVT()
+	return m.MarshalToSizedBufferVTStrict(dAtA[:size])
+}
+
+func (m *UpstreamResumeRequest) MarshalToSizedBufferVTStrict(dAtA []byte) (int, error) {
+	if m == nil {
+		return 0, nil
+	}
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	if m.unknownFields != nil {
+		i -= len(m.unknownFields)
+		copy(dAtA[i:], m.unknownFields)
+	}
+	if len(m.ResumeToken) > 0 {
+		i -= len(m.ResumeToken)
+		copy(dAtA[i:], m.ResumeToken)
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(len(m.ResumeToken)))
+		i--
+		dAtA[i] = 0x22
+	}
+	if m.ExtensionFields != nil {
+		size, err := m.ExtensionFields.MarshalToSizedBufferVTStrict(dAtA[:i])
+		if err != nil {
+			return 0, err
+		}
+		i -= size
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(size))
+		i--
+		dAtA[i] = 0x1a
+	}
+	if len(m.StreamId) > 0 {
+		i -= len(m.StreamId)
+		copy(dAtA[i:], m.StreamId)
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(len(m.StreamId)))
+		i--
+		dAtA[i] = 0x12
+	}
+	if m.RequestId != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.RequestId))
+		i--
+		dAtA[i] = 0x8
+	}
+	return len(dAtA) - i, nil
+}
+
+func (m *UpstreamResumeResponse) MarshalVTStrict() (dAtA []byte, err error) {
+	if m == nil {
+		return nil, nil
+	}
+	size := m.SizeVT()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBufferVTStrict(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *UpstreamResumeResponse) MarshalToVTStrict(dAtA []byte) (int, error) {
+	size := m.SizeVT()
+	return m.MarshalToSizedBufferVTStrict(dAtA[:size])
+}
+
+func (m *UpstreamResumeResponse) MarshalToSizedBufferVTStrict(dAtA []byte) (int, error) {
+	if m == nil {
+		return 0, nil
+	}
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	if m.unknownFields != nil {
+		i -= len(m.unknownFields)
+		copy(dAtA[i:], m.unknownFields)
+	}
+	if len(m.ResumeToken) > 0 {
+		i -= len(m.ResumeToken)
+		copy(dAtA[i:], m.ResumeToken)
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(len(m.ResumeToken)))
+		i--
+		dAtA[i] = 0x32
+	}
+	if m.ExtensionFields != nil {
+		size, err := m.ExtensionFields.MarshalToSizedBufferVTStrict(dAtA[:i])
+		if err != nil {
+			return 0, err
+		}
+		i -= size
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(size))
+		i--
+		dAtA[i] = 0x2a
+	}
+	if len(m.ResultString) > 0 {
+		i -= len(m.ResultString)
+		copy(dAtA[i:], m.ResultString)
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(len(m.ResultString)))
+		i--
+		dAtA[i] = 0x22
+	}
+	if m.ResultCode != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.ResultCode))
+		i--
+		dAtA[i] = 0x18
+	}
+	if m.AssignedStreamIdAlias != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.AssignedStreamIdAlias))
+		i--
+		dAtA[i] = 0x10
+	}
+	if m.RequestId != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.RequestId))
+		i--
+		dAtA[i] = 0x8
+	}
+	return len(dAtA) - i, nil
+}
+
+func (m *UpstreamCloseRequest) MarshalVTStrict() (dAtA []byte, err error) {
+	if m == nil {
+		return nil, nil
+	}
+	size := m.SizeVT()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBufferVTStrict(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *UpstreamCloseRequest) MarshalToVTStrict(dAtA []byte) (int, error) {
+	size := m.SizeVT()
+	return m.MarshalToSizedBufferVTStrict(dAtA[:size])
+}
+
+func (m *UpstreamCloseRequest) MarshalToSizedBufferVTStrict(dAtA []byte) (int, error) {
+	if m == nil {
+		return 0, nil
+	}
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	if m.unknownFields != nil {
+		i -= len(m.unknownFields)
+		copy(dAtA[i:], m.unknownFields)
+	}
+	if m.ExtensionFields != nil {
+		size, err := m.ExtensionFields.MarshalToSizedBufferVTStrict(dAtA[:i])
+		if err != nil {
+			return 0, err
+		}
+		i -= size
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(size))
+		i--
+		dAtA[i] = 0x2a
+	}
+	if m.FinalSequenceNumber != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.FinalSequenceNumber))
+		i--
+		dAtA[i] = 0x20
+	}
+	if m.TotalDataPoints != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.TotalDataPoints))
+		i--
+		dAtA[i] = 0x18
+	}
+	if len(m.StreamId) > 0 {
+		i -= len(m.StreamId)
+		copy(dAtA[i:], m.StreamId)
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(len(m.StreamId)))
+		i--
+		dAtA[i] = 0x12
+	}
+	if m.RequestId != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.RequestId))
+		i--
+		dAtA[i] = 0x8
+	}
+	return len(dAtA) - i, nil
+}
+
+func (m *UpstreamCloseResponse) MarshalVTStrict() (dAtA []byte, err error) {
+	if m == nil {
+		return nil, nil
+	}
+	size := m.SizeVT()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBufferVTStrict(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *UpstreamCloseResponse) MarshalToVTStrict(dAtA []byte) (int, error) {
+	size := m.SizeVT()
+	return m.MarshalToSizedBufferVTStrict(dAtA[:size])
+}
+
+func (m *UpstreamCloseResponse) MarshalToSizedBufferVTStrict(dAtA []byte) (int, error) {
+	if m == nil {
+		return 0, nil
+	}
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	if m.unknownFields != nil {
+		i -= len(m.unknownFields)
+		copy(dAtA[i:], m.unknownFields)
+	}
+	if m.ExtensionFields != nil {
+		size, err := m.ExtensionFields.MarshalToSizedBufferVTStrict(dAtA[:i])
+		if err != nil {
+			return 0, err
+		}
+		i -= size
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(size))
+		i--
+		dAtA[i] = 0x22
+	}
+	if len(m.ResultString) > 0 {
+		i -= len(m.ResultString)
+		copy(dAtA[i:], m.ResultString)
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(len(m.ResultString)))
+		i--
+		dAtA[i] = 0x1a
+	}
+	if m.ResultCode != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.ResultCode))
+		i--
+		dAtA[i] = 0x10
+	}
+	if m.RequestId != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.RequestId))
+		i--
+		dAtA[i] = 0x8
+	}
+	return len(dAtA) - i, nil
+}
+
+func (m *UpstreamChunk) MarshalVTStrict() (dAtA []byte, err error) {
+	if m == nil {
+		return nil, nil
+	}
+	size := m.SizeVT()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBufferVTStrict(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *UpstreamChunk) MarshalToVTStrict(dAtA []byte) (int, error) {
+	size := m.SizeVT()
+	return m.MarshalToSizedBufferVTStrict(dAtA[:size])
+}
+
+func (m *UpstreamChunk) MarshalToSizedBufferVTStrict(dAtA []byte) (int, error) {
+	if m == nil {
+		return 0, nil
+	}
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	if m.unknownFields != nil {
+		i -= len(m.unknownFields)
+		copy(dAtA[i:], m.unknownFields)
+	}
+	if m.ExtensionFields != nil {
+		size, err := m.ExtensionFields.MarshalToSizedBufferVTStrict(dAtA[:i])
+		if err != nil {
+			return 0, err
+		}
+		i -= size
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(size))
+		i--
+		dAtA[i] = 0x22
+	}
+	if len(m.DataIds) > 0 {
+		for iNdEx := len(m.DataIds) - 1; iNdEx >= 0; iNdEx-- {
+			size, err := m.DataIds[iNdEx].MarshalToSizedBufferVTStrict(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = protohelpers.EncodeVarint(dAtA, i, uint64(size))
+			i--
+			dAtA[i] = 0x1a
+		}
+	}
+	if m.StreamChunk != nil {
+		size, err := m.StreamChunk.MarshalToSizedBufferVTStrict(dAtA[:i])
+		if err != nil {
+			return 0, err
+		}
+		i -= size
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(size))
+		i--
+		dAtA[i] = 0x12
+	}
+	if m.StreamIdAlias != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.StreamIdAlias))
+		i--
+		dAtA[i] = 0x8
+	}
+	return len(dAtA) - i, nil
+}
+
+func (m *UpstreamChunkAck) MarshalVTStrict() (dAtA []byte, err error) {
+	if m == nil {
+		return nil, nil
+	}
+	size := m.SizeVT()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBufferVTStrict(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *UpstreamChunkAck) MarshalToVTStrict(dAtA []byte) (int, error) {
+	size := m.SizeVT()
+	return m.MarshalToSizedBufferVTStrict(dAtA[:size])
+}
+
+func (m *UpstreamChunkAck) MarshalToSizedBufferVTStrict(dAtA []byte) (int, error) {
+	if m == nil {
+		return 0, nil
+	}
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	if m.unknownFields != nil {
+		i -= len(m.unknownFields)
+		copy(dAtA[i:], m.unknownFields)
+	}
+	if m.ExtensionFields != nil {
+		size, err := m.ExtensionFields.MarshalToSizedBufferVTStrict(dAtA[:i])
+		if err != nil {
+			return 0, err
+		}
+		i -= size
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(size))
+		i--
+		dAtA[i] = 0x22
+	}
+	if len(m.DataIdAliases) > 0 {
+		for k := range m.DataIdAliases {
+			v := m.DataIdAliases[k]
+			baseI := i
+			size, err := v.MarshalToSizedBufferVTStrict(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = protohelpers.EncodeVarint(dAtA, i, uint64(size))
+			i--
+			dAtA[i] = 0x12
+			i = protohelpers.EncodeVarint(dAtA, i, uint64(k))
+			i--
+			dAtA[i] = 0x8
+			i = protohelpers.EncodeVarint(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x1a
+		}
+	}
+	if len(m.Results) > 0 {
+		for iNdEx := len(m.Results) - 1; iNdEx >= 0; iNdEx-- {
+			size, err := m.Results[iNdEx].MarshalToSizedBufferVTStrict(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = protohelpers.EncodeVarint(dAtA, i, uint64(size))
+			i--
+			dAtA[i] = 0x12
+		}
+	}
+	if m.StreamIdAlias != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.StreamIdAlias))
+		i--
+		dAtA[i] = 0x8
+	}
+	return len(dAtA) - i, nil
+}
+
+func (m *UpstreamMetadata) MarshalVTStrict() (dAtA []byte, err error) {
+	if m == nil {
+		return nil, nil
+	}
+	size := m.SizeVT()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBufferVTStrict(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *UpstreamMetadata) MarshalToVTStrict(dAtA []byte) (int, error) {
+	size := m.SizeVT()
+	return m.MarshalToSizedBufferVTStrict(dAtA[:size])
+}
+
+func (m *UpstreamMetadata) MarshalToSizedBufferVTStrict(dAtA []byte) (int, error) {
+	if m == nil {
+		return 0, nil
+	}
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	if m.unknownFields != nil {
+		i -= len(m.unknownFields)
+		copy(dAtA[i:], m.unknownFields)
+	}
+	if m.ExtensionFields != nil {
+		size, err := m.ExtensionFields.MarshalToSizedBufferVTStrict(dAtA[:i])
+		if err != nil {
+			return 0, err
+		}
+		i -= size
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(size))
+		i--
+		dAtA[i] = 0x22
+	}
+	if msg, ok := m.Metadata.(*UpstreamMetadata_BaseTime); ok {
+		size, err := msg.MarshalToSizedBufferVTStrict(dAtA[:i])
+		if err != nil {
+			return 0, err
+		}
+		i -= size
+	}
+	if m.RequestId != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.RequestId))
+		i--
+		dAtA[i] = 0x8
+	}
+	return len(dAtA) - i, nil
+}
+
+func (m *UpstreamMetadata_BaseTime) MarshalToVTStrict(dAtA []byte) (int, error) {
+	size := m.SizeVT()
+	return m.MarshalToSizedBufferVTStrict(dAtA[:size])
+}
+
+func (m *UpstreamMetadata_BaseTime) MarshalToSizedBufferVTStrict(dAtA []byte) (int, error) {
+	i := len(dAtA)
+	if m.BaseTime != nil {
+		size, err := m.BaseTime.MarshalToSizedBufferVTStrict(dAtA[:i])
+		if err != nil {
+			return 0, err
+		}
+		i -= size
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(size))
+		i--
+		dAtA[i] = 0x12
+	}
+	return len(dAtA) - i, nil
+}
+func (m *UpstreamMetadataAck) MarshalVTStrict() (dAtA []byte, err error) {
+	if m == nil {
+		return nil, nil
+	}
+	size := m.SizeVT()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBufferVTStrict(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *UpstreamMetadataAck) MarshalToVTStrict(dAtA []byte) (int, error) {
+	size := m.SizeVT()
+	return m.MarshalToSizedBufferVTStrict(dAtA[:size])
+}
+
+func (m *UpstreamMetadataAck) MarshalToSizedBufferVTStrict(dAtA []byte) (int, error) {
+	if m == nil {
+		return 0, nil
+	}
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	if m.unknownFields != nil {
+		i -= len(m.unknownFields)
+		copy(dAtA[i:], m.unknownFields)
+	}
+	if m.ExtensionFields != nil {
+		size, err := m.ExtensionFields.MarshalToSizedBufferVTStrict(dAtA[:i])
+		if err != nil {
+			return 0, err
+		}
+		i -= size
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(size))
+		i--
+		dAtA[i] = 0x22
+	}
+	if len(m.ResultString) > 0 {
+		i -= len(m.ResultString)
+		copy(dAtA[i:], m.ResultString)
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(len(m.ResultString)))
+		i--
+		dAtA[i] = 0x1a
+	}
+	if m.ResultCode != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.ResultCode))
+		i--
+		dAtA[i] = 0x10
+	}
+	if m.RequestId != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.RequestId))
+		i--
+		dAtA[i] = 0x8
+	}
+	return len(dAtA) - i, nil
+}
+
+func (m *UpstreamChunkResult) MarshalVTStrict() (dAtA []byte, err error) {
+	if m == nil {
+		return nil, nil
+	}
+	size := m.SizeVT()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBufferVTStrict(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *UpstreamChunkResult) MarshalToVTStrict(dAtA []byte) (int, error) {
+	size := m.SizeVT()
+	return m.MarshalToSizedBufferVTStrict(dAtA[:size])
+}
+
+func (m *UpstreamChunkResult) MarshalToSizedBufferVTStrict(dAtA []byte) (int, error) {
+	if m == nil {
+		return 0, nil
+	}
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	if m.unknownFields != nil {
+		i -= len(m.unknownFields)
+		copy(dAtA[i:], m.unknownFields)
+	}
+	if m.ExtensionFields != nil {
+		size, err := m.ExtensionFields.MarshalToSizedBufferVTStrict(dAtA[:i])
+		if err != nil {
+			return 0, err
+		}
+		i -= size
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(size))
+		i--
+		dAtA[i] = 0x22
+	}
+	if len(m.ResultString) > 0 {
+		i -= len(m.ResultString)
+		copy(dAtA[i:], m.ResultString)
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(len(m.ResultString)))
+		i--
+		dAtA[i] = 0x1a
+	}
+	if m.ResultCode != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.ResultCode))
+		i--
+		dAtA[i] = 0x10
+	}
+	if m.SequenceNumber != 0 {
+		i = protohelpers.EncodeVarint(dAtA, i, uint64(m.SequenceNumber))
+		i--
+		dAtA[i] = 0x8
+	}
+	return len(dAtA) - i, nil
+}
+
 func (m *UpstreamOpenRequest) SizeVT() (n int) {
 	if m == nil {
 		return 0

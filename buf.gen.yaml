@@ -14,7 +14,7 @@ plugins:
     out: gen/go
     opt:
       - paths=source_relative
-      - features=marshal+unmarshal+size
+      - features=marshal+marshal_strict+unmarshal+size
       - pool=github.com/aptpod/iscp-proto/gen/go
   - plugin: buf.build/protocolbuffers/python:v23.4
     out: gen/python
