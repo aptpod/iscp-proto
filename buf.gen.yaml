@@ -6,7 +6,7 @@ managed:
     default: github.com/aptpod/iscp-proto/gen/go
   java_multiple_files: true
 plugins:
-  - plugin: buf.build/protocolbuffers/go
+  - plugin: buf.build/protocolbuffers/go:v1.36.11
     out: gen/go
     opt:
       - paths=source_relative
@@ -23,10 +23,10 @@ plugins:
   - plugin: buf.build/bufbuild/es:v1.3.0
     opt: target=ts
     out: gen/ts
-  - plugin: buf.build/protocolbuffers/csharp
+  - plugin: buf.build/protocolbuffers/csharp:v33.4
     out: gen/csharp
     opt: file_extension=.g.cs,base_namespace=Iscp2.V1,internal_access
-  - plugin: buf.build/protocolbuffers/java
+  - plugin: buf.build/protocolbuffers/java:v33.4
     out: gen/java
-  - plugin: buf.build/protocolbuffers/kotlin
+  - plugin: buf.build/protocolbuffers/kotlin:v33.4
     out: gen/kotlin

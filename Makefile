@@ -27,7 +27,7 @@ format:
 tools:
 	go install github.com/gogo/protobuf/protoc-gen-gogofast@$(VERSION_PROTOC_GOGOPROTO)
 	go run github.com/x-motemen/ghq@latest get github.com/gogo/protobuf/gogoproto
-	npm install @bufbuild/protobuf @bufbuild/protoc-gen-es @bufbuild/buf
+	npm ci
 
 .PHONY: clean
 clean:
