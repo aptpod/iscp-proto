@@ -2,6 +2,7 @@ package iscp2v1_test
 
 import (
 	"bytes"
+	"encoding/hex"
 	"testing"
 
 	iscp2v1 "github.com/aptpod/iscp-proto/gen/go/iscp2/v1"
@@ -44,6 +45,8 @@ func TestMarshalVTStrictMatchesGogofast(t *testing.T) {
 		name string
 		in   vtMessage
 		gogo func() gogoMessage
+		// want is the hex of the gogofast Marshal output for in.
+		want string
 	}{
 		{
 			name: "Message/UpstreamChunk",
@@ -53,6 +56,7 @@ func TestMarshalVTStrictMatchesGogofast(t *testing.T) {
 				DataIds:       []*iscp2v1.DataID{{Name: "a", Type: "b"}},
 			}}},
 			gogo: func() gogoMessage { return &gogofast.Message{} },
+			want: "b2043e080112320803120e10051a0608011202010222020708121e0a150a0afffe2d696e76616c69641207666c6f617436341a0508141201031a060a0161120162",
 		},
 		{
 			name: "Message/DownstreamChunk",
@@ -65,6 +69,7 @@ func TestMarshalVTStrictMatchesGogofast(t *testing.T) {
 				},
 			}}},
 			gogo: func() gogoMessage { return &gogofast.Message{} },
+			want: "b20854080212140a017312030102031a0afffe2d696e76616c696422320803120e10051a0608011202010222020708121e0a150a0afffe2d696e76616c69641207666c6f617436341a05081412010332060a0408011002",
 		},
 		{
 			name: "Message/DownstreamMetadata",
@@ -75,6 +80,7 @@ func TestMarshalVTStrictMatchesGogofast(t *testing.T) {
 				SourceNodeId:  "node",
 			}}},
 			gogo: func() gogoMessage { return &gogofast.Message{} },
+			want: "ca082c080912200a0afffe2d696e76616c69641208656467655f727463181420042880c49fd50c5a046e6f64656804",
 		},
 		{
 			name: "UpstreamMetadata",
@@ -83,6 +89,7 @@ func TestMarshalVTStrictMatchesGogofast(t *testing.T) {
 				Metadata:  &iscp2v1.UpstreamMetadata_BaseTime{BaseTime: baseTime},
 			},
 			gogo: func() gogoMessage { return &gogofast.UpstreamMetadata{} },
+			want: "080112200a0afffe2d696e76616c69641208656467655f727463181420042880c49fd50c",
 		},
 	}
 	for _, tt := range tests {
@@ -102,9 +109,13 @@ func TestMarshalVTStrictMatchesGogofast(t *testing.T) {
 			if !bytes.Equal(want, got) {
 				t.Fatalf("MarshalVTStrict differs from gogofast\n got: %x\nwant: %x", got, want)
 			}
+			fixed := mustDecodeHex(t, tt.want)
+			if !bytes.Equal(fixed, want) {
+				t.Fatalf("fixed value differs from gogofast\nfixed: %x\n gogo: %x", fixed, want)
+			}
 
 			decoded := tt.in.ProtoReflect().New().Interface().(vtMessage)
-			if err := decoded.UnmarshalVT(want); err != nil {
+			if err := decoded.UnmarshalVT(fixed); err != nil {
 				t.Fatalf("UnmarshalVT: %v", err)
 			}
 			if !proto.Equal(tt.in, decoded) {
@@ -140,4 +151,17 @@ func TestMarshalVTStrictMatchesIndependentGogofastValue(t *testing.T) {
 	if !bytes.Equal(want, got) {
 		t.Fatalf("MarshalVTStrict differs from gogofast\n got: %x\nwant: %x", got, want)
 	}
+	fixed := mustDecodeHex(t, "080912200a0afffe2d696e76616c69641208656467655f727463181420042880c49fd50c5a046e6f64656804")
+	if !bytes.Equal(fixed, want) {
+		t.Fatalf("fixed value differs from gogofast\nfixed: %x\n gogo: %x", fixed, want)
+	}
+}
+
+func mustDecodeHex(t *testing.T, s string) []byte {
+	t.Helper()
+	b, err := hex.DecodeString(s)
+	if err != nil {
+		t.Fatal(err)
+	}
+	return b
 }
