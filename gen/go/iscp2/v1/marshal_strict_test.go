@@ -2,19 +2,14 @@ package iscp2v1_test
 
 import (
 	"bytes"
+	"encoding/hex"
 	"testing"
 
 	iscp2v1 "github.com/aptpod/iscp-proto/gen/go/iscp2/v1"
-	gogofast "github.com/aptpod/iscp-proto/gen/gogofast/iscp2/v1"
 	"google.golang.org/protobuf/proto"
 )
 
 const invalidUTF8 = "\xff\xfe-invalid"
-
-type gogoMessage interface {
-	Marshal() ([]byte, error)
-	Unmarshal([]byte) error
-}
 
 type vtMessage interface {
 	proto.Message
@@ -23,7 +18,8 @@ type vtMessage interface {
 }
 
 // MarshalVTStrict must emit the same bytes as gogofast, which writes fields
-// (oneof members included) in field number order.
+// (oneof members included) in field number order. gogofast is no longer
+// generated, so the expected bytes are the gogofast output recorded as hex.
 func TestMarshalVTStrictMatchesGogofast(t *testing.T) {
 	streamChunk := &iscp2v1.StreamChunk{
 		SequenceNumber: 3,
@@ -43,7 +39,8 @@ func TestMarshalVTStrictMatchesGogofast(t *testing.T) {
 	tests := []struct {
 		name string
 		in   vtMessage
-		gogo func() gogoMessage
+		// want is the hex of the gogofast Marshal output for in.
+		want string
 	}{
 		{
 			name: "Message/UpstreamChunk",
@@ -52,7 +49,7 @@ func TestMarshalVTStrictMatchesGogofast(t *testing.T) {
 				StreamChunk:   streamChunk,
 				DataIds:       []*iscp2v1.DataID{{Name: "a", Type: "b"}},
 			}}},
-			gogo: func() gogoMessage { return &gogofast.Message{} },
+			want: "b2043e080112320803120e10051a0608011202010222020708121e0a150a0afffe2d696e76616c69641207666c6f617436341a0508141201031a060a0161120162",
 		},
 		{
 			name: "Message/DownstreamChunk",
@@ -64,7 +61,7 @@ func TestMarshalVTStrictMatchesGogofast(t *testing.T) {
 					{References: []*iscp2v1.DownstreamFilterReference{{DownstreamFilterIndex: 1, DataFilterIndex: 2}}},
 				},
 			}}},
-			gogo: func() gogoMessage { return &gogofast.Message{} },
+			want: "b20854080212140a017312030102031a0afffe2d696e76616c696422320803120e10051a0608011202010222020708121e0a150a0afffe2d696e76616c69641207666c6f617436341a05081412010332060a0408011002",
 		},
 		{
 			name: "Message/DownstreamMetadata",
@@ -74,7 +71,7 @@ func TestMarshalVTStrictMatchesGogofast(t *testing.T) {
 				Metadata:      &iscp2v1.DownstreamMetadata_BaseTime{BaseTime: baseTime},
 				SourceNodeId:  "node",
 			}}},
-			gogo: func() gogoMessage { return &gogofast.Message{} },
+			want: "ca082c080912200a0afffe2d696e76616c69641208656467655f727463181420042880c49fd50c5a046e6f64656804",
 		},
 		{
 			name: "UpstreamMetadata",
@@ -82,7 +79,17 @@ func TestMarshalVTStrictMatchesGogofast(t *testing.T) {
 				RequestId: 1,
 				Metadata:  &iscp2v1.UpstreamMetadata_BaseTime{BaseTime: baseTime},
 			},
-			gogo: func() gogoMessage { return &gogofast.UpstreamMetadata{} },
+			want: "080112200a0afffe2d696e76616c69641208656467655f727463181420042880c49fd50c",
+		},
+		{
+			name: "DownstreamMetadata",
+			in: &iscp2v1.DownstreamMetadata{
+				RequestId:     9,
+				StreamIdAlias: 4,
+				Metadata:      &iscp2v1.DownstreamMetadata_BaseTime{BaseTime: baseTime},
+				SourceNodeId:  "node",
+			},
+			want: "080912200a0afffe2d696e76616c69641208656467655f727463181420042880c49fd50c5a046e6f64656804",
 		},
 	}
 	for _, tt := range tests {
@@ -91,11 +98,7 @@ func TestMarshalVTStrictMatchesGogofast(t *testing.T) {
 			if err != nil {
 				t.Fatal(err)
 			}
-			g := tt.gogo()
-			if err := g.Unmarshal(got); err != nil {
-				t.Fatalf("gogofast Unmarshal: %v", err)
-			}
-			want, err := g.Marshal()
+			want, err := hex.DecodeString(tt.want)
 			if err != nil {
 				t.Fatal(err)
 			}
@@ -111,33 +114,5 @@ func TestMarshalVTStrictMatchesGogofast(t *testing.T) {
 				t.Fatalf("round trip differs\n got: %v\nwant: %v", decoded, tt.in)
 			}
 		})
-	}
-}
-
-// The round trip above cannot catch differences that gogofast normalizes on
-// decode, so compare against a value built directly with the gogofast types.
-func TestMarshalVTStrictMatchesIndependentGogofastValue(t *testing.T) {
-	vt := &iscp2v1.DownstreamMetadata{
-		RequestId:     9,
-		StreamIdAlias: 4,
-		Metadata:      &iscp2v1.DownstreamMetadata_BaseTime{BaseTime: &iscp2v1.BaseTime{SessionId: invalidUTF8, Name: "edge_rtc", Priority: 20, ElapsedTime: 4, BaseTime: 1700000000}},
-		SourceNodeId:  "node",
-	}
-	gogo := &gogofast.DownstreamMetadata{
-		RequestId:     9,
-		StreamIdAlias: 4,
-		Metadata:      &gogofast.DownstreamMetadata_BaseTime{BaseTime: &gogofast.BaseTime{SessionId: invalidUTF8, Name: "edge_rtc", Priority: 20, ElapsedTime: 4, BaseTime: 1700000000}},
-		SourceNodeId:  "node",
-	}
-	got, err := vt.MarshalVTStrict()
-	if err != nil {
-		t.Fatal(err)
-	}
-	want, err := gogo.Marshal()
-	if err != nil {
-		t.Fatal(err)
-	}
-	if !bytes.Equal(want, got) {
-		t.Fatalf("MarshalVTStrict differs from gogofast\n got: %x\nwant: %x", got, want)
 	}
 }
