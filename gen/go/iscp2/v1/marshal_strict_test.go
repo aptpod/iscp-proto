@@ -113,3 +113,31 @@ func TestMarshalVTStrictMatchesGogofast(t *testing.T) {
 		})
 	}
 }
+
+// The round trip above cannot catch differences that gogofast normalizes on
+// decode, so compare against a value built directly with the gogofast types.
+func TestMarshalVTStrictMatchesIndependentGogofastValue(t *testing.T) {
+	vt := &iscp2v1.DownstreamMetadata{
+		RequestId:     9,
+		StreamIdAlias: 4,
+		Metadata:      &iscp2v1.DownstreamMetadata_BaseTime{BaseTime: &iscp2v1.BaseTime{SessionId: invalidUTF8, Name: "edge_rtc", Priority: 20, ElapsedTime: 4, BaseTime: 1700000000}},
+		SourceNodeId:  "node",
+	}
+	gogo := &gogofast.DownstreamMetadata{
+		RequestId:     9,
+		StreamIdAlias: 4,
+		Metadata:      &gogofast.DownstreamMetadata_BaseTime{BaseTime: &gogofast.BaseTime{SessionId: invalidUTF8, Name: "edge_rtc", Priority: 20, ElapsedTime: 4, BaseTime: 1700000000}},
+		SourceNodeId:  "node",
+	}
+	got, err := vt.MarshalVTStrict()
+	if err != nil {
+		t.Fatal(err)
+	}
+	want, err := gogo.Marshal()
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !bytes.Equal(want, got) {
+		t.Fatalf("MarshalVTStrict differs from gogofast\n got: %x\nwant: %x", got, want)
+	}
+}

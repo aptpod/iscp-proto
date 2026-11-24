@@ -17,6 +17,7 @@ build-all:
   retry: 1
   script:
     - make build-all
+    - go test ./gen/go/...
     - git diff --exit-code
 
 lint:
